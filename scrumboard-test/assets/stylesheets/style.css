@@ -38,14 +38,11 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 { -webkit-text-size-a
 .radius-top { -webkit-border-radius: 4px 4px 0px 0px; -moz-border-radius: 4px 4px 0px 0px; border-radius: 4px 4px 0px 0px; }
 .radius-bottom { -webkit-border-radius: 0px 0px 4px 4px; -moz-border-radius: 0px 0px 4px 4px; border-radius: 0px 0px 4px 4px; }
 
-/*.button { width: 60px; line-height: 30px; padding: 10px; color: #EAEAEA; background: #063; text-align: center; cursor: pointer; }*/
-
 /* Desktop */
 body { padding: 10px; background: #EAEAEA; }
 #container { width: 100%; }
 
     #header { padding: 10px 10px 10px 20px; background: #181818; position: relative; }
-        /* #clear { margin: 0px 0px 0px 0px; float: right; } */
         #title { line-height: 50px; margin: 0px; color: #649ED0; }
         #description { line-height: 20px; margin: 0px; color: #EAEAEA; }
 
@@ -61,10 +58,3 @@ body { padding: 10px; background: #EAEAEA; }
 
 
    #logo { display: block; width: 30%; margin: 2% auto 2% auto; }
-
-/* Mobile */
-@media screen and (max-width: 480px){
-	
-    // ..
-
-}

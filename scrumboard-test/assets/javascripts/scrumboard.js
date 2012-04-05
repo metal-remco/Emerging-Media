@@ -141,38 +141,4 @@ function Scrumboard(scrumboardtitle, scrumboarddescription) {
 			
 		}		
 		
-} // Prikbord
-
-	/* Opmerkingen
-			
-		Ik heb een aantal keer 'Vraag voor Rimmert' in de comments staan. Misschien kunt u hier antwoord op geven?
-		
-		Todo: 
-		- Dubbele code verwijderen; zoals bij het positioneren van de items
-		
-		Schoonheidsfoutjes:
-		- Ruimte tussen #items en #content maken.
-		- Radius bij de foto's in de items op een desktop weghalen.
-		- Het id van de items beter weergeven.
-		- Margin van de items, right en bottom + stage padding.
-		
-		Master:
-		- Meerder prikborden aanmaken
-		- Browser Check; weergeven in Footer
-
-		Aantekeningen:
-		
-		Scope
-		private 	var name = ''; (= protected)
-		private 	function get() (= protected)
-		public		this.get = fucntion() { } 
-		
-		Media Queries 	
-		<link rel="stylesheet" type="text/css" media="screen" href="assets/stylesheets/style.css" />
-		<link rel="stylesheet" type="text/css" media="screen and (min-width: 480px)" href="assets/stylesheets/desktop.css" />
-		<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="assets/stylesheets/mobile.css" />
-		
-		
-	*/
-	
-
+}
