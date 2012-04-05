@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+		
+    <title></title>
+    <meta name="description" content=".." />
+    <meta name="keywords" content=">.." />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <meta charset="utf-8" />
+
+	<!-- Stylesheets -->
+	<link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/stylesheets/style.css" />
+
+    <!-- Favicons -->
+    <link href="assets/favicons/favicon.ico" type="image/x-icon" rel="shortcut icon"  />
+    <link href="assets/favicons/favicon-ios.png" rel="apple-touch-icon-precomposed" />
+
+    <!--  Apple meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" /> <!-- default, black, black-translucent -->
+    
+</head>
+<body>
+
+	<div id="container" class="radius">
+    
+        <div id="header" class="radius-top">
+        
+        	<!--<div id="clear" class="radius button">Clear</div>-->
+
+            <h1 id="title"></h1>
+            <p id="description"></p>
+            
+			<div class="clear"></div>
+
+        </div><!--header-->
+        
+    	<div id="stage">
+        
+            <div id="panels">
+            
+                <!-- .. -->
+                        
+            </div><!--panels-->
+			        
+        </div><!--stage-->
+
+        <div id="footer" class="radius-bottom">
+        
+            <dl>
+            	<dt>&copy; 2012</dt>			<dd><a href="http://project.cmi.hro.nl/2011_2012/emedia_med2d_t5/" target="_blank" title="De Zware Jongens">De Zware Jongens</a></dd>
+            	<dt>Made for</dt>				<dd><a href="http://project.cmi.hro.nl/2011_2012/emedia_med2d_t5/" target="_blank" title="#emedia2012">#emedia2012</a></dd>
+            </dl>
+                                
+			<div class="clear"></div>
+
+        </div><!--footer-->
+        
+        <a href="http://project.cmi.hro.nl/2011_2012/emedia_med2d_t5/" target="_blank" title="De Zware Jongens"><img src="assets/images/logo.png" alt="De Zware Jongens" id="logo"></a>
+
+    </div><!--container-->
+    
+    <!-- Javascripts -->
+	<script type="text/javascript" src="assets/javascripts/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="assets/javascripts/jquery/jquery-ui-1.8.18.custom.min.js"></script>
+	<script type="text/javascript" src="assets/javascripts/item.js"></script>
+	<script type="text/javascript" src="assets/javascripts/panel.js"></script>
+	<script type="text/javascript" src="assets/javascripts/scrumboard.js"></script>
+    
+	<script type="text/javascript"> $(document).ready(function(){
+				
+		// Maak een nieuw scrumboard aan
+		var scrumboard = new Scrumboard('Scrumboard: De Zware Jongens', 'Scrumboard voor ons #emedia2012 project.');
+		
+		// Voeg de panels toe aan het scrumboard
+		scrumboard.addPanel('Waiting', '#FFE5CC');
+		scrumboard.addPanel('In Flight', '#FFFFE5');
+		scrumboard.addPanel('Landed', '#FFE5FF');
+		
+		// Plaats de panels op het scherm
+		scrumboard.displayPanels();
+		
+		// Voeg een aantal items toe
+		scrumboard.addItem('Taak A');
+		scrumboard.addItem('Taak B');
+		scrumboard.addItem('Taak C');
+
+		// Plaats de items op het scherm
+		scrumboard.displayItems();
+
+	}); </script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+@charset "UTF-8"; /* CSS Document
+Theme Name: De Zware Jongens
+Theme URI: http://project.cmi.hro.nl/2011_2012/emedia_med2d_t5/
+Description: Thema gemaakt in maart 2012 voor het blog van De Zware Jongens
+Author: De Zware Jongens
+Version: 1.0
+*/ 
+
+/* Global: Reset */
+* { margin: 0px; padding: 0px; outline: none; }
+body { font-size: 62.5%; }
+img { border: none; }
+
+.clear { clear: both; }
+.hidden { display: none; }
+.left { float: left; }
+.right { float: right; }
+.centered { text-align: center; }
+.pointer { cursor: pointer; }
+.alignleft { float: left; margin: 0px 20px 20px 0px; }
+.alignright { float: right; margin: 0px 0px 20px 20px; }
+.aligncenter { display: block; margin: 0px auto 20px auto; }
+.alignnone { margin: 0px 0px 20px 0px; }
+
+/* Global: Fonts & Colors */
+h1, h2, h3, h4, h5, h6, p, li, label, input, textare, a { font-family: 'Sansita One', Arial, sans-serif; }
+.post-content p, .post-content li, tr, #header-widgets p, #header-widgets li, #header-widgets a, #footer-widgets p, #footer-widgets li, #footer-widgets a { font-family: 'Helvetica', Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; color: #649ED0; margin: 20px 0px 10px 0px; }
+h1 { font-size: 3.0em; }
+h2 { font-size: 2.4em; }
+h3 { font-size: 2.2em; }
+h4 { font-size: 2.0em; }
+h5 { font-size: 1.8em; }
+h6 { font-size: 1.6em; }
+
+p, label, input, textarea, li { font-size: 1.4em; font-weight: normal; color: #000; }
+input, textarea { font-size: 1.4em; font-weight: normal; color: #000; }
+.line { width: 100%; height: 1px; background: #fff; border-bottom: 0px solid #000; margin: 0px 0px 10px 0px; }
+
+p { margin: 0px 0px 10px 0px; }
+a { text-decoration: none; color: #000; }
+a:hover { text-decoration: underline; color: #000; }
+
+.red { color: #9F0909; }
+.blue { color: #649ED0; }
+.green { color: #0E743B; }
+.yellow { color: #FF6; }	
+
+
+/* Kleuren: 
+
+	#FFFFFF Wit
+	#808080 Grijs
+        #181818 Donker Grijs
+	#000000 Zwart
+	
+	#649ED0 Blauw
+	#9F0909 Rood
+	#0E743B Groen
+
+*/
+
+/* CSS3 */
+.shadow { -webkit-box-shadow: 1px 1px 3px 0px #000; -moz-box-shadow: 1px 1px 3px 0px #000; box-shadow: 1px 1px 3px 0px #000; }
+.radius, .post-content img, .post-content blockquote, #header-content, #pinterest_rss_widget-2, #pinterest_rss_widget-2 .pins-feed-item, #post-comments .post-stage .commentlist li { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+
+.comment-author { -webkit-border-radius: 4px 4px 0px 0px; -moz-border-radius: 4px 4px 0px 0px; border-radius: 4px 4px 0px 0px; }
+.comment-meta { -webkit-border-radius: 0px 0px 4px 4px; -moz-border-radius: 0px 0px 4px 4px; border-radius: 0px 0px 4px 4px; }
+
+/* Stijl */
+body {  }
+
+    #container { width: 100%; background: url(assets/images/bg-pattern.png) repeat; }
+
+        #header { width: 100%; min-height: 270px; border-bottom: 1px solid #808080; background: #E1E1E1 url(assets/images/dezwarejongens.jpg) top center no-repeat; overflow: hidden; }
+            #navigation { width: 100%; height: 95px; background: url(assets/images/bg-header.png) top center repeat-x; }
+            #navigation-container { width: 900px; height: 70px; margin: 0px auto 0px auto; position: relative; }
+                #menu { height: 70px; line-height: 70px; margin: 0px 0px 0px 30px; float: left; list-style: none; }
+                #menu li { margin: 0px 0px 0px 0px; float: left; font-size: 1.6em; }
+                #menu li a { color: #fff; }
+                #menu li a .seperator { margin: 0px 10px 0px 10px; }
+                #menu li a:hover, #menu li.current_page_item a { color: #649ED0; }
+                #menu li a:hover .seperator, #menu li.current_page_item a .seperator { color: #fff; }
+                #menu li a:hover { text-decoration: none; }
+                #search { margin: 0px 30px 0px 0px; padding: 25px 0px 25px 0px; float: right; }
+                #search input { width: 120px; height: 14px; margin: 0px; padding: 2px; border: 1px dashed #808080; background: none; color: #fff; text-align: right; }
+                #search label, #search #searchsubmit { display: none; }
+
+                    #header-widgets, #header-widgets-panel { width: 670px; height: 390px; padding: 10px 20px 10px 20px; background: url(assets/images/bg-black80.png) repeat; list-style: none; }
+                    #header-widgets { position: relative; margin: 0px auto 30px auto; display: none; }
+						#header-widgets-panel { position: absolute; left: -1810px; top: 0px; }
+						#header-switch, #header-switch-panel { width: 80px; height: 40px; position: absolute; cursor: pointer; }
+						#header-switch { background: url(assets/images/switch-left.png) no-repeat; top: 0px; right: -20px; } 
+						#header-switch-panel { background: url(assets/images/switch-right.png) no-repeat; top: 0px; right: -20px; display: none; }						
+					    .widget h2 { color: #fff; font-size: 1.2em; }
+                        .widget ul { margin: 0px 0px 0px 20px; list-style: disc; }
+                        .widget p { color: #fff; font-size: 1.0em; }
+                        .widget li { color: #fff; font-size: 1.0em; }
+                        .widget a { color: #649ED0; }
+           
+        #logo { width: 180px; height: 180px; display: block; margin: -180px auto 0px auto; z-index: 1; position: relative; top: 65px; }
+        #header-arrow { width: 75px; height: 160px; margin: -160px auto 0px auto; z-index: 1; position: relative; top: 130px; right: 390px; background: url(assets/images/arrow-down.png) no-repeat; cursor: pointer; }
+
+        #breadcrumbs { width: 680px; height: 20px; margin: 0px auto 0px auto; display: none;}           
+        #breadcrumbs p { font-family: Arial; font-size: 1.2em; color: #808080; }
+        #breadcrumbs p a { color: #808080; }
+
+        #stage { width: 740px; padding: 10px 0px 10px 0px; margin: 0px auto 0px auto; }
+            .post { margin: 0px 0px 0px 0px; position: relative; }
+                .post-header { height: 47px; background: url(assets/images/bg-postheader.png) no-repeat; }
+                .post-footer { height: 32px; background: url(assets/images/bg-postfooter.png) no-repeat; }
+                #first-post-header { height: 68px; padding: 30px 0px 0px 52px; background: url(assets/images/bg-firstpostheader.png) no-repeat; }
+                    #category-title-top { height: 18px; margin: 0px; padding: 0px; }
+                    #category-title { height: 50px; margin: 0px; padding: 0px; }
+                #last-post-footer { height: 32px; background: url(assets/images/bg-lastpostfooter.png) no-repeat; }
+
+                .post-stage { padding: 20px 46px 10px 46px; background: url(assets/images/bg-postcontent.png) repeat-y; }
+                    .post-title { margin: 0px 0px 5px 0px; color: #000; }
+                    .post-meta-before { font-size: 1.2em; color: #808080; }
+                    .post-content {  }
+                        .post-content p { margin: 10px 0px 10px 0px; }
+                        .post-content li { margin: 0px 0px 5px 0px; }
+                        .post-content ul, .post-content ol { margin: 0px 0px 10px 20px; }
+                        .post-content object, .post-content iframe { margin: 20px 0px 20px 0px; }
+                        .post-content a { color: #649ED0; }
+                        .post-content img { padding: 10px; border: solid 1px #808080; background: #fff; }
+                        .post-content blockquote { margin: 20px 20px 20px 20px; padding: 10px 20px 10px 20px; border: solid 1px #999; background: url(assets/images/bg-pattern.png) repeat; }
+                        .post-content #archive {width: 100%; table-layout: fixed; font-size:12px;}
+                        .post-content #archive td{padding:2px 10px;}
+                        .post-content .column-time{width:75px; overflow:hidden; white-space: nowrap}
+                        .post-content .column-title{width:350px; overflow:hidden; white-space: nowrap;}
+                        .post-content .column-author{width: 85px; overflow:hidden; white-space: nowrap}
+                        .post-content .column-category{overflow:hidden; white-space: nowrap}
+                        
+                        
+                        .pin-it-btn { margin: 0px; padding: 0px; position: absolute; right: 66px; bottom: 52px; }
+                        .twitter-share-button { margin: 0px; padding: 0px; position: absolute; right: 113px; bottom: 32px; }
+                #post-comments .post-stage .commentlist { list-style: none; }
+                #post-comments .post-stage .commentlist li ul li { list-style: none; }
+                
+                #post-comments .post-stage .commentlist li {  font-size: 1em; border: solid 1px #999; background: url(assets/images/bg-pattern.png) repeat; margin: 10px 0px 10px 0px; padding: 10px; }
+                #post-comments .post-stage .commentlist li a { color: #649ED0; }
+                #post-comments .post-stage .commentlist .comment-author { background: #649ED0; padding: 20px 20px 0px 20px; font-size: 2em; }
+                #post-comments .post-stage .commentlist .comment-author img { float: right; margin: 0px; padding: 0px;  }
+                #post-comments .post-stage .commentlist .comment-meta { height: 20px; line-height: 20px; margin: 0px 0px 10px 0px; padding: 0px 0px 10px 20px; background: #649ED0; }
+                #post-comments .post-stage .commentlist .comment-meta a { color: #fff; }
+                    #post-comments  .comment-subscription-form{font-size: 80%;}
+                    #post-comments p {font-family: 'Helvetica',Arial,sans-serif;}
+                    #post-comments #commentform p {font-size:12px;}
+                    #post-comments #commentform #submit{font-style: normal;}
+                    #post-comments .subscribe-label{font-size:1.2em;}
+                    #post-comments #commentform input{font-size: 14px; font-family: 'Helvetica',Arial,sans-serif;}
+                    #post-comments #commentform textarea{font-size: 14px; font-family: 'Helvetica',Arial,sans-serif;}
+                    #post-comments #commentform #submit{font-family: 'Sansita One', Arial, sans-serif;}
+                    #post-comments #respond label{font-family: 'Helvetica',Arial,sans-serif;}
+
+
+                    .post-meta-after { font-size: 1.2em; margin: 30px 0px 0px 0px; color: #808080; }
+                    .post-meta-after a { color: #808080; }
+                
+                .stage-widgets { margin: 20px 0px 20px 0px; padding: 0px 16px 0px 16px; list-style: none; }
+                .stage-widgets h2 { color: #808080; display: none; }
+                    #pinterest_rss_widget-2 { padding: 0px 0px 0px 0px; }
+                    #pinterest_rss_widget-2 .pins-feed-item { margin: 0px 0px 0px 9px; background: #fff; border: 8px solid #649ED0; }
+			
+
+        #footer { width: 100%; background: url(assets/images/bg-footer.png) top center repeat-x; }
+            #footer-widgets { width: 705px; margin: 0px auto 0px auto; padding: 40px 0px 10px 0px; list-style: none; }
+            #footer-widgets .widget { float: left; margin: 0px 30px 20px 0px; }
+            #footer-widgets .widget_text { width: 230px; } 
+            #footer-widgets .widget_categories { width: 170px; }
+            #footer-widgets .widget_links { width: 245px; margin: 0px 0px 20px 0px; }
+            #copyright { width: 705px; font-size: 1em; text-align: left; color: #808080; margin: 0px auto 0px auto; padding: 0px 0px 10px 0px;  }
+
+
