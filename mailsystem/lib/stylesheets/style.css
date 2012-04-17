@@ -1,2 +1,28 @@
 
-	#container { background: #f09; }
+/* Global Reset */
+
+    * { margin: 0px; padding: 0px; outline: none; }
+    h1, h2, h3, h4, h5, h6, p, li, label, input, textarea, dt, dd, th, td { font-family: sans-serif; }
+
+/* Classes */
+
+    .clear { clear: both; }
+    .hidden { display: none; }
+
+/* IDs */
+
+    #container { margin: 32px; padding: 8px; }
+        #navigation { margin: 8px 0px 32px 0px; list-style: none; }
+        #navigation li { margin: 0px 8px 0px 0px; padding: 8px; background: #999; display: inline;  }
+
+        #index { }
+        #login { }
+        #subscribers { }
+            #subscribers table { width: 480px; line-height: 16px; font-size: 12px; text-align: left; border-collapse: collapse; }
+            #subscribers table th { font-size: 14px; font-weight: normal; padding: 8px; }
+            #subscribers table td { padding: 8px; border-top: 1px solid #999; }
+            #subscribers table tr:hover td { background: #eaeaea; }
+        #subscribe { }
+        #unsubscribe { }
+
+

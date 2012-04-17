@@ -3,7 +3,7 @@
 	// Includes
 	// -
 
-class user
+class subscriber
 {
 
 	// Initialisatie
