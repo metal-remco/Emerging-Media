@@ -2,22 +2,22 @@
 	<div id="subscribe">
     
     	<?php // Als er nog niet op submit is gedruk
-		if(!$_POST['submit']): ?>
+		if(!$_POST['subscribe']): ?>
 
-    	<p>Vul dit formulier in om een subscriber toe te voegen.</p>
-        
-        <!-- Todo: Melding bij foute invoer -->
-        <form action="index.php?view=subscribe" method="post">
-
-             <label for="name">Name:</label>
-             <input type="text" name="name" id="name" value="" tabindex="1" /><br />
-             
-             <label for="email">Email:</label><!-- Todo: Check of dit wel echt een email adress is -->
-             <input type="text" name="email" id="email" value="" tabindex="2" /><br />
-
-            <input type="submit" name="submit" value="Submit" />
-
-        </form> 
+            <p>Vul dit formulier in om een subscriber toe te voegen.</p>
+            
+            <!-- Todo: Melding bij foute invoer -->
+            <form action="index.php?view=subscribe" method="post">
+    
+                 <label for="name">Name:</label>
+                 <input type="text" name="name" id="name" value="" tabindex="1" /><br />
+                 
+                 <label for="email">Email:</label><!-- Todo: Check of dit wel echt een email adress is -->
+                 <input type="text" name="email" id="email" value="" tabindex="2" /><br />
+    
+                <input type="submit" name="subscribe" value="Submit" />
+    
+            </form> 
         
         <?php else: ?>  
         
