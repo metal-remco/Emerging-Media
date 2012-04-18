@@ -20,21 +20,21 @@ class mailsystem
 	public function getSubscribers() {
 		
 		$query	= 'SELECT * FROM mail_subscribers ORDER BY id ASC;';
-		return $this->db->getData($query);
+		return $this->db->query($query, true);
 				
 	}
 
 	public function removeSubscriber($id) {
 		
 		$query = 'DELETE FROM mail_subscribers WHERE id = '.$id.';';
-		$this->db->removeData($query);
+		$this->db->query($query);
 				
 	}
 	
 	public function addSubscriber($name, $email) {
 		
 		$query = 'INSERT INTO mail_subscribers VALUES ("", "'.$name.'", "'.$email.'");';
-		$this->db->addData($query);
+		$this->db->query($query);
 				
 	}
 
