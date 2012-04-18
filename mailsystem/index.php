@@ -19,7 +19,7 @@
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Mailsystem</title>
+    <title>Drag, Drop &amp; Mail</title>
     
 	<!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" media="screen" href="lib/stylesheets/style.css" />

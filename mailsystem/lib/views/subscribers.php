@@ -11,7 +11,7 @@
 
             <thead>
                 <tr>
-                    <th scope="col">ID</th>
+                    <th scope="col">id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">DELETE</th>
@@ -28,8 +28,15 @@
                         <td><?php echo $subscriber->name; ?></td>
                         <td><?php echo $subscriber->email; ?></td>
                         
-                        <!-- Todo: Weet je zeker dat je deze subscriber wilt verwijderen? Dit kan niet worden teruggedraaid -->
-                        <td><a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>">DELETE</a></td>
+                        <td>
+                        	<a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" 
+                               onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name; ?> wilt verwijderen?');">
+                                
+                                index.php?view=unsubscribe&amp;id=<?php echo $subscriber->id; ?>
+                        	
+                            </a>
+                        </td>
+                                                
                     </tr>
 				
 				<?php endforeach; ?>

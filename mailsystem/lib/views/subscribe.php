@@ -7,7 +7,6 @@
     	<p>Vul dit formulier in om een subscriber toe te voegen.</p>
         
         <!-- Todo: Melding bij foute invoer -->
-        
         <form action="index.php?view=subscribe" method="post">
 
              <label for="name">Name:</label>
@@ -25,13 +24,11 @@
 			<?php // Voeg de gebruiker toe
             $mailsystem->addSubscriber($_POST['name'], $_POST['email']); ?>
             
-            <p>Subscriber '<?php echo $_POST['name']; ?>' is succesvol toegevoegd.</p>
+            <p>'<?php echo $_POST['name']; ?>' is succesvol toegevoegd.</p>
         
         <?php endif; ?>  
         
         <!-- Todo: Dit moet natuurlijk niet echt worden weergegeven als iemand zich uitschrijft. -->
     	<p><a href="index.php?view=subscribers">Terug naar het overzicht</a></p>
-        
-        <?php echo $_POST['name']; echo $_POST['email']; ?>
 
     </div>
