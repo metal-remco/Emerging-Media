@@ -40,7 +40,7 @@ class mailsystem
     public function checkLogin($username, $password) {
 		
         $query = 'SELECT function FROM mail_users WHERE username ="'. $username .'" AND password = "'.$password.'"';
-        return $this->db->query($query);
+        return $this->db->query($query, true);
     
 	}
 
