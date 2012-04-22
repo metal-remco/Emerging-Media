@@ -25,4 +25,5 @@
         #subscribe { }
         #unsubscribe { }
 
+        form .error { color: #C00; }
 

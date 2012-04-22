@@ -46,7 +46,11 @@
     </div><!-- container -->
 
 	<!-- Javascipts -->
+	<script type="text/javascript" src="lib/javascripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="lib/javascripts/jquery.validate-1.9.0.min.js"></script>
 	<script type="text/javascript" src="lib/javascripts/script.js"></script>
+
+
 
 </body>
 </html>
