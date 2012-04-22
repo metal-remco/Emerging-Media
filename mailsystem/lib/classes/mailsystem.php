@@ -17,9 +17,20 @@ class mailsystem
 	}
 
 	// Methodes: Subscribers
-	public function getSubscribers() {
+	public function getSubscribers($type = '') {
 		
-		$query	= 'SELECT * FROM mail_subscribers ORDER BY id ASC;';
+		// Als er geen type is
+		if(!$type):
+		
+			$query	= 'SELECT * FROM mail_subscribers ORDER BY id ASC;';
+
+		// Als er wel een type is
+		else: 
+		
+			$query	= 'SELECT * FROM mail_subscribers WHERE type = "'.$type.'" ORDER BY id ASC;';
+
+		endif; 
+		
 		return $this->db->query($query, true);
 				
 	}

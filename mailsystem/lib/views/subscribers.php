@@ -54,7 +54,125 @@
             </tbody>
         </table>
 
+		<!-- Extra: Tabellen met alleen subscribers van een bepaald type -->
 
+		<h2>Ge&iuml;nteresseerde</h2>
+        <table >
 
-    
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+            
+            	<?php $subscribers = $mailsystem->getSubscribers('interested');
+				foreach($subscribers as $subscriber): ?>
+				
+                    <tr>
+                        <td><?php echo $subscriber->id; ?></td>
+                        <td><?php echo $subscriber->email; ?></td>
+
+                        <td>
+                        	<a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" 
+                               onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name; ?> wilt verwijderen?');">
+                                
+                                index.php?view=unsubscribe&amp;id=<?php echo $subscriber->id; ?>
+                        	
+                            </a>
+                        </td>
+                                                
+                    </tr>
+				
+				<?php endforeach; ?>
+				
+            </tbody>
+        </table>
+        
+		<h2>Ouder</h2>
+        <table >
+
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Kind: Naam</th>
+                    <th scope="col">Kind: Klas</th>
+                    <th scope="col">DELETE</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+            
+            	<?php $subscribers = $mailsystem->getSubscribers('parent');
+				foreach($subscribers as $subscriber): ?>
+				
+                    <tr>
+                        <td><?php echo $subscriber->id; ?></td>
+                        <td><?php echo $subscriber->name; ?></td>
+                        <td><?php echo $subscriber->email; ?></td>
+                        <td><?php echo $subscriber->child_name; ?></td>
+                        <td><?php echo $subscriber->child_class; ?></td>
+
+                        <td>
+                        	<a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" 
+                               onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name; ?> wilt verwijderen?');">
+                                
+                                index.php?view=unsubscribe&amp;id=<?php echo $subscriber->id; ?>
+                        	
+                            </a>
+                        </td>
+                                                
+                    </tr>
+				
+				<?php endforeach; ?>
+				
+            </tbody>
+        </table>
+
+		<h2>Medewerker</h2>
+        <table >
+
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Medewerker: Functie</th>
+                    <th scope="col">Medewerker: Klas</th>
+                    <th scope="col">DELETE</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+            
+            	<?php $subscribers = $mailsystem->getSubscribers('employee');
+				foreach($subscribers as $subscriber): ?>
+				
+                    <tr>
+                        <td><?php echo $subscriber->id; ?></td>
+                        <td><?php echo $subscriber->name; ?></td>
+                        <td><?php echo $subscriber->email; ?></td>
+                        <td><?php echo $subscriber->employee_function; ?></td>
+                        <td><?php echo $subscriber->employee_class; ?></td>
+
+                        <td>
+                        	<a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" 
+                               onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name; ?> wilt verwijderen?');">
+                                
+                                index.php?view=unsubscribe&amp;id=<?php echo $subscriber->id; ?>
+                        	
+                            </a>
+                        </td>
+                                                
+                    </tr>
+				
+				<?php endforeach; ?>
+				
+            </tbody>
+        </table>
+
     </div>
