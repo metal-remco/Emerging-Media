@@ -5,7 +5,7 @@
     
     	<p>Dit zijn alle subscribers:</p>
         
-        <p><a href="index.php?view=subscribe">ADD</a></p>
+        <p><a href="index.php?view=subscribe-intro">ADD</a></p>
         
         <table >
 

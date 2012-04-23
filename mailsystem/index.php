@@ -8,13 +8,20 @@
 	$getview = $_GET['view'];
 	
 	switch ($getview) {
-		case 'unsubscribe':		$view = 'lib/views/unsubscribe.php';	break;
-		case 'subscribe':		$view = 'lib/views/subscribe.php';		break;
-		case 'subscribers':		$view = 'lib/views/subscribers.php';	break;
-		case 'login': 			$view = 'lib/views/login.php';			break;
-		case 'logout';			$view = 'lib/views/logout.php';			break;
-		default: 				$view = 'lib/views/subscribers.php'; // Dit moet uiteindelijk index.php worden			
+		
+		case 'subscribe-intro':	$view = 'lib/views/subscribe-intro.php';	break;
+		case 'subscribe':		$view = 'lib/views/subscribe.php';			break;
+		case 'unsubscribe':		$view = 'lib/views/unsubscribe.php';		break;
+		case 'subscribers':		$view = 'lib/views/subscribers.php';		break;
+	
+		case 'login': 			$view = 'lib/views/login.php';				break;
+		case 'logout';			$view = 'lib/views/logout.php';				break;
+	
+		default: 				$view = 'lib/views/subscribers.php'; // Dit moet uiteindelijk index.php worden		
+			
 	}
+	
+	$types = Array('parent' => 'ouder', 'employee' => 'medewerker', 'interested' => 'ge&iuml;nteresseerde');
 
 ?><html>
 <head>
