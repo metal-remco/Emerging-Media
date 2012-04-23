@@ -27,6 +27,12 @@ body { background: #E0E0E0 url(../../lib/images/bg-body.jpg) top center no-repea
 
         #index { }
         #login {  }
+            #login { width: 400px; margin: 64px auto 0px auto; }
+            #login form { min-height: 296px; padding: 28px 32px 0px 32px; background: url(../../lib/images/bg-login.png) no-repeat; }
+            #login form #submit { position: relative; bottom: 16px; right: 32px; }
+            
+        #logout
+            
         #subscribers {  }
             #subscribers table { line-height: 16px; font-size: 12px; text-align: left; border-collapse: collapse; }
             #subscribers table th { font-size: 14px; font-weight: normal; padding: 8px; }

@@ -15,7 +15,7 @@
 // Als er nog niet op de login knop is geklikt
         if (!$_POST['login']) {
 
-            echo "Vul hieronder je gebruikersnaam en wachtwoord in.";
+            echo "<h1 class="."shadow-text"." id="."page-title".">Vul hieronder je gebruikersnaam en wachtwoord in.</h1>";
 
 // Als er al wel op de login knop is geklikt
         } else {
@@ -23,11 +23,11 @@
             echo "Gebruikersnaam en wachtwoord komen niet in de database voor.";
         }
         ?>
-    <form action="index.php?view=login" method="post" />
-        <label for="username">Gebruikersnaam</label>
-        <input type="text" id="username" name="username" value="<?php echo $_POST['username']; ?>" /><br />
-        <label for="password">Wachtwoord</label>
-        <input type="password" id="password" name="password" value="<?php echo $_POST['password']; ?>" /><br />
+    <form id="form_subscribe" class="shadow" action="index.php?view=login" method="post" />
+
+        <input placeholder="Gebruikersnaam" type="text" id="username" name="username" value="<?php echo $_POST['username']; ?>" /><br />
+
+        <input placeholder="Wachtwoord" type="password" id="password" name="password" value="<?php echo $_POST['password']; ?>" /><br />
         <input type="submit" name="login" value="Login" />
     </form>
     <?php
