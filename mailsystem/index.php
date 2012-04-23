@@ -12,7 +12,7 @@
 		case 'subscribe':		$view = 'lib/views/subscribe.php';		break;
 		case 'subscribers':		$view = 'lib/views/subscribers.php';	break;
 		case 'login': 			$view = 'lib/views/login.php';			break;
-		default: 				$view = 'lib/views/index.php';			
+		default: 				$view = 'lib/views/subscribers.php'; // Dit moet uiteindelijk index.php worden			
 	}
 
 ?><html>
@@ -43,7 +43,7 @@
     
     <?php include($view); ?>
     
-    </div><!-- container -->
+</div><!-- container -->
 
 	<!-- Javascipts -->
 	<script type="text/javascript" src="lib/javascripts/jquery-1.7.2.min.js"></script>

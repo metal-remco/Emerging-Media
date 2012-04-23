@@ -6,7 +6,7 @@
     	<p>Dit zijn alle subscribers:</p>
         
         <p><a href="index.php?view=subscribe">ADD</a></p>
-    
+        
         <table >
 
             <thead>
@@ -27,7 +27,7 @@
             
             	<?php $subscribers = $mailsystem->getSubscribers();
 				foreach($subscribers as $subscriber): ?>
-				
+
                     <tr>
                         <td><?php echo $subscriber->id; ?></td>
                         <td><?php echo $subscriber->name; ?></td>
@@ -53,8 +53,6 @@
 				
             </tbody>
         </table>
-
-		<!-- Extra: Tabellen met alleen subscribers van een bepaald type -->
 
 		<h2>Ge&iuml;nteresseerde</h2>
         <table >
