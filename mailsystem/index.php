@@ -12,6 +12,7 @@
 		case 'subscribe':		$view = 'lib/views/subscribe.php';		break;
 		case 'subscribers':		$view = 'lib/views/subscribers.php';	break;
 		case 'login': 			$view = 'lib/views/login.php';			break;
+                                    case 'logout';                              $view = 'lib/views/logout.php';                     break;
 		default: 				$view = 'lib/views/index.php';			
 	}
 
@@ -36,9 +37,10 @@
 <div id="container">
 
     <ul id="navigation">
-        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php?view=index">Home</a></li>
         <li><a href="index.php?view=login">Login</a></li>
-        <li><a href="index.php?view=subscribers">Subscribers</a></li>        
+        <li><a href="index.php?view=subscribers">Subscribers</a></li>  
+        <li><a href="index.php?view=logout">Uitloggen</a></li>
     </ul>
     
     <?php include($view); ?>
