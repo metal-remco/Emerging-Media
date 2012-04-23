@@ -18,7 +18,7 @@
         #index { }
         #login { }
         #subscribers { }
-            #subscribers table { width: 480px; line-height: 16px; font-size: 12px; text-align: left; border-collapse: collapse; }
+            #subscribers table { line-height: 16px; font-size: 12px; text-align: left; border-collapse: collapse; }
             #subscribers table th { font-size: 14px; font-weight: normal; padding: 8px; }
             #subscribers table td { padding: 8px; border-top: 1px solid #999; }
             #subscribers table tr:hover td { background: #eaeaea; }

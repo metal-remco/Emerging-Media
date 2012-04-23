@@ -29,29 +29,30 @@ class mailsystem {
         $this->db->query($query);
     }
 
-    public function addSubscriber($name, $email) {
+    public function addSubscriber($name = '', $email, $child_name = '', $child_class = '', $employee_function = '', $employee_class = '', $type) {
 
-        $query = 'INSERT INTO mail_subscribers VALUES ("", "' . $name . '", "' . $email . '");';
+        $query = 'INSERT INTO mail_subscribers VALUES ("", "' . $name . '", "' . $email . '", "' . $child_name . '", "' . $child_class . '", "' . $employee_function . '", "' . $employee_class . '", "' . $type . '");';
         $this->db->query($query);
     }
 
     // Methodes: Login
     public function checkLogin($username, $password) {
 
-        $query = 'SELECT function FROM mail_users WHERE username ="' . $username . '" AND password = "' . $password . '"';
+        $query = 'SELECT function FROM mail_users WHERE username ="' . $username . '" AND password = "' . $password . '";';
         return $this->db->query($query, true);
     }
 
     //Methodes: Sessie
     public function makeSession($editor) {
         $_SESSION["editor"] = $editor;
-        
+
         return $_SESSION["editor"];
     }
 
     public function destroySession() {
         session_destroy();
     }
+
 }
 
 ?>
