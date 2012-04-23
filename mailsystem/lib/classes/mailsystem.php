@@ -12,7 +12,9 @@ class mailsystem
 	// Constructor
 	public function __construct() {
 
-		$this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
+        //$this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
+        $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
+        session_start();
 
 	}
 
@@ -49,11 +51,20 @@ class mailsystem
 	
 	// Methodes: Login
     public function checkLogin($username, $password) {
-		
-        $query = 'SELECT function FROM mail_users WHERE username ="'. $username .'" AND password = "'.$password.'";';
+
+        $query = 'SELECT function FROM mail_users WHERE username ="' . $username . '" AND password = "' . $password . '";';
         return $this->db->query($query, true);
-    
-	}
+    }
+
+    public function makeSession($editor) {
+        $_SESSION["editor"] = $editor;
+
+        return $_SESSION["editor"];
+    }
+
+    public function destroySession() {
+        session_destroy();
+    }
 
 }
 
