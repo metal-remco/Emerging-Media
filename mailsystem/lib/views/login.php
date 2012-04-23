@@ -48,6 +48,9 @@
 				if ($function == "editor") {
 			
 					echo "Je bent de redacteur.";
+                                        
+                                                                                         $editorSession = "true";
+                                                                                         $mailsystem->makeSession($editorSession);
 			
 				} else {
 				
