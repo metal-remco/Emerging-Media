@@ -12,8 +12,10 @@
     /* CSS3 */
     .shadow { -webkit-box-shadow: 2px 2px 4px 0px #000000; -moz-box-shadow: 2px 2px 4px 0px #000000; box-shadow: 2px 2px 4px 0px #000000; }
     .shadow-text { text-shadow: 2px 2px 4px #000; }
+    .orange { color: #d36e25; }
 
     form .error { color: #C00; }
+
 
 /* IDs */
 
@@ -42,9 +44,16 @@ body { background: #E0E0E0 url(../../lib/images/bg-body.jpg) top center no-repea
         #subscribe-intro #type_interested { background: url(../../lib/images/button-interested.png) bottom center no-repeat; }
 
         #subscribe { width: 400px; margin: 64px auto 0px auto; }
-        #subscribe form { min-height: 296px; padding: 28px 32px 0px 32px; background: url(../../lib/images/bg-login.png) no-repeat; }
-        #subscribe form #submit { position: relative; bottom: 16px; right: 32px; }
+        #subscribe form { padding: 28px 32px 24px 32px; background: url(../../lib/images/bg-login.png) no-repeat; position: relative; }
+        #subscribe form input { width: 100%; height: 32px; margin: 0px 0px 8px 0px; padding: 0px 0px 0px 46px; border: none; background: #fff url(../../lib/images/icon-clip.png) no-repeat; font-size: 12px; }
+        #subscribe form input#name { background: #fff url(../../lib/images/icon-users.png) no-repeat;  }
+        #subscribe form input#email { background: #fff url(../../lib/images/icon-mail.png) no-repeat;  }
+        #subscribe form #submit { width: auto; height: 32px; padding: 0px 8px 0px 32px; background: #d36e25 url(../../lib/images/icon-lock.png) no-repeat; position: absolute; bottom: -24px; right: 32px; text-align: left; color: #fff; font-weight: bold; cursor: pointer; }
 
 
         #unsubscribe { }
+
+
+
+
 
