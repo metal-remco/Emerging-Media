@@ -9,15 +9,16 @@
 	
 	switch ($getview) {
 		
-		case 'subscribe-intro':	$view = 'lib/views/subscribe-intro.php';	break;
-		case 'subscribe':		$view = 'lib/views/subscribe.php';			break;
-		case 'unsubscribe':		$view = 'lib/views/unsubscribe.php';		break;
-		case 'subscribers':		$view = 'lib/views/subscribers.php';		break;
+		case 'subscribe-intro':		$view = 'lib/views/subscribe-intro.php';		break;
+		case 'subscribe':			$view = 'lib/views/subscribe.php';				break;
+		case 'subscribe-success':	$view = 'lib/views/subscribe-success.php';		break;
+		case 'unsubscribe':			$view = 'lib/views/unsubscribe.php';			break;
+		case 'subscribers':			$view = 'lib/views/subscribers.php';			break;
 	
-		case 'login': 			$view = 'lib/views/login.php';				break;
-		case 'logout';			$view = 'lib/views/logout.php';				break;
+		case 'login': 				$view = 'lib/views/login.php';					break;
+		case 'logout';				$view = 'lib/views/logout.php';					break;
 	
-		default: 				$view = 'lib/views/subscribers.php'; // Dit moet uiteindelijk index.php worden		
+		default: 					$view = 'lib/views/subscribers.php'; 			// Dit moet uiteindelijk index.php worden		
 			
 	}
 	
