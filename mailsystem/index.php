@@ -24,6 +24,13 @@
 	
 	$types = Array('parent' => 'ouder', 'employee' => 'medewerker', 'interested' => 'ge&iuml;nteresseerde');
 
+	// Als er niemand is ingelogd, ga dan naar het login scherm
+	if( $mailsystem->areThereAnyUsersLoggedIn() ):
+	
+		$view = 'lib/views/login.php';
+	
+	endif; 
+	
 ?><html>
 <head>
 
@@ -49,7 +56,6 @@
         <li><a href="index.php?view=subscribers">Alle inschrijvingen</a></li>  
         <li><a href="index.php?view=subscribe-intro">Inschrijven</a></li>  
         
-        <li><a href="index.php?view=login">Login</a></li>
         <li><a href="index.php?view=logout">Uitloggen</a></li>
         
     </ul>
@@ -62,8 +68,6 @@
 	<script type="text/javascript" src="lib/javascripts/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="lib/javascripts/jquery.validate-1.9.0.min.js"></script>
 	<script type="text/javascript" src="lib/javascripts/script.js"></script>
-
-
 
 </body>
 </html>

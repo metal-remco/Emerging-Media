@@ -14,19 +14,16 @@ class mailsystem
 
 		$this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
         // $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
-        session_start();
 
 	}
 
 	// Methodes: Subscribers
 	public function getSubscribers($type = '') {
 		
-		// Als er geen type is
 		if(!$type):
 		
 			$query	= 'SELECT * FROM mail_subscribers ORDER BY id ASC;';
 
-		// Als er wel een type is
 		else: 
 		
 			$query	= 'SELECT * FROM mail_subscribers WHERE type = "'.$type.'" ORDER BY id ASC;';
@@ -50,22 +47,53 @@ class mailsystem
 	}
 	
 	// Methodes: Login
-    public function checkLogin($username, $password) {
-
+    public function login($username, $password) {
+		
+		// Todo: User Logged in is true naar de user class verplaatsen
+	
+		// Check of de gebruikersnaam en het wachtwoord overeenkomen met een database entry, zo ja: vul user_function met de functie van deze gebruiker
         $query = 'SELECT function FROM mail_users WHERE username ="' . $username . '" AND password = "' . $password . '";';
-        return $this->db->query($query, true);
+		$query_result = $this->db->query($query, true);
+		$user_function = $query_result[0]->function;
+
+		if ($user_function == "editor"):
+			
+			session_start();
+			$_SESSION["login"] = "editor";
+			return true;
+						
+		else:
+	
+			return false;
+			
+		endif;
+		
     }
-
-    public function makeSession($editor) {
-        $_SESSION["editor"] = $editor;
-
-        return $_SESSION["editor"];
+    public function logout() {
+		
+		if ($_SESSION["login"]):
+		
+			session_destroy();
+		
+		endif;
+		
     }
-
-    public function destroySession() {
-        session_destroy();
-    }
-
+	public function areThereAnyUsersLoggedIn() {
+		
+		// Todo: Editor misschien betere weghalen, als er toch geen verschillende typen zijn
+		
+		if($_SESSION["login"] == "editor"):
+		
+			return true;
+		
+		else: 
+		
+			return false;
+		
+		endif;
+		
+	}
+	
 }
 
 ?>
