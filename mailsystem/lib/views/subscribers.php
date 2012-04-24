@@ -1,25 +1,23 @@
 
 	<div id="subscribers">
     
-    	<h1>Subscribers</h1>
+    	<!-- Todo: Afvangen als er geen Post data is -->
     
-    	<p>Dit zijn alle subscribers:</p>
+        <h1 id="page-title" class="shadow-text">Alle inschrijvingen</h1>
         
-        <p><a href="index.php?view=subscribe-intro">ADD</a></p>
-        
-        <table >
+        <table class="shadow">
 
             <thead>
                 <tr>
                     <th scope="col">id</th>
-                    <th scope="col">Name</th>
+                    <th scope="col">Naam (p+m)</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Kind: Naam</th>
-                    <th scope="col">Kind: Klas</th>
-                    <th scope="col">Medewerker: Functie</th>
-                    <th scope="col">Medewerker: Klas</th>
+                    <th scope="col">Naam (p)</th>
+                    <th scope="col">Klas (p)</th>
+                    <th scope="col">Functie (m)</th>
+                    <th scope="col">Klas (m)</th>
                     <th scope="col">Type</th>
-                    <th scope="col">DELETE</th>
+                    <th scope="col">Uitschrijven</th>
                 </tr>
             </thead>
             
@@ -42,7 +40,7 @@
                         	<a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" 
                                onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name; ?> wilt verwijderen?');">
                                 
-                                index.php?view=unsubscribe&amp;id=<?php echo $subscriber->id; ?>
+                                uitschrijven
                         	
                             </a>
                         </td>
@@ -53,124 +51,5 @@
 				
             </tbody>
         </table>
-
-		<h2>Ge&iuml;nteresseerde</h2>
-        <table >
-
-            <thead>
-                <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">Email</th>
-                </tr>
-            </thead>
-            
-            <tbody>
-            
-            	<?php $subscribers = $mailsystem->getSubscribers('interested');
-				foreach($subscribers as $subscriber): ?>
-				
-                    <tr>
-                        <td><?php echo $subscriber->id; ?></td>
-                        <td><?php echo $subscriber->email; ?></td>
-
-                        <td>
-                        	<a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" 
-                               onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name; ?> wilt verwijderen?');">
-                                
-                                index.php?view=unsubscribe&amp;id=<?php echo $subscriber->id; ?>
-                        	
-                            </a>
-                        </td>
-                                                
-                    </tr>
-				
-				<?php endforeach; ?>
-				
-            </tbody>
-        </table>
-        
-		<h2>Ouder</h2>
-        <table >
-
-            <thead>
-                <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Kind: Naam</th>
-                    <th scope="col">Kind: Klas</th>
-                    <th scope="col">DELETE</th>
-                </tr>
-            </thead>
-            
-            <tbody>
-            
-            	<?php $subscribers = $mailsystem->getSubscribers('parent');
-				foreach($subscribers as $subscriber): ?>
-				
-                    <tr>
-                        <td><?php echo $subscriber->id; ?></td>
-                        <td><?php echo $subscriber->name; ?></td>
-                        <td><?php echo $subscriber->email; ?></td>
-                        <td><?php echo $subscriber->child_name; ?></td>
-                        <td><?php echo $subscriber->child_class; ?></td>
-
-                        <td>
-                        	<a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" 
-                               onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name; ?> wilt verwijderen?');">
-                                
-                                index.php?view=unsubscribe&amp;id=<?php echo $subscriber->id; ?>
-                        	
-                            </a>
-                        </td>
-                                                
-                    </tr>
-				
-				<?php endforeach; ?>
-				
-            </tbody>
-        </table>
-
-		<h2>Medewerker</h2>
-        <table >
-
-            <thead>
-                <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Medewerker: Functie</th>
-                    <th scope="col">Medewerker: Klas</th>
-                    <th scope="col">DELETE</th>
-                </tr>
-            </thead>
-            
-            <tbody>
-            
-            	<?php $subscribers = $mailsystem->getSubscribers('employee');
-				foreach($subscribers as $subscriber): ?>
-				
-                    <tr>
-                        <td><?php echo $subscriber->id; ?></td>
-                        <td><?php echo $subscriber->name; ?></td>
-                        <td><?php echo $subscriber->email; ?></td>
-                        <td><?php echo $subscriber->employee_function; ?></td>
-                        <td><?php echo $subscriber->employee_class; ?></td>
-
-                        <td>
-                        	<a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" 
-                               onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name; ?> wilt verwijderen?');">
-                                
-                                index.php?view=unsubscribe&amp;id=<?php echo $subscriber->id; ?>
-                        	
-                            </a>
-                        </td>
-                                                
-                    </tr>
-				
-				<?php endforeach; ?>
-				
-            </tbody>
-        </table>
-
+                    
     </div>

@@ -45,10 +45,13 @@
 <div id="container">
 
     <ul id="navigation">
-        <li><a href="index.php?view=index">Home</a></li>
+    
+        <li><a href="index.php?view=subscribers">Alle inschrijvingen</a></li>  
+        <li><a href="index.php?view=subscribe-intro">Inschrijven</a></li>  
+        
         <li><a href="index.php?view=login">Login</a></li>
-        <li><a href="index.php?view=subscribers">Subscribers</a></li>  
         <li><a href="index.php?view=logout">Uitloggen</a></li>
+        
     </ul>
     
     <?php include($view); ?>
