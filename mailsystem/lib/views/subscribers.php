@@ -1,11 +1,11 @@
 
-	<div id="subscribers">
+    <h1 id="page-title" class="shadow-text">Alle inschrijvingen</h1>
+
+	<div id="subscribers" class="shadow">
     
     	<!-- Todo: Afvangen als er geen Post data is -->
-    
-        <h1 id="page-title" class="shadow-text">Alle inschrijvingen</h1>
-        
-        <table class="shadow">
+            
+        <table>
 
             <thead>
                 <tr>
@@ -52,4 +52,4 @@
             </tbody>
         </table>
                     
-    </div>
+    </div><!-- subscribers -->

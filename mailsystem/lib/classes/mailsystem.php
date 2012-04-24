@@ -15,6 +15,8 @@ class mailsystem
 		$this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
         // $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
 
+		session_start();
+
 	}
 
 	// Methodes: Subscribers
@@ -58,7 +60,6 @@ class mailsystem
 
 		if ($user_function == "editor"):
 			
-			session_start();
 			$_SESSION["login"] = "editor";
 			return true;
 						

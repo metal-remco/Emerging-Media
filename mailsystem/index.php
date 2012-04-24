@@ -25,7 +25,7 @@
 	$types = Array('parent' => 'ouder', 'employee' => 'medewerker', 'interested' => 'ge&iuml;nteresseerde');
 
 	// Als er niemand is ingelogd, ga dan naar het login scherm
-	if( $mailsystem->areThereAnyUsersLoggedIn() ):
+	if( !$mailsystem->areThereAnyUsersLoggedIn() ):
 	
 		$view = 'lib/views/login.php';
 	
@@ -51,15 +51,18 @@
 
 <div id="container">
 
-    <ul id="navigation">
-    
-        <li><a href="index.php?view=subscribers">Alle inschrijvingen</a></li>  
-        <li><a href="index.php?view=subscribe-intro">Inschrijven</a></li>  
+	<?php if( $mailsystem->areThereAnyUsersLoggedIn() ): ?>
         
-        <li><a href="index.php?view=logout">Uitloggen</a></li>
+        <ul id="navigation">
         
-    </ul>
-    
+            <li><a href="index.php?view=subscribers">Alle inschrijvingen</a></li>  
+            <li><a href="index.php?view=subscribe-intro">Inschrijven</a></li>  
+            <li><a href="index.php?view=logout">Uitloggen</a></li>
+            
+        </ul>
+
+	<?php endif; ?>
+
     <?php include($view); ?>
     
 </div><!-- container -->

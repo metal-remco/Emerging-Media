@@ -1,24 +1,16 @@
+
+	<?php if($_GET['type']): 	$type = $_GET['type']; // interested, parent, employee
+   					   else: 	$type = 'interested'; endif; ?>  
 	
-	<?php // Als er een type is meegestuurd
-    if($_GET['type']):
+    <h1 id="page-title" class="shadow-text">Inschrijven als <?php echo $types[$type]; ?></h1>
     
-        $type = $_GET['type']; // interested, parent, employee
+	<div id="subscribe" class="shadow">
     
-    else:
-    
-        $type = 'interested';
-    
-    endif; ?>  
-
-	<div id="subscribe">
-
     	<?php // Als er nog niet op submit(subscribe) is gedrukt
 		if(!$_POST['subscribe-success']): ?>
         
-            <h1 id="page-title" class="shadow-text">Inschrijven als <?php echo $types[$type]; ?></h1>
-
-            <!-- Todo: Melding bij foute invoer & Invoer converteren htmlentities -->
-            <form action="index.php?view=subscribe-success" method="post" id="form_subscribe" class="shadow">
+            <!-- Todo: Melding bij foute invoer & Invoer converteren htmlentities + Afvangen als het email adress al staat ingechreven -->
+            <form action="index.php?view=subscribe-success" method="post" id="form_subscribe">
             
             	<?php if($type == 'parent' || $type == 'employee' ): ?>
     
@@ -53,4 +45,4 @@
         
         <?php endif; ?>  
 
-    </div>
+    </div><!-- subscribe -->
