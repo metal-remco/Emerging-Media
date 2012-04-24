@@ -11,24 +11,23 @@
 
 // Als er nog niet op de login knop is geklikt, of als er wel op de login knop is gedrukt maar de fucntie variable is leeg
     if (!$_POST['login'] || ( $_POST['login'] && !$function)) {
-
+?>  <form id="form_subscribe" class="shadow" action="index.php?view=login" method="post" /><?php
 // Als er nog niet op de login knop is geklikt
         if (!$_POST['login']) {
 
-            echo "Vul hieronder je gebruikersnaam en wachtwoord in.";
+            echo "<h1 class="."shadow-text"." id="."page-title".">Vul hieronder je gebruikersnaam en wachtwoord in.</h1>";
 
 // Als er al wel op de login knop is geklikt
         } else {
 
-            echo "Gebruikersnaam en wachtwoord komen niet in de database voor.";
+            echo "<h1 class="."shadow-text"." id="."page-title".">Gebruikersnaam en wachtwoord komen niet in de database voor.</h1>";
         }
         ?>
-    <form action="index.php?view=login" method="post" />
-        <label for="username">Gebruikersnaam</label>
-        <input type="text" id="username" name="username" value="<?php echo $_POST['username']; ?>" /><br />
-        <label for="password">Wachtwoord</label>
-        <input type="password" id="password" name="password" value="<?php echo $_POST['password']; ?>" /><br />
-        <input type="submit" name="login" value="Login" />
+    <form id="form_login" class="shadow" action="index.php?view=login" method="post" />
+
+        <input placeholder="Gebruikersnaam" type="text" class="required " id="username" name="username" value="<?php echo $_POST['username']; ?>" /><br />
+        <input placeholder="Wachtwoord" type="password" class="required" id="password" name="password" value="<?php echo $_POST['password']; ?>" /><br />
+        <input id ="submit" class="shadow" type="submit" name="login" value="Login" />
     </form>
     <?php
 // Als er wel op login is gedrukt en de functie var is gevuld
@@ -36,7 +35,7 @@
 
     if ($function == "editor") {
 
-        echo "Je bent de redacteur.";
+        echo "<h1 class="."shadow-text"." id="."page-title".">Je bent de redacteur.</h1>";
         $mailsystem->makeSession(true);
         
     } else {
