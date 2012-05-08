@@ -12,8 +12,9 @@ class mailsystem
 	// Constructor
 	public function __construct() {
 
-		$this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
-        // $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
+	//	$this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
+         //$this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
+  
 
 		session_start();
 
@@ -44,9 +45,17 @@ class mailsystem
 	public function addSubscriber($name = '', $email, $child_name = '', $child_class = '', $employee_function = '', $employee_class = '', $type) {
 		
 		$query = 'INSERT INTO mail_subscribers VALUES ("", "'.$name.'", "'.$email.'", "'.$child_name.'", "'.$child_class.'", "'.$employee_function.'", "'.$employee_class.'", "'.$type.'");';
-		$this->db->query($query);
-				
+		$this->db->query($query);		
 	}
+        
+        public function sendConformationMail($email)
+        {
+            $to = $email;
+            $subject = "Bevestiging van inschrijven voor de nieuwsbrief van de Emmausschool";
+            $message = "U bent succesvol ingeschreven voor de nieuwsbrief van de Emmausschool. Deze zult u dus zeer binnenkort ontvangen";
+            //$from = "info@emmausschool";
+           mail($to, $subject, $message);
+        }
 	
 	// Methodes: Login
     public function login($username, $password) {
