@@ -13,7 +13,7 @@ class mailsystem
 	public function __construct() {
 
 	//	$this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
-         //$this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
+         $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
   
 
 		session_start();
@@ -47,6 +47,14 @@ class mailsystem
 		$query = 'INSERT INTO mail_subscribers VALUES ("", "'.$name.'", "'.$email.'", "'.$child_name.'", "'.$child_class.'", "'.$employee_function.'", "'.$employee_class.'", "'.$type.'");';
 		$this->db->query($query);		
 	}
+        
+        //Todo: Functie en view changeSubscriberEmail nog werkend maken
+        
+       /* public function changeSubscriberEmail($email = '')
+        {
+            $query = 'UPDATE mail_subscribers SET email="'.$email.'"';
+            $this->db->query($query);
+        }*/
         
         public function sendConformationMail($email)
         {
