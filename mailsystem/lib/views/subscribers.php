@@ -1,5 +1,5 @@
 
-    <h1 id="page-title" class="shadow-text">Alle inschrijvingen</h1>
+    <h1 id="page-title" class="shadow-text">Alle abonnees</h1>
 
 	<div id="subscribers" class="shadow">
     
@@ -10,10 +10,10 @@
             <thead>
                 <tr>
                     <th scope="col">id</th>
-                    <th scope="col">Naam (p+m)</th>
+                    <th scope="col">Naam (o+m)</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Naam (p)</th>
-                    <th scope="col">Klas (p)</th>
+                    <th scope="col">Naam (o)</th>
+                    <th scope="col">Klas (o)</th>
                     <th scope="col">Functie (m)</th>
                     <th scope="col">Klas (m)</th>
                     <th scope="col">Type</th>
@@ -40,7 +40,7 @@
                         	<a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" 
                                onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name; ?> wilt verwijderen?');">
                                 
-                                uitschrijven
+                                abonnement opzeggen
                         	
                             </a>
                         </td>

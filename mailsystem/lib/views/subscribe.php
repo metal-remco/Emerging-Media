@@ -2,7 +2,7 @@
 	<?php if($_GET['type']): 	$type = $_GET['type']; // interested, parent, employee
    					   else: 	$type = 'interested'; endif; ?>  
 	
-    <h1 id="page-title" class="shadow-text">Inschrijven als <?php echo $types[$type]; ?></h1>
+    <h1 id="page-title" class="shadow-text">Abonneren als <?php echo $types[$type]; ?></h1>
     
 	<div id="subscribe" class="shadow">
     
