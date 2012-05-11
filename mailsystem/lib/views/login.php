@@ -5,8 +5,8 @@
     
 		<?php
     
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = htmlentities(htmlspecialchars($_POST['username']));
+        $password = htmlentities(htmlspecialchars(md5($_POST['password'])));
     
         // Als deze gebruiker niet succesvol is ingelogd
         if( !$mailsystem->login($username, $password) ): ?>
