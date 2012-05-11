@@ -1,5 +1,5 @@
 
-    <h1 id="page-title" class="shadow-text">DASHBOARD PLACEHOLDER: Alle abonnees</h1>
+    <h1 id="page-title" class="shadow-text">Alle abonnees</h1>
 
 	<div id="subscribers" class="shadow">
     
@@ -37,7 +37,7 @@
                         <td><?php echo $subscriber->type; ?></td>
 
                         <td>
-                        	<a href="<?php echo $mailsystem->getRoot(); ?>/opzeggen/<?php echo $subscriber->id; ?>" 
+                        	<a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" 
                                onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name; ?> wilt verwijderen?');">
                                 
                                 abonnement opzeggen
