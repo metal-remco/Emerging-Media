@@ -1,5 +1,5 @@
 
-    <h1 id="page-title" class="shadow-text">Inschrijven</h1>
+    <h1 id="page-title" class="shadow-text">Abonneren</h1>
                 
 	<div id="subscribe-intro">
     

@@ -1,5 +1,5 @@
 
-    <h1 id="page-title" class="shadow-text">Uitschrijving succesvol</h1>
+    <h1 id="page-title" class="shadow-text">Abonnement succesvol opgezegd</h1>
 
     <div id="unsubscribe" class="shadow">
     
@@ -7,6 +7,6 @@
 		$mailsystem->removeSubscriber($getid); ?>
     
     	<!-- bevestiginsmail -->
-        <p>U bent succesvol uitgeschreven en zult onze nieuwsbrief niet meer ontvangen.</p>
+        <p>Uw abonnement is succesvol opgezegd, u zult onze nieuwsbrief niet meer ontvangen.</p>
     
     </div><!-- unsubscribe -->
