@@ -50,11 +50,12 @@ class mailsystem
         
         //Todo: Functie en view changeSubscriberEmail nog werkend maken
         
-       /* public function changeSubscriberEmail($email = '')
+        public function changeSubscriberEmail($email = '', $id = '')
         {
-            $query = 'UPDATE mail_subscribers SET email="'.$email.'"';
+            $query = 'UPDATE mail_subscribers SET email="'.$email.'" WHERE id="'.$id.'"';
+            //echo $query;
             $this->db->query($query);
-        }*/
+        }
         
         public function sendConformationMail($email)
         {

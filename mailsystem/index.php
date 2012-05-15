@@ -17,6 +17,8 @@
 	
 		case 'login': 				$view = 'lib/views/login.php';					break;
 		case 'logout';				$view = 'lib/views/logout.php';					break;
+                                    case 'changeEmail';                         $view = 'lib/views/changeEmail.php'; break;
+                                    case 'changeEmail-succes';              $view = 'lib/views/changeEmail-succes.php'; break;
 	
 		default: 					$view = 'lib/views/subscribers.php'; 			// Dit moet uiteindelijk index.php worden		
 			
