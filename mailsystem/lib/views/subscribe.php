@@ -23,9 +23,18 @@
                  
 				<?php if($type == 'parent'): ?>
                 
-                    <!-- Todo: Meerdere kinderen toevoegen -->
-                    <input type="text" name="child_name" id="child_name" placeholder="Naam van uw kind"  value="<?php echo $_POST['child_name']; ?>" tabindex="3" size="99" class="required" /><br />
-                    <input type="text" name="child_class" id="child_class" placeholder="Klas van uw kind" value="<?php echo $_POST['child_class']; ?>" tabindex="4" size="3" /><br />
+                	<div id="children">
+                
+                        <div id="child_1" class="child">
+                        
+                            <input type="text" name="child_name_1" id="child_name_1" placeholder="Naam van uw kind"  value="<?php echo $_POST['child_name']; ?>" tabindex="3" size="99" class="required" /><br />
+                            <input type="text" name="child_class_1" id="child_class_1" placeholder="Klas van uw kind" value="<?php echo $_POST['child_class']; ?>" tabindex="4" size="3" /><br />
+                                                
+                        </div>
+                        
+                    </div><!-- children -->
+                    
+                    <a id="addchild" title="Kind toevoegen">Kind toevoegen</a>
                  
                 <?php endif; ?>
                 

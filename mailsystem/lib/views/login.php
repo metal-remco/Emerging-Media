@@ -22,7 +22,7 @@
 		else: ?>
         
             <p>U bent succesvol ingelogd</p>
-            <meta http-equiv="refresh" content="0;URL=index.php?view=subscribers" /><!-- Tijdenlijk voor de Sprint Review: Todo -->
+            <meta http-equiv="refresh" content="0;URL=index.php?view=dashboard" /><!-- Tijdenlijk voor de Sprint Review: Todo -->
 
         <?php endif; ?>
 
