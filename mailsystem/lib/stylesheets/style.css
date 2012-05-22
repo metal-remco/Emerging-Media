@@ -30,11 +30,7 @@ body { background: #E0E0E0 url(../../lib/images/bg-body.jpg) top center no-repea
 
         #index { }
         
-<<<<<<< HEAD
         #login, #logout, #subscribe-intro, #subscribe, #subscribe-success, #unsubscribe #change_email{ width: 336px; margin: 0px auto 0px auto; padding: 28px 32px 24px 32px; background: #eaeaea; position: relative; }
-=======
-        #login, #logout, #subscribe-intro, #subscribe, #subscribe-success, #unsubscribe { width: 336px; margin: 0px auto 0px auto; padding: 28px 32px 24px 32px; background: #EAEAEA; position: relative; }
->>>>>>> Stijl aangepast: Subscribe + Subscribe Success
 
         #login form input { width: 100%; height: 32px; margin: 0px 0px 8px 0px; padding: 0px 0px 0px 46px; border: none; background: #fff url(../../lib/images/icon-clip.png) no-repeat; font-size: 12px; }
         #login form input#username { background: #fff url(../../lib/images/icon-users.png) no-repeat; }
