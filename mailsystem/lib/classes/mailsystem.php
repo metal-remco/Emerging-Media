@@ -47,9 +47,9 @@ class mailsystem
 		$this->db->query($query);
 				
 	}
-	public function addSubscriber($name = '', $email, $child_name = '', $child_class = '', $employee_function = '', $employee_class = '', $type) {
+	public function addSubscriber($name = '', $email, $child_name = '', $child_class = '', $employee_function = '', $employee_class = '', $type, $reason = '') {
 		
-		$query = 'INSERT INTO mail_subscribers VALUES ("", "'.$name.'", "'.$email.'", "'.$child_name.'", "'.$child_class.'", "'.$employee_function.'", "'.$employee_class.'", "'.$type.'");';
+		$query = 'INSERT INTO mail_subscribers VALUES ("", "'.$name.'", "'.$email.'", "'.$child_name.'", "'.$child_class.'", "'.$employee_function.'", "'.$employee_class.'", "'.$type.'", "'.$reason.'");';
 		$this->db->query($query);		
 	}
         
@@ -117,7 +117,7 @@ class mailsystem
 		endif;
 		
 	}
-	
+
 }
 
 ?>

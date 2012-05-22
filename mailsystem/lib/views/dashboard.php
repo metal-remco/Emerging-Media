@@ -17,6 +17,7 @@
                     <th scope="col">Functie (m)</th>
                     <th scope="col">Klas (m)</th>
                     <th scope="col">Type</th>
+                    <th scope="col">Reden</th>
                     <th scope="col">Uitschrijven</th>
                     <th scope="col">Wijzig mail</th>
                 </tr>
@@ -36,6 +37,7 @@
                         <td><?php echo $subscriber->employee_function; ?></td>
                         <td><?php echo $subscriber->employee_class; ?></td>
                         <td><?php echo $subscriber->type; ?></td>
+                        <td><?php echo $subscriber->reason; ?></td>
 
                         <td>
                             <a href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" 
@@ -45,6 +47,7 @@
                             
                             </a>
                         </td>
+                        
                         <td>
                             <a href="index.php?view=changeEmail&id=<?php echo $subscriber->id; ?>" onclick="return confirm('Email wijzigen van <?php echo $subscriber->name;?>')">Wijzigen</a>
                         </td>

@@ -5,8 +5,8 @@
     
     	<h2>Ik ben:</h2>
             
-        <a href="index.php?view=subscribe&type=parent" id="type_parent" class="type_button">Ouder</a>   
-        <a href="index.php?view=subscribe&type=interested" id="type_interested" class="type_button">Ge&iuml;nteresseerde</a>
+        <a href="index.php?view=subscribe&type=parent" id="type_parent" class="type_button shadow-light">Ouder</a>   
+        <a href="index.php?view=subscribe&type=interested" id="type_interested" class="type_button shadow-light">Ge&iuml;nteresseerde</a>
         
         <div class="clear"></div>   
                     

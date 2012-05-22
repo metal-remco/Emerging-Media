@@ -46,8 +46,8 @@
 			
 			htmlentities( htmlspecialchars($_POST['employee_function']) ), 
 			htmlentities( htmlspecialchars($_POST['employee_class']) ), 
-			htmlentities( htmlspecialchars($_POST['type']) )
-			
+			htmlentities( htmlspecialchars($_POST['type']) ),
+			htmlentities( htmlspecialchars($_POST['reason']) )
 		);
 			
         $mailsystem->sendConformationMail($_POST['email']); ?>

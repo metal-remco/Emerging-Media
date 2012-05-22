@@ -35,9 +35,9 @@ $(document).ready(function(){
 		id++;
 		
 		var div_top 		= "<div id='child_"+id+"' class='child'>"
-		var name_field 		= "<input type='text' name='child_name_"+id+"' id='child_name_"+id+"' placeholder='Naam van uw kind'  value='' size='99' class='required' /><br />";
-		var class_field 	= "<input type='text' name='child_class_"+id+"' id='child_class_"+id+"' placeholder='Klas van uw kind' value='' size='3' /><br />";
-		var remove_child	= "<a id='removechild' title='Kind verwijderen'>Kind verwijderen</a>";
+		var name_field 		= "<input type='text' name='child_name_"+id+"' id='child_name_"+id+"' placeholder='Naam kind'  value='' size='99' class='required shadow-light input-child' /><br />";
+		var class_field 	= "<input type='text' name='child_class_"+id+"' id='child_class_"+id+"' placeholder='Klas kind' value='' size='3' class='shadow-light input-class' />";
+		var remove_child	= "<a id='removechild' title='Kind verwijderen'>Kind verwijderen</a><br />";
 		var div_bottom		= "</div>";
 	
 		var child_div 		= div_top+name_field+class_field+remove_child+div_bottom;
