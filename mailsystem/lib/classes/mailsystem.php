@@ -117,20 +117,20 @@ class mailsystem
 		endif;
 		
 	}
+        
+        //artikel insturen
+        public function sendArticle($title, $article){
+            $query = 'INSERT INTO mail_article (title, article) VALUES ("'. $title . '","' . $article . '")';
+            //echo $query;
+            $this->db->query($query);
+        }
+        
+        public function getArticles (){
+            $query = "SELECT * FROM mail_article ORDER BY id ASC";
+            $result = $this->db->query($query, true);
+            return $result;
+        }
 
-	//artikel insturen
-	public function sendArticle($title, $article){
-		$query = 'INSERT INTO mail_article (title, article) VALUES ("'. $title . '","' . $article . '")';
-		//echo $query;
-		$this->db->query($query);
-	}
-	
-
-	public function getArticles (){
-		$query = "SELECT * FROM mail_article";
-		$this->db->query($query, true);
-	}
-	
 }
 
 ?>
