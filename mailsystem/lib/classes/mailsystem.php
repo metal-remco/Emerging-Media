@@ -16,10 +16,10 @@ class mailsystem
 		//$this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
         
 		// Randy Localhost
-		$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
+		//$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
          
 		// Remco Localhost
-		//$this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
+		 $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
 
 		session_start();
 
@@ -118,6 +118,19 @@ class mailsystem
 		
 	}
 
+	//artikel insturen
+	public function sendArticle($title, $article){
+		$query = 'INSERT INTO mail_article (title, article) VALUES ("'. $title . '","' . $article . '")';
+		//echo $query;
+		$this->db->query($query);
+	}
+	
+
+	public function getArticles (){
+		$query = "SELECT * FROM mail_article";
+		$this->db->query($query, true);
+	}
+	
 }
 
 ?>
