@@ -19,7 +19,8 @@
 		case 'logout';				$view = 'lib/views/logout.php';					break;
 		case 'changeEmail';			$view = 'lib/views/changeEmail.php';			break;
 		case 'changeEmail-succes';	$view = 'lib/views/changeEmail-succes.php';		break;
-	
+                
+                                    case 'inputArticle';                            $view = 'lib/views/inputArticle.php';                                   break;
 		default: 					$view = 'lib/views/dashboard.php'; 	
 			
 	}
