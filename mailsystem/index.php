@@ -13,15 +13,15 @@
 		case 'subscribe':			$view = 'lib/views/subscribe.php';				break;
 		case 'subscribe-success':	$view = 'lib/views/subscribe-success.php';		break;
 		case 'unsubscribe':			$view = 'lib/views/unsubscribe.php';			break;
-		case 'dashboard':			$view = 'lib/views/dashboard.php';				break;
+		case 'dashboard':			$view = 'lib/views/dashboard.php';				$backend = true; break;
 	
 		case 'login': 				$view = 'lib/views/login.php';					break;
 		case 'logout';				$view = 'lib/views/logout.php';					break;
-		case 'changeEmail';			$view = 'lib/views/changeEmail.php';			break;
-		case 'changeEmail-succes';	$view = 'lib/views/changeEmail-succes.php';		break;
+		case 'changeEmail';			$view = 'lib/views/changeEmail.php';			$backend = true; break;
+		case 'changeEmail-succes';	$view = 'lib/views/changeEmail-succes.php';		$backend = true; break;
                 
-                                    case 'inputArticle';                            $view = 'lib/views/inputArticle.php';                                   break;
-		default: 					$view = 'lib/views/dashboard.php'; 	
+		case 'inputArticle';        $view = 'lib/views/inputArticle.php';           $backend = true; break;
+		default: 					$view = 'lib/views/dashboard.php'; 				$backend = true;
 			
 	}
 	
@@ -48,7 +48,7 @@
 
 </head>
 
-<body>
+<body<?php if($backend):?> class="backend"<?php endif; ?>>
 
 <div id="container">
 
@@ -57,7 +57,8 @@
         <ul id="navigation">
         
             <li><a href="index.php?view=dashboard">Dashboard</a></li>  
-            <li><a href="index.php?view=subscribe-intro">Inschrijven</a></li>  
+            <li><a href="index.php?view=subscribe-intro">Abonneren</a></li>  
+            <li><a href="index.php?view=inputArticle">Toevoegen</a></li>  
             <li><a href="index.php?view=logout">Uitloggen</a></li>
             
         </ul>

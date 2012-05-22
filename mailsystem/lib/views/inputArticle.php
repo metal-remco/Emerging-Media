@@ -15,5 +15,3 @@
         <input id="submit" class="shadow" type="submit" value="Versturen" name="submit"/>
     </form>
     </div>
-
-
