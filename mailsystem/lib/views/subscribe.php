@@ -1,8 +1,8 @@
 
-	<?php if($_GET['type']): 	$type = $_GET['type']; // interested, parent, employee
+	<?php if($_GET['type']): 	$type = $_GET['type']; // interested, parent
    					   else: 	$type = 'interested'; endif; ?>  
 	
-    <h1 id="page-title" class="shadow-text">Abonneren als <?php echo $types[$type]; ?></h1>
+    <h1 id="page-title" class="shadow-text">Abonneren als <?php if($type == 'parent'): ?>Ouder<?php elseif($type == 'interested'): ?>Ge&iuml;nteresseerde<?php endif; ?></h1>
     
 	<div id="subscribe" class="shadow">
     
@@ -37,16 +37,7 @@
                     <a id="addchild" title="Kind toevoegen">Kind toevoegen</a>
                  
                 <?php endif; ?>
-                
-                <?php if($type == 'employee'): ?>
-                
-                    <!-- Todo: Dropdown -->
-                    <input type="text" name="employee_function" id="employee_function" placeholder="Functie binnen school" value="<?php echo $_POST['employee_function']; ?>" tabindex="3" size="99" class="required" /><br />
-                    <!-- Todo: Alleen weergeven als dit een leerkracht is -->
-                    <input type="text" name="employee_class" id="employee_class" placeholder="Welke klas geeft u les?" value="<?php echo $_POST['employee_class']; ?>" tabindex="4" size="3" class="required" /><br />
-
-                <?php endif; ?>
-                
+                                
                 <input type="hidden" name="type" id="type" value="<?php echo $type; ?>" />
                 <input type="submit" id="submit" name="subscribe" value="inschrijven" class="shadow" />
     

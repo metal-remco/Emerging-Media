@@ -25,8 +25,6 @@
 			
 	}
 	
-	$types = Array('parent' => 'ouder', 'employee' => 'medewerker', 'interested' => 'ge&iuml;nteresseerde');
-
 	// Als er niemand is ingelogd, ga dan naar het login scherm
 	if( !$mailsystem->areThereAnyUsersLoggedIn() ):
 	

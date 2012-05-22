@@ -1,12 +1,13 @@
 
-    <h1 id="page-title" class="shadow-text">Abonneren</h1>
+    <h1 id="page-title" class="shadow-text">Abonneren op nieuwsbrief</h1>
                 
-	<div id="subscribe-intro">
+	<div id="subscribe-intro" class="shadow">
     
-        <?php $i=1; foreach($types as $key => $value): ?>
-        
-            <a href="index.php?view=subscribe&type=<?php echo $key; ?>" id="type_<?php echo $key; ?>" class="type_button shadow"> Als <br /><?php echo $value; ?></a>   
+    	<h2>Ik ben:</h2>
             
-         <?php $i++; endforeach; ?>
+        <a href="index.php?view=subscribe&type=parent" id="type_parent" class="type_button">Ouder</a>   
+        <a href="index.php?view=subscribe&type=interested" id="type_interested" class="type_button">Ge&iuml;nteresseerde</a>
+        
+        <div class="clear"></div>   
                     
     </div><!-- subscribe-intro -->
