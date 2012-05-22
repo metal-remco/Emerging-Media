@@ -21,6 +21,7 @@
 		case 'changeEmail-succes';	$view = 'lib/views/changeEmail-succes.php';		break;
                 
                                     case 'inputArticle';                            $view = 'lib/views/inputArticle.php';                                   break;
+                                    case 'inputArticle-succes';                 $view = 'lib/views/inputArticle-succes.php';                    break;
 		default: 					$view = 'lib/views/dashboard.php'; 	
 			
 	}
