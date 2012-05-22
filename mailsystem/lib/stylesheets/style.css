@@ -23,9 +23,11 @@ body { background: #E0E0E0 url(../../lib/images/bg-body.jpg) top center no-repea
 body.backend { background: #4C585E; }
 
     #container { width: 960px; margin: 0px auto 32px auto; position: relative; }
-        #navigation { position: absolute; top: 0px; right: 0px; list-style: none; }
+        #navigation { padding: 0px 0px 0px 8px; position: absolute; top: 0px; right: 0px; list-style: none; background: #fff; }
         #navigation li { margin: 0px 8px 0px 0px; display: inline; font-size: 10px; }
         #navigation li a { color: #333; }
+
+#navigatie {	width:512px; height:28px; background:#fff; float:right; border:1px solid #C6C7C8; }
 
         #page-title { padding: 64px 0px 4px 0px; margin: 0px; color: #fff; text-align: center; font-weight: normal; font-size: 24px; }
 
@@ -33,7 +35,7 @@ body.backend { background: #4C585E; }
         
         #login, #logout, #subscribe-intro, #subscribe, #subscribe-success, #unsubscribe #change_email{ width: 336px; margin: 0px auto 0px auto; padding: 28px 32px 24px 32px; background: #eaeaea; position: relative; }
 
-        #login form input { width: 100%; height: 32px; margin: 0px 0px 8px 0px; padding: 0px 0px 0px 46px; border: none; background: #fff url(../../lib/images/icon-clip.png) no-repeat; font-size: 12px; }
+        #login form input { width: 100%; height: 32px; margin: 0px 0px 8px 0px; padding: 0px 0px 0px 40px; border: none; background: #fff url(../../lib/images/icon-clip.png) no-repeat; font-size: 12px; }
         #login form input#username { background: #fff url(../../lib/images/icon-users.png) no-repeat; }
         #login form input#password { background: #fff url(../../lib/images/icon-lock.png) no-repeat; }
         #login form #submit { width: auto; height: 32px; padding: 0px 8px 0px 32px; background: #EF8045 url(../../lib/images/icon-lock.png) no-repeat; position: absolute; bottom: -24px; right: 32px; text-align: left; color: #fff; font-weight: bold; cursor: pointer;}
@@ -69,10 +71,11 @@ body.backend { background: #4C585E; }
         #subscribers table td { padding: 8px; background: #fff;}
         #subscribers table tr:hover td { background: #eaeaea; }
         
-        #article{ width: 800px; margin: 0px auto 0px auto; padding: 28px 32px 24px 32px; background: url(../../lib/images/bg-login.png) repeat; position: relative;}
-        #article form input{ width: 100%; height: 32px; margin: 0px 0px 8px 0px; padding: 0px 0px 0px 46px; border: none; background: #fff  no-repeat; font-size: 12px; }
-        #article form #picture{}
-        #article form #submit{width: auto; height: 32px; padding: 0px 8px 0px 32px; background: #d36e25 no-repeat; position: absolute; bottom: -24px; right: 32px; text-align: left; color: #fff; font-weight: bold; cursor: pointer;}
+        #article { width: 800px; margin: 0px auto 0px auto; padding: 28px 32px 24px 32px; background: #eaeaea; position: relative;}
+        #article form input { width: 100%; height: 32px; margin: 0px 0px 8px 0px; padding: 0px 0px 0px 40px; border: none; background: #fff url(../../lib/images/icon-clipboard.png) no-repeat; font-size: 12px; }
+        #article form input#articleTitle { background: #fff url(../../lib/images/icon-clipboard.png) no-repeat; }
+        #article form #picture {}
+        #article form #submit {width: auto; height: 32px; padding: 0px 8px 0px 32px; background: #d36e25 no-repeat; position: absolute; bottom: -24px; right: 32px; text-align: left; color: #fff; font-weight: bold; cursor: pointer;}
 
 
 
@@ -81,7 +84,7 @@ body.backend { background: #4C585E; }
 
 
 
-#container{	width:960px; margin:0 auto; }
+#container{ width:960px; margin:0 auto; }
 
 #wrapper{ width:960px; }
 
@@ -90,13 +93,6 @@ body.backend { background: #4C585E; }
 #info{height:30px; width:220px; color:#fff; font-size:18px; font-weight:bold; margin:-30px 0 0 0; float:right;}
 #info a:link, #info a:visited, #info a:hover, #info a:active{ color:#fff; font-size:12px; text-decoration:underline; font-weight:bold;}
 	
-
-/********************navigatie stijlen********************/
-#navigatie{	width:512px; height:28px; background:#fff; float:right; border:1px solid #C6C7C8; }
-
-	#navigatie ul{ margin:0; padding:0; height:20px; }
-	#navigatie ul li{ list-style:none; float:left; margin:5px 0 0 22px; padding:0; font-size:12px; font-weight:bold; color:#707173; }
-	/*#navigatie ul li.active{background:#EE8144; color:#fff;}*/
 	
 /********************breadcrumbs stijlen********************/
 	#breadcrumbs{ width:913px; background:#EE8144; color:#fff; font-size:10px; font-weight:bold; height:15px; padding:0 0 0 47px; margin:0 0 28px 0;}
@@ -106,7 +102,7 @@ body.backend { background: #4C585E; }
 /********************sidebar stijlen********************/
 #sidebar{ float:left; width:185px; margin:0 0 0 47px; }
 .btn_margin{ margin:20px 0 0 0;}
-#search_artikel{ height:40px; width:140px; border:1px solid #C6C7C8; background:url(images/search.png) no-repeat #fff; padding:0 0 0 45px; margin:20px 0 0 0; font-size:15px;}
+#search_artikel{ height:40px; width:140px; border:1px solid #C6C7C8; background:url(../../lib/images/backendsearch.png) no-repeat #fff; padding:0 0 0 45px; margin:20px 0 0 0; font-size:15px;}
 
 /********************states stijlen********************/
 #states{ float:left; width:575px; margin:0 0 0 52px; background:#fff; padding:0 10px 10px 10px;}

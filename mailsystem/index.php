@@ -20,6 +20,9 @@
 		case 'changeEmail';			$view = 'lib/views/changeEmail.php';			$backend = true; break;
 		case 'changeEmail-succes';	$view = 'lib/views/changeEmail-succes.php';		$backend = true; break;
                 
+
+		case 'articleOverview';     $view = 'lib/views/articleOverview.php';        $backend = true; break;
+
 		case 'inputArticle';        $view = 'lib/views/inputArticle.php';           $backend = true; break;
 		case 'inputArticle-succes'; $view = 'lib/views/inputArticle-succes.php';    $backend = true; break;
 		default: 					$view = 'lib/views/dashboard.php'; 				$backend = true; 
@@ -54,12 +57,15 @@
 <div id="container">
 
 	<?php if( $mailsystem->areThereAnyUsersLoggedIn() ): ?>
-        
+                
+        <img src="lib/images/logo.png" alt="EMMAIL" class="logo"/>
+                
         <ul id="navigation">
         
             <li><a href="index.php?view=dashboard">Dashboard</a></li>  
             <li><a href="index.php?view=subscribe-intro">Abonneren</a></li>  
             <li><a href="index.php?view=inputArticle">Toevoegen</a></li>  
+            <li><a href="index.php?view=articleOverview">Artikelen</a></li>  
             <li><a href="index.php?view=logout">Uitloggen</a></li>
             
         </ul>

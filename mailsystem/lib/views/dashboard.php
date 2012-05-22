@@ -1,5 +1,5 @@
 
-    <h1 id="page-title" class="shadow-text">Dashboad</h1>
+    <h1 id="page-title" class="shadow-text">Dashboard</h1>
 
     <div id="subscribers" class="shadow">
     
