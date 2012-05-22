@@ -1,3 +1,8 @@
+<?php
+include '../classes/mailsystem.php';
+
+$mailsystem = new mailsystem();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -45,17 +50,21 @@
             
             <div id="states" class="shadow">
             		<h1>Artikel Beheer - Overzicht </h1>
-                    
+                    <?php 
+                    $articles = $mailsystem->getArticles();
+                        foreach($articles as $article)
+                        {
+                    ?>
                     <div id="artikel">
                     	<div id="head">
-                        	<h1></h1>
+                        	<h1><?php //echo $article->title;?></h1>
                         </div><!--head-->
                         	
-                        <p>.
+                        <p><?php echo $article->article;?>
                         </p>
                         
                         <div id="footnote">
-                        	<p></p>
+                        	<p><span class="orange">Auteur:</span> Henk van Dongen	<span class="orange">Geschreven:</span> 15-05-2012</p>
                             
                         	<div id="icons">
                             <img src="images/view.png" alt="bekijken" class="icons" />
@@ -65,26 +74,9 @@
                             </div><!--icons-->
                         </div><!--footnote-->
                     </div><!--artikel-->
-                    
-                    <div id="artikel">
-                    	<div id="head">
-                        	<h1></h1>
-                        </div><!--head-->
-                        	
-                        <p>
-                        </p>
-                        
-                        <div id="footnote">
-                        	<p></p>
-                            
-                        	<div id="icons">
-                            <img src="images/view.png" alt="bekijken" class="icons" />
-                            <img src="images/trash.png" alt="verwijderen" class="icons" />
-                            <img src="images/edit.png" alt="bewerken" class="icons" />
-                            <img src="images/comment.png" alt="reageren" class="icons" />
-                            </div><!--icons-->
-                        </div><!--footnote-->
-                    </div><!--artikel-->
+                    <?php
+                        }
+                        ?>
                     
             </div><!--rechts-->
             

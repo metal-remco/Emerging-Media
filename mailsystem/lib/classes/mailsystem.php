@@ -127,7 +127,9 @@ class mailsystem
         
         public function getArticles (){
             $query = "SELECT * FROM mail_article";
-            $this->db->query($query, true);
+            $result = $this->db->query($query, true);
+            echo $result;
+            return $result;
         }
 	
 }

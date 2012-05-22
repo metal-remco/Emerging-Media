@@ -15,3 +15,4 @@
     
     $mailsystem->sendArticle($title, $article);
 ?>
+<meta http-equiv="refresh" content="0;URL=index.php?view=articleOverview" />
