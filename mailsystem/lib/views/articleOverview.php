@@ -32,7 +32,7 @@
 
                     <div id="artikel">
                     	<div id="head">
-                        	<h1><?php //echo $article->title;?></h1>
+                        	<h1><?php echo $article->title;?></h1>
                         </div><!--head-->
                         	
                         <p><?php echo $article->article;?>

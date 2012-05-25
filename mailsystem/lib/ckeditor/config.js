@@ -17,7 +17,7 @@ CKEDITOR.editorConfig = function( config )
 {
         name: 'paragraph', 
         items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote',
-        '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock', ]
+        '-'/*,'JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock',*/ ]
     },
 { name: 'styles', items : [ 'FontSize' ] }
 	
