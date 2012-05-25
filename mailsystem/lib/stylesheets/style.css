@@ -1,37 +1,39 @@
 
-/* Global Reset */
-
+/* Global */
+    
     * { margin: 0px; padding: 0px; outline: none; }
     h1, h2, h3, h4, h5, h6, p, li, label, input, textarea, dt, dd, th, td, .type_button, #addchild, #removechild { font-family: "Calibri", "Helvetica", sans-serif; }
-    p { font-size: 13px; }
-
-/* Classes */
+    p, li { font-size: 13px; }
 
     .clear { clear: both; }
     .hidden { display: none; }
 
-    /* CSS3 */
+/* CSS3 */
+
     .shadow { -webkit-box-shadow: 2px 2px 4px 0px #000000; -moz-box-shadow: 2px 2px 4px 0px #000000; box-shadow: 2px 2px 4px 0px #000000; }
     .shadow-light { -webkit-box-shadow: 0px 0px 1px 0px #000000; -moz-box-shadow: 0px 0px 1px 0px #000000; box-shadow: 0px 0px 2px -1px #000000; }
     .shadow-text { text-shadow: 2px 2px 4px #000; }
+
+/* Colors */
+
     .orange { color: #EF8045; }
     .gray { color: #6E6F71; }
 
-/* IDs */
+/* Desktop */
 
-body { background: #E0E0E0 url(../../lib/images/bg-body.jpg) top center no-repeat; }
-body.backend { background: #4C585E; }
+    body { background: #E0E0E0 url(../../lib/images/bg-body.jpg) top center no-repeat; padding-bottom: 64px; }
+    body.backend { background: #4C585E; }
 
     #container { width: 960px; margin: 0px auto 32px auto; position: relative; }
-        #navigation { padding: 0px 0px 0px 8px; position: absolute; top: 0px; right: 0px; list-style: none; background: #fff; }
-        #navigation li { margin: 0px 8px 0px 0px; display: inline; font-size: 10px; }
-        #navigation li a { color: #333; }
 
-#navigatie {	width:512px; height:28px; background:#fff; float:right; border:1px solid #C6C7C8; }
+        #header { height: 64px; position: relative; }
+            #logo { margin: 11px 0px 0px 0px; }
+            #navigation { width: 700px; height: 32px; float: right; list-style: none; }
+            #navigation li { }
+            #navigation li a { height: 32px; line-height: 32px; float: right; padding: 0px 8px 0px 8px; color: #333; background: #fff; }
+            #navigation li.current a { background: #EF8045; }
 
         #page-title { padding: 64px 0px 4px 0px; margin: 0px; color: #fff; text-align: center; font-weight: normal; font-size: 24px; }
-
-        #index { }
         
         #login, #logout, #subscribe-intro, #subscribe, #subscribe-success, #unsubscribe #change_email{ width: 336px; margin: 0px auto 0px auto; padding: 28px 32px 24px 32px; background: #eaeaea; position: relative; }
 
@@ -76,6 +78,19 @@ body.backend { background: #4C585E; }
         #article form input#articleTitle { background: #fff url(../../lib/images/icon-clipboard.png) no-repeat; }
         #article form #picture {}
         #article form #submit {width: auto; height: 32px; padding: 0px 8px 0px 32px; background: #d36e25 no-repeat; position: absolute; bottom: -24px; right: 32px; text-align: left; color: #fff; font-weight: bold; cursor: pointer;}
+
+    #footer { margin: 64px 0px 0px 0px; }
+    #footer p { text-align: left; color: #fff; }
+
+    #temporary-footer { width: 100%; height: 48px; padding: 8px 0px 8px 0px; background: #4C585E; border-top: 1px solid #fff; position: fixed; bottom: 0px; left: 0px; line-height: 24px; }
+    #temporary-footer p { width: 960px; margin: 0px auto 0px auto; font-size: 12px; color: #999; }
+	#temporary-footer p .livegaan { float: right; }
+    #temporary-navigation { width: 960px; margin: 0px auto 0px auto; }
+    #temporary-navigation li { margin: 0px 2px 0px 0px; font-size: 12px; display: inline; color: #999; }
+    #temporary-navigation li a { color: #333; color: #999; }
+
+
+
 
 
 
