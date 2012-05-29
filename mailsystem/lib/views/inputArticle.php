@@ -21,7 +21,9 @@
             
             <input id="picture" type="file" name="picture" value="" ></input>
             <input id="submit" class="shadow" type="submit" value="Versturen" name="submit"/>
-        
+        <!-- TODO User toevoegen 
+            <input id="user" value="user" type="hidden"></input>
+        -->
         </form>
         
     </div>

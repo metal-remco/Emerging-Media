@@ -35,14 +35,15 @@
                         	<h1><?php echo $article->title;?></h1>
                         </div><!--head-->
                         	
-                        <p><?php echo $article->article;?>
-                        </p>
+                        <a class="articleContent" data-content="<?php echo$article->article;?>" data-orignal-title="<?php echo $article->title;?>"><?php echo $article->article;?></a>
+                        
                         <?php
                         if(!empty($article->picture))
                         {
-                            ?><img class="articlePicture" src="<?php echo $article->picture;?>" alt="plaatje"></img><?php
+                            ?><img class="articlePicture" class="btn btn-success" src="<?php echo $article->picture;?>" alt="plaatje"></img><?php
                         }
                         ?>
+                            <!--<a id="example" href="#" rel="tooltip" data-content="It's so simple to create a tooltop for my website!" data-original-title="Twitter Bootstrap Popover title="first tooltip">hover over me</a>-->
                         <div id="footnote">
                         	<p><span class="orange">Auteur:</span> Henk van Dongen	<span class="orange">Geschreven:</span> 15-05-2012</p>
                             

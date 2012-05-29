@@ -44,6 +44,8 @@
     
 	<!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" media="screen" href="lib/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="lib/stylesheets/tooltip_popover.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css"/>
 
     <!-- Todo: Favicons 
     <link href="lib/images/favicon.ico" type="image/x-icon" rel="shortcut icon"  />
@@ -108,6 +110,10 @@
 	<script type="text/javascript" src="lib/javascripts/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="lib/javascripts/jquery.validate-1.9.0.min.js"></script>
 	<script type="text/javascript" src="lib/javascripts/script.js"></script>
+        
+<script type="text/javascript" src="lib/javascripts/tooltip.js"></script>
+<script type="text/javascript" src="lib/javascripts/popover.js"></script>
+<script type="text/javascript" src="lib/javascripts/popoverscript.js"></script>
 
 </body>
 </html>
