@@ -119,8 +119,8 @@ class mailsystem
 	}
         
         //artikel insturen
-        public function sendArticle($title, $article){
-            $query = 'INSERT INTO mail_article (title, article) VALUES ("'. $title . '","' .addslashes($article). '")';;
+        public function sendArticle($title, $article, $picture){
+            $query = 'INSERT INTO mail_article (title, article, picture) VALUES ("'. $title . '","' .addslashes($article). '", "'.$picture.'")';
             $this->db->query($query);
         }
         

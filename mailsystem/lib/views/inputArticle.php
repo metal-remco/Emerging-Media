@@ -19,7 +19,7 @@
                 
             </script>
             
-            <!--<input id="picture" type="file" name="picture" value="" ></input>-->
+            <input id="picture" type="file" name="picture" value="" ></input>
             <input id="submit" class="shadow" type="submit" value="Versturen" name="submit"/>
         
         </form>

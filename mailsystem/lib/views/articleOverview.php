@@ -37,7 +37,12 @@
                         	
                         <p><?php echo $article->article;?>
                         </p>
-                        
+                        <?php
+                        if(!empty($article->picture))
+                        {
+                            ?><img class="articlePicture" src="<?php echo $article->picture;?>" alt="plaatje"></img><?php
+                        }
+                        ?>
                         <div id="footnote">
                         	<p><span class="orange">Auteur:</span> Henk van Dongen	<span class="orange">Geschreven:</span> 15-05-2012</p>
                             

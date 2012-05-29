@@ -114,6 +114,7 @@
 #container-backend #states #artikel blockquote p{font-style: italic;padding-left:20px; }
 #container-backend #states #artikel blockquote p:before {content: '"'; }
 #container-backend #states #artikel blockquote p:after {content: ' "'; }
+#container-backend #states #artikel .articlePicture{width: 75%;margin:8 8 8 12.5%;}
 #container-backend #states #artikel #footnote p{font-family:Calibri; font-weight:normal; color:#707173; font-size:12px; width:400px; float:left; margin:0 0 0 10px; }
 #container-backend #states #artikel #footnote{height:22px; width:574px; font-size:12px; color:707173; /*padding:3px 10px 0 10px;*/}
 #container-backend #states #artikel #footnote .orange{color:#EE8144;}
