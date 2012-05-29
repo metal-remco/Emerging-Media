@@ -23,8 +23,8 @@
 
 		case 'articleOverview';     $view = 'lib/views/articleOverview.php';        $backend = true; break;
 
-		case 'inputArticle';        $view = 'lib/views/inputArticle.php';           $backend = true; break;
-		case 'inputArticle-succes'; $view = 'lib/views/inputArticle-succes.php';    $backend = true; break;
+		case 'inputArticle';        $view = 'lib/views/inputArticle.php';           break;
+		case 'inputArticle-succes'; $view = 'lib/views/inputArticle-succes.php';    break;
 		default: 					$view = 'lib/views/dashboard.php'; 				$backend = true; 
 			
 	}
@@ -55,26 +55,54 @@
 <body<?php if($backend):?> class="backend"<?php endif; ?>>
 
 <div id="container">
-
-	<?php if( $mailsystem->areThereAnyUsersLoggedIn() ): ?>
-                
-        <img src="lib/images/logo.png" alt="EMMAIL" class="logo"/>
-                
-        <ul id="navigation">
-        
-            <li><a href="index.php?view=dashboard">Dashboard</a></li>  
-            <li><a href="index.php?view=subscribe-intro">Abonneren</a></li>  
-            <li><a href="index.php?view=inputArticle">Toevoegen</a></li>  
-            <li><a href="index.php?view=articleOverview">Artikelen</a></li>  
-            <li><a href="index.php?view=logout">Uitloggen</a></li>
+    
+    <div id="header">
             
-        </ul>
+        <a href="index.php?view=dashboard"><img id="logo" src="lib/images/logo.png" width="164" height="45" alt="Emmail" /></a>
+	
+		<?php if( $backend ): ?>
+        
+            <ul id="navigation">
+            
+                <li<?php if($getview == 'articleOverview'): ?> class="current"<?php endif; ?>><a href="index.php?view=articleOverview">Artikelen</a></li>  
+                <li<?php if($getview == 'logout'): ?> class="current"<?php endif; ?>><a href="index.php?view=logout">Uitloggen</a></li>
+                
+            </ul><!-- navigation -->
+            
+        <?php endif; ?>
 
-	<?php endif; ?>
+    </div><!-- header -->
 
     <?php include($view); ?>
     
+	<?php if( $backend ): ?>
+    
+        <div id="footer">
+        
+            <p>&copy; 2012 Emmaus Basisschool | Ontwikkeld door <a href="http://project.cmi.hr.nl/2011_2012/emedia_med2d_t5/" target="_blank" title="Bekijk het blog van de zware jongens">de zware jongens</a></p>
+        
+        </div><!-- footer -->
+    
+    <?php endif; ?>
+        
 </div><!-- container -->
+
+<div id="temporary-footer">
+
+	<!-- Verwijderen bij livegaan -->
+
+    <p>Informatie: Inloggen kan met gebruikersnaam <strong>admin</strong> en wachtwoord <strong>1234</strong><i class="livegaan">Deze balk zal bij het livegaan worden verwijderd</i></p>
+
+    <ul id="temporary-navigation">
+    
+        <li>Navigatie: </li>
+        <li><a href="index.php?view=dashboard">Dashboard</a></li>  
+        <li><a href="index.php?view=subscribe-intro">Abonneren</a></li>  
+        <li><a href="index.php?view=inputArticle">Artikel toevoegen</a></li>  
+        
+    </ul><!-- temporary-navigation -->
+
+</div><!-- temporary-footer -->
 
 	<!-- Javascipts -->
 	<script type="text/javascript" src="lib/javascripts/jquery-1.7.2.min.js"></script>

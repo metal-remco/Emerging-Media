@@ -12,7 +12,7 @@
         if( !$mailsystem->login($username, $password) ): ?>
         
             <form id="form_login" action="index.php?view=login" method="post" />
-        
+                                
                 <input placeholder="Gebruikersnaam" type="text" class="required " id="username" name="username" value="<?php echo $_POST['username']; ?>" /><br />
                 <input placeholder="Wachtwoord" type="password" class="required" id="password" name="password" value="<?php echo $_POST['password']; ?>" /><br />
                 <input id ="submit" class="shadow" type="submit" name="login" value="Login" />
