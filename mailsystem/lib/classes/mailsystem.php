@@ -13,13 +13,13 @@ class mailsystem
 	public function __construct() {
 
 		// Schoolserver
-		//$this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
+		// $this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
         
 		// Randy Localhost
-		//$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
+		$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
          
 		// Remco Localhost
-		$this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
+		// $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
 
 		session_start();
 
@@ -83,7 +83,7 @@ class mailsystem
 
 		if ($user_function == "editor"):
 			
-			$_SESSION["login"] = "editor";
+			$_SESSION["login"] = $username;
 			return true;
 						
 		else:
@@ -106,7 +106,7 @@ class mailsystem
 		
 		// Todo: Editor misschien betere weghalen, als er toch geen verschillende typen zijn
 		
-		if($_SESSION["login"] == "editor"):
+		if($_SESSION["login"]):
 		
 			return true;
 		
@@ -129,6 +129,12 @@ class mailsystem
             $result = $this->db->query($query, true);
             return $result;
         }
+		
+		
+		public function getCurrentUsersName() {
+            return 'admin'; // Todo: echte data ophalen
+		}
+		
 
 }
 
