@@ -33,6 +33,7 @@
                             	<?php echo $article->article;?>
                             	
                         	</div>
+                            <img class="article-picture" src="<?php echo $article->picture;?>"></img>
                                                         
                             <p class="article-footer">
                             

@@ -111,7 +111,7 @@
                 h2 { margin: 0px 0px 8px 0px; }
                 h3 { margin: 0px 0px 0px 0px; color: #6E6F71; font-size: 16px; }
                 p { margin: 0px 0px 16px 0px; }
-                ul { margin: 0px 0px 0px 20px; }
+                ul, ol { margin: 0px 0px 0px 20px; }
 
                 form { margin: 0px 0px 20px 0px; }
                 input { width: 560px; height: 16px; margin: 0px 0px 8px 0px; padding: 4px; }
@@ -136,14 +136,19 @@
             	#articles { margin: 0px 0px 20px 0px; }
             	#articles .article { margin: 0px 0px 10px 0px; border: 1px solid #999; }
             	#articles .article .article-title { width: 566px; height: 32px; line-height: 32px; padding: 0px 0px 0px 8px; font-size: 16px; font-weight: normal; background: #4A575D; color: #DDE0E1; float: left; }
-            	#articles .article .article-content { height: 60px; line-height: 20px; padding: 0px 10px 0px 10px; overflow: hidden; }
-                #articles .article .article-content p { font-family: Calibri; font-weight: normal; color: #707173; font-size: 12px; width: 560px; margin: 8px; white-space: nowrap; width: 250px; overflow: hidden; -o-text-overflow: ellipsis; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
+            	#articles .article .article-content { line-height: 20px; padding: 0px 10px 0px 10px;}
+                #articles .article .article-content p { font-family: Calibri; font-weight: normal; color: #707173; font-size: 12px; width: 560px; margin: 8px;}
                 #articles .article .article-content li {font-family: Calibri; font-weight: normal; color: #707173; font-size: 12px; width: 560px; margin:8 8 8 40;}
                 #articles .article .article-content blockquote p { font-style: italic; padding-left:20px; }
                 #articles .article .article-content blockquote p:before {content: '"'; }
                 #articles .article .article-content blockquote p:after {content: ' "'; }
                 #articles .article .article-content .articlePicture { width: 75%; margin: 8 8 8 12.5%;}
             	#articles .article .article-footer { padding: 0px 10px 0px 10px; }
+                #articles .article .article-picture{margin-left:35px; width: 500px;}
+                
+                /*Article Backend */
+                #content #picture{height: 25px;}
+                #content #submit{height:28px; margin-bottom:5px;}
 
             	.icon.article-view { background: url(../../lib/images/icons/eye-16.png) no-repeat; }
             	.icon.article-view:hover { background: url(../../lib/images/icons/eye-16-orange.png) no-repeat; }

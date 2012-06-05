@@ -72,7 +72,7 @@
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Drag, Drop &amp; Mail</title>
+    <title>Emmail</title>
     
 	<!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" media="screen" href="lib/stylesheets/style.css" />
