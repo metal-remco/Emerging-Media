@@ -132,6 +132,15 @@
             	#newsletters .newsletter .newsletter-right { float: left; }
             	#newsletters .newsletter .newsletter-right .newsletter-title { width: 423px; height: 32px; line-height: 32px; padding: 0px 0px 0px 8px; font-size: 16px; font-weight: normal; background: #4A575D; color: #DDE0E1; float: left; }
 
+                #steps { width: 230px; margin: 0px 0px 20px 0px; padding: 10px; border: 1px solid #999; background: #fff;  }
+                #steps .step { height: 32px; line-height: 24px;margin: 0px 0px 4px 0px; padding: 0px 0px 0px 0px; text-align: center; background: url(../../lib/images/arrow-down.png) center bottom no-repeat; }
+                #steps .step.done p { background: url(../../lib/images/check.png) right center no-repeat; color: #999; }
+                #steps .step.last { background: none; padding: 0px; }
+                #steps .step.current p { text-decoration: underline; color: #EF8045; }
+
+
+
+
             	/* Articles */
             	#articles { margin: 0px 0px 20px 0px; }
             	#articles .article { margin: 0px 0px 10px 0px; border: 1px solid #999; }

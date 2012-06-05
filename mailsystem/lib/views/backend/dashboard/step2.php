@@ -11,6 +11,17 @@
         
         	<div id="sidebar">
             
+        		<div id="steps">
+        		
+        			<div class="step done"><p>Nieuwsbrief toevoegen</p></div>
+        			<div class="step current"><p>Template kiezen</p></div>
+        			<div class="step"><p>Artikelen selecteren</p></div>
+        			<div class="step"><p>Artikelen plaatsen (Drag &amp; Drop)</p></div>
+        			<div class="step"><p>Maillijst selecteren</p></div>
+        			<div class="step last"><p>Preview</p></div>
+
+        		</div><!-- steps -->
+            
 	    		<a class="button shadow-text" href="index.php?view=step3" title="Stap 3">Stap 3</a>
 
             </div><!-- sidebar -->
