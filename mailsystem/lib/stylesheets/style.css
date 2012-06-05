@@ -88,15 +88,15 @@
         #breadcrumbs p a { color: #fff; }
 
         #dashboard-header { height: 210px; margin: 0px 0px 20px 0px; }
-        #dashboard-header .dashboard-button { width: 214px; height: 45px; line-height: 45px; margin: 0px 12px 0px 0px; padding: 165px 0px 0px 0px; border: 1px solid #999; float: left; text-align: center; text-decoration: none; }
+        #dashboard-header .dashboard-button { width: 214px; height: 45px; line-height: 45px; margin: 0px 12px 0px 0px; padding: 165px 0px 0px 0px; border: 1px solid #999; float: left; text-align: center; text-decoration: none; color: #fff; }
         #dashboard-header .button-newsletter { background: url(../../lib/images/buttons/newsletter.png) no-repeat; }
-        #dashboard-header .button-newsletter:hover { background: url(../../lib/images/buttons/newsletter-hover.png) no-repeat; color: #fff; }
+        #dashboard-header .button-newsletter:hover { background: url(../../lib/images/buttons/newsletter-hover.png) no-repeat; }
         #dashboard-header .button-articles { background: url(../../lib/images/buttons/articles.png) no-repeat; }
-        #dashboard-header .button-articles:hover { background: url(../../lib/images/buttons/articles-hover.png) no-repeat;  color: #fff;}
+        #dashboard-header .button-articles:hover { background: url(../../lib/images/buttons/articles-hover.png) no-repeat; }
         #dashboard-header .button-templates { background: url(../../lib/images/buttons/templates.png) no-repeat; }
-        #dashboard-header .button-templates:hover { background: url(../../lib/images/buttons/templates-hover.png) no-repeat; color: #fff; }
+        #dashboard-header .button-templates:hover { background: url(../../lib/images/buttons/templates-hover.png) no-repeat; }
         #dashboard-header .button-mailinglists { background: url(../../lib/images/buttons/mailinglists.png) no-repeat; margin: 0px; }
-        #dashboard-header .button-mailinglists:hover { background: url(../../lib/images/buttons/mailinglists-hover.png) no-repeat; color: #fff; }
+        #dashboard-header .button-mailinglists:hover { background: url(../../lib/images/buttons/mailinglists-hover.png) no-repeat; }
 
         #stage { padding: 30px; }
 
