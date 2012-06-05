@@ -101,15 +101,15 @@
         #stage { padding: 30px; }
 
             #sidebar { width: 252px; margin: 0px 30px 0px 0px; float: left; }
-    
-                .button { width: 252px; height: 52px; line-height: 52px; margin: 0px 0px 16px 0px; background: url(../../lib/images/buttons/sidebar-button.png) no-repeat; color: #fff; text-align: center; text-decoration: none; float: left; }
+            #dashboard #sidebar { width: 230px; padding: 10px; border: 1px solid #999; background: #fff; }
 
             #content { width: 576px; padding: 20px 20px 0px 20px; border: 1px solid #999; background: #fff; float: left; }
 
                 a { color: #EB7F44; }
 
-                h1 { margin: 0px 0px 16px 0px; }
+                h1 { margin: 0px 0px 16px 0px; color: #6E6F71; font-size: 20px; }
                 h2 { margin: 0px 0px 8px 0px; }
+                h3 { margin: 0px 0px 0px 0px; color: #6E6F71; font-size: 16px; }
                 p { margin: 0px 0px 16px 0px; }
                 ul { margin: 0px 0px 0px 20px; }
 
@@ -118,17 +118,33 @@
                 #submit { width: 84px; height: 24px; margin: 0px 0px 0px 0px; float: right; }
 
                 .icon { width: 16px; height: 16px; margin: 0px 0px 0px 4px; display: block; float: right; }
+                .button { width: 252px; height: 52px; line-height: 52px; margin: 0px 0px 16px 0px; background: url(../../lib/images/buttons/sidebar-button.png) no-repeat; color: #fff; text-align: center; text-decoration: none; float: left; }
 
                 /* Dashboard */
-                /* - */
+                #dashboard-articles { }
+                #dashboard-articles .dashboard-article { padding: 4px; border-bottom: 1px solid #999; }
+
+            	#newsletters { margin: 0px 0px 20px 0px; }
+            	#newsletters .newsletter { height: 142px; border: 1px solid #999; margin: 0px 0px 16px 0px; }
+            	#newsletters .newsletter .newsletter-left { width: 142px; height: 142px; border-right: 1px solid #999; background: #ddd url(../../lib/images/icons/eye-50.png) center center no-repeat; float: left; }
+            	#newsletters .newsletter .newsletter-left p { text-align: center; line-height: 31px; margin: 0px; color: #4A575D; }
+            	#newsletters .newsletter .newsletter-left p.count { padding: 70px 0px 0px 0px; text-align: center; line-height: 20px; font-size: 30px; font-weight: bold; }
+            	#newsletters .newsletter .newsletter-right { float: left; }
+            	#newsletters .newsletter .newsletter-right .newsletter-title { width: 423px; height: 32px; line-height: 32px; padding: 0px 0px 0px 8px; font-size: 16px; font-weight: normal; background: #4A575D; color: #DDE0E1; float: left; }
 
             	/* Articles */
             	#articles { margin: 0px 0px 20px 0px; }
             	#articles .article { margin: 0px 0px 10px 0px; border: 1px solid #999; }
             	#articles .article .article-title { width: 566px; height: 32px; line-height: 32px; padding: 0px 0px 0px 8px; font-size: 16px; font-weight: normal; background: #4A575D; color: #DDE0E1; float: left; }
-            	#articles .article .article-text { height: 60px; line-height: 20px; padding: 10px 10px 0px 10px; overflow: hidden; }
+            	#articles .article .article-content { height: 60px; line-height: 20px; padding: 0px 10px 0px 10px; overflow: hidden; }
+                #articles .article .article-content p { font-family: Calibri; font-weight: normal; color: #707173; font-size: 12px; width: 560px; margin: 8px; white-space: nowrap; width: 250px; overflow: hidden; -o-text-overflow: ellipsis; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
+                #articles .article .article-content li {font-family: Calibri; font-weight: normal; color: #707173; font-size: 12px; width: 560px; margin:8 8 8 40;}
+                #articles .article .article-content blockquote p { font-style: italic; padding-left:20px; }
+                #articles .article .article-content blockquote p:before {content: '"'; }
+                #articles .article .article-content blockquote p:after {content: ' "'; }
+                #articles .article .article-content .articlePicture { width: 75%; margin: 8 8 8 12.5%;}
             	#articles .article .article-footer { padding: 0px 10px 0px 10px; }
-            	
+
             	.icon.article-view { background: url(../../lib/images/icons/eye-16.png) no-repeat; }
             	.icon.article-view:hover { background: url(../../lib/images/icons/eye-16-orange.png) no-repeat; }
             	.icon.article-delete { background: url(../../lib/images/icons/trashcan-16.png) no-repeat; }

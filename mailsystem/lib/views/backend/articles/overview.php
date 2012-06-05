@@ -28,7 +28,11 @@
                         
                             <h2 class="article-title"><?php echo $article->title;?></h2>
                                 
-                            <p class="article-text"><?php echo $article->article;?></p>
+                            <div class="article-content">
+                            
+                            	<?php echo $article->article;?>
+                            	
+                        	</div>
                                                         
                             <p class="article-footer">
                             

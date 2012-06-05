@@ -11,7 +11,7 @@
         
         	<div id="sidebar">
             
-	    		<p>Sidebar</p>
+	    		<a class="button shadow-text" href="index.php?view=step6" title="Stap 6">Stap 6</a>
 
             </div><!-- sidebar -->
             

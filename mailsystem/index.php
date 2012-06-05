@@ -54,6 +54,18 @@
 		default: 												$view='lib/views/backend/dashboard/dashboard.php'; 		 				$backend = true; 
 			
 	}
+	
+	if($backend):
+	
+		$loggedin = $mailsystem->areThereAnyUsersLoggedIn();
+	
+		if ($loggedin == false):
+		
+			header('Location: index.php?view=login');
+		
+		endif;
+	
+	endif;
 		
 ?><!DOCTYPE html>
 <html>
