@@ -16,10 +16,10 @@ class mailsystem
 		// $this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
         
 		// Randy Localhost
-		$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
+		//$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
          
 		// Remco Localhost
-		// $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
+		 $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
 
 		session_start();
 
@@ -120,7 +120,7 @@ class mailsystem
 		
 	}
         
-	// Methodes: Insturen
+	// Methodes: Articles
     public function sendArticle($title, $article, $picture){
         $query = 'INSERT INTO mail_article (title, article, picture) VALUES ("'. $title . '","' .addslashes($article). '", "'.$picture.'")';
         $this->db->query($query);
@@ -144,6 +144,11 @@ class mailsystem
             return $result;
         }
 	
+        public function deleteArticle($id)
+        {
+            $query = "DELETE  FROM mail_article WHERE id='".$id."'";
+            $this->db->query($query);
+        }
 	
 	
 	// Methodes: Maillists

@@ -41,7 +41,7 @@
                             	                            
                                 <a class="icon article-comment" title="Reageren" href="index.php?view=articles-view&id=<?php echo $article->id;?>" /></a>
                                 <a class="icon article-edit" title="Bewerken" href="index.php?view=articles-edit&id=<?php echo $article->id;?>" /></a>
-                                <a class="icon article-delete" title="Verwijderen" href="index.php?view=articles-delete&id=<?php echo $article->id;?>" /></a>
+                                <a class="icon article-delete" title="Verwijderen" href="index.php?view=articles-delete&id=<?php echo $article->id;?>" onclick="return confirm('Weet je zeker dat je dit bericht wilt verwijderen?');" /></a>
                                 <a class="icon article-view" title="Bekijken" href="index.php?view=articles-view&id=<?php echo $article->id;?>" /></a>
 
                             </p><!-- article-footer -->

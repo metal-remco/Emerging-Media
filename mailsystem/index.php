@@ -36,7 +36,7 @@
 		case 'articles-add'; 									$view='lib/views/backend/articles/add.php'; 			 				$backend = true; break;
 		case 'articles-edit'; 									$view='lib/views/backend/articles/edit.php'; 			 				$backend = true; break;
 		case 'articles-delete'; 								$view='lib/views/backend/articles/delete.php'; 			 				$backend = true; break;
-                                    case 'edit-succes';                                                                                                                                      $view='lib/views/backend/articles/edit-succes.php';                                                                                                     $backen = true; break;
+                                    case 'article-edit-success';                                                                                                                                      $view='lib/views/backend/articles/edit-succes.php';                                                                                                     $backen = true; break;
 				
 		// Backend - Templates
 		case 'templates'; 										$view='lib/views/backend/templates/overview.php'; 		 				$backend = true; break;
@@ -177,13 +177,14 @@
 	
 	<script type="text/javascript" src="lib/javascripts/script.js"></script>
 	<script type="text/javascript" src="lib/javascripts/mailinglist-subscribers.js"></script>
+        
           <!-- Javascript files editor en filesubmit button voor articles-add, inputArticle, articles-edit -->
         <?php 
-            if($getview == "articles-add" || $getview = "inputArticle" || $getview == "articles-edit"):
+            if($getview == "articles-add" || $getview == "inputArticle" || $getview == "articles-edit"):
                  ?><script type="text/javascript" src="lib/ckeditor/ckeditor.js"></script><?php
                 if($getview == "articles-add"):
                     $fileSubmitPicture = "lib/images/buttons/afbeelding_toe_backend.png";
-                elseif ($getview = "inputArticle"):
+                elseif ($getview == "inputArticle"):
                         $fileSubmitPicture = "lib/images/buttons/voeg_afbeelding_toe.png";
                 endif;
          ?>

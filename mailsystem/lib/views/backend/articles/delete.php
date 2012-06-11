@@ -1,4 +1,7 @@
-
+<?php
+$id = $_GET['id'];
+ $mailsystem->deleteArticle($id);
+?>
     <div id="articles-delete" class="shadow">
     
     	<div id="breadcrumbs">
@@ -19,7 +22,7 @@
                             
                 <h1>Artikel verwijderen</h1>
                 
-                <p>Het is nog niet mogelijk om een artikel te verwijderen.</p>
+                <p>Het artikel is succesvol verwijderd.</p>
 
             </div><!-- content -->
             

@@ -22,7 +22,7 @@
 
             <h1>Artikel bewerken</h1>
             <?php foreach ($articles as $article):?>
-            <form enctype="multipart/form-data" id="form_article" action="index.php?view=edit-succes" method="post"/>
+            <form enctype="multipart/form-data" id="form_article" action="index.php?view=article-edit-success" method="post"/>
             <input id="articleTitle" class="required" value="" name="articleTitle" placeholder="<?php if($article->title) echo $article->title;else echo "Titel van artikel" ?>" type="text"></input>
             <textarea id="editor1" name="editor1">
                 <?php echo $article->article;?>
@@ -38,7 +38,8 @@
                 };
                 
             </script>
-            <!--<img class="article-picture" src="<?php echo $article->picture;?>" alt="Afbeelding"/>-->
+            <p>Huidige afbeelding:</p>
+            <img class="article-picture" src="<?php echo $article->picture;?>" alt="Afbeelding"/>
             <input id="picture" type="file" name="picture" value="" />
             <input type="hidden" name="oldPicture" value="<?php echo $article->picture;?>"/>
             <input class="button shadow-text" id="submit" type="submit" value="Versturen" name="submit"/>
