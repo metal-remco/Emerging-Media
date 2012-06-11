@@ -187,6 +187,12 @@
                 #subscribers th.desc { background: #5A696E url(../../lib/plugins/table-sorter/images/desc.gif) 8px center no-repeat; }
                 #subscribers th.asc  { background: #5A696E url(../../lib/plugins/table-sorter/images/asc.gif) 8px center no-repeat; }
 
+                #mailinglist-subscribers { margin: 0px 0px 20px 0px; padding: 10px 5px 10px 10px; border: 1px dotted #999; }
+                #mailinglist-subscribers .subscriber { height: 32px; margin: 0px 5px 5px 0px; padding: 5px; border: 1px dotted #000; float: left; cursor: pointer; }
+                #mailinglist-subscribers .subscriber.inmailinglist { background: #EF8045; color: #fff; border: 1px solid #fff;}
+                #mailinglist-subscribers .subscriber .name { height: 16px; line-height: 16px; margin: 0px; }
+                #mailinglist-subscribers .subscriber .mail { height: 16px; line-height: 16px; margin: 0px; font-size: 10px; }
+
             	.icon.subscriber-edit { background: url(../../lib/images/icons/pen-16.png) no-repeat; }
             	.icon.subscriber-edit:hover { background: url(../../lib/images/icons/pen-16-orange.png) no-repeat; }
             	.icon.subscriber-delete { background: url(../../lib/images/icons/trashcan-16.png) no-repeat; }

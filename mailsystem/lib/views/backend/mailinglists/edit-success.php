@@ -3,7 +3,7 @@
     
     	<div id="breadcrumbs">
         
-        	<p><a href="index.php?view=dashboard" title="Dashboard">Dashboard</a> &gt; <a href="index.php?view=mailinglists" title="Maillijsten">Maillijsten</a> &gt; Maillijst toevoegen</p>
+        	<p><a href="index.php?view=dashboard" title="Dashboard">Dashboard</a> &gt; <a href="index.php?view=mailinglists" title="Maillijsten">Maillijsten</a> &gt; Maillijst bijwerken</p>
             
         </div><!-- breadcrumbs -->
         
@@ -17,18 +17,13 @@
             
             <div id="content">
                             
-                <h1>Maillijst toevoegen</h1>
+                <h1>Maillijst succesvol bijgewerkt</h1>
                 
-                <form method="post" action="index.php?view=mailinglists-add-success">
-		        
-		            <input type="text" value="" name="name" id="name" class="required" placeholder="Naam"><br>
+                <?php $subscribers_string = $_POST['mailinglist-subscribers-input']; ?>
+                <?php $subscribers = explode(",", $subscribers_string); ?>
+                
+				<?php $mailsystem->editMailinglist( $_POST['id'], $_POST['name'], $subscribers ); ?>
 
-		            <input type="submit" value="Toevoegen" name="addMailinglist" id="submit">
-		            
-		            <div class="clear"></div>
-		            
-		        </form>
-                                
             </div><!-- content -->
             
             <div class="clear"></div>

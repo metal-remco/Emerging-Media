@@ -22,23 +22,27 @@
 		min: jQuery.format("<span class='form-error-left'></span><span class='form-error-center'>U dient een waarde groter dan of gelijk aan {0} in te voeren.</span><span class='form-error-right'></span>"),
 		creditcard: "<span class='form-error-left'></span><span class='form-error-center'>Een geldig creditcardnummer is verplicht.</span><span class='form-error-right'></span>"
 	});
-
-	// Maak de subscribers tabel sorteerbaar
-	var sorter = new TINY.table.sorter("sorter");
 	
-	sorter.head = "head";
-	sorter.asc = "asc";
-	sorter.desc = "desc";
-	//sorter.even = "evenrow";
-	//sorter.odd = "oddrow";
-	//sorter.evensel = "evenselected";
-	//sorter.oddsel = "oddselected";
-	//sorter.paginate = true;
-	//sorter.currentid = "currentpage";
-	//sorter.limitid = "pagelimit";
-	
-	sorter.init("subscribers",1);
+	if( $("#subscribers").hasClass('sorter') ) {
 
+		// Maak de subscribers tabel sorteerbaar
+		var sorter = new TINY.table.sorter("sorter");
+		
+		sorter.head = "head";
+		sorter.asc = "asc";
+		sorter.desc = "desc";
+		//sorter.even = "evenrow";
+		//sorter.odd = "oddrow";
+		//sorter.evensel = "evenselected";
+		//sorter.oddsel = "oddselected";
+		//sorter.paginate = true;
+		//sorter.currentid = "currentpage";
+		//sorter.limitid = "pagelimit";
+		
+		sorter.init("subscribers",1);
+		
+	}
+	
 $(document).ready(function(){
 		
 	$("#form_subscribe").validate();
@@ -68,6 +72,5 @@ $(document).ready(function(){
 	
 	});
 	
-
 });
 

@@ -17,18 +17,10 @@
             
             <div id="content">
                             
-                <h1>Maillijst toevoegen</h1>
+                <h1>Maillijst succesvol toegevoegd</h1>
                 
-                <form method="post" action="index.php?view=mailinglists-add-success">
-		        
-		            <input type="text" value="" name="name" id="name" class="required" placeholder="Naam"><br>
+				<?php $mailsystem->addMaillijst($_POST['name']); ?>
 
-		            <input type="submit" value="Toevoegen" name="addMailinglist" id="submit">
-		            
-		            <div class="clear"></div>
-		            
-		        </form>
-                                
             </div><!-- content -->
             
             <div class="clear"></div>

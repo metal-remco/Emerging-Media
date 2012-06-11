@@ -23,12 +23,14 @@
 		case 'mailinglists'; 									$view='lib/views/backend/mailinglists/overview.php'; 	 				$backend = true; break;
 		case 'mailinglists-view'; 								$view='lib/views/backend/mailinglists/view.php'; 		 				$backend = true; break;
 		case 'mailinglists-add'; 								$view='lib/views/backend/mailinglists/add.php'; 		 				$backend = true; break;
+		case 'mailinglists-add-success'; 						$view='lib/views/backend/mailinglists/add-success.php'; 		 		$backend = true; break;
 		case 'mailinglists-edit'; 								$view='lib/views/backend/mailinglists/edit.php'; 		 				$backend = true; break;
+		case 'mailinglists-edit-success'; 						$view='lib/views/backend/mailinglists/edit-success.php'; 		 		$backend = true; break;
 		case 'mailinglists-edit-email'; 						$view='lib/views/backend/mailinglists/edit-email.php'; 					$backend = true; break;
 		case 'mailinglists-edit-email-success'; 				$view='lib/views/backend/mailinglists/edit-email-success.php'; 			$backend = true; break;
 		case 'mailinglists-delete'; 							$view='lib/views/backend/mailinglists/delete.php'; 						$backend = true; break;
                 
-		// Backend - Artikelen
+   		// Backend - Artikelen
 		case 'articles'; 										$view='lib/views/backend/articles/overview.php'; 		 				$backend = true; break;
 		case 'articles-view'; 									$view='lib/views/backend/articles/view.php'; 			 				$backend = true; break;
 		case 'articles-add'; 									$view='lib/views/backend/articles/add.php'; 			 				$backend = true; break;
@@ -173,6 +175,7 @@
 	<script type="text/javascript" src="lib/plugins/table-sorter/packed.js"></script>
 	
 	<script type="text/javascript" src="lib/javascripts/script.js"></script>
+	<script type="text/javascript" src="lib/javascripts/mailinglist-subscribers.js"></script>
 
 </body>
 </html>

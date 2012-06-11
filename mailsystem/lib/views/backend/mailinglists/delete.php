@@ -17,9 +17,9 @@
             
             <div id="content">
                             
-                <h1>Maillijst verwijderen</h1>
+                <h1>Maillijst succesvol verwijderd</h1>
                 
-                <p>Het is nog niet mogelijk om een maillijst te verwijderen.</p>
+				<?php $mailsystem->deleteMailinglistByID( $_GET['id'] ); ?>
                                 
             </div><!-- content -->
             
