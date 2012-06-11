@@ -126,11 +126,23 @@ class mailsystem
         $this->db->query($query);
     }
     
-    public function getArticles (){
-        $query = "SELECT * FROM mail_article ORDER BY id ASC";
-        $result = $this->db->query($query, true);
-        return $result;
-    }
+ public function editArticle($title, $article, $picture, $id){
+            $query = 'UPDATE mail_article SET title="'.$title.'", article="'.addslashes($article).'", picture="'.$picture.'" WHERE id="'.$id.'"';
+            
+            $this->db->query($query);
+        }
+        
+        public function getArticles ($id){
+            if($id != 0)
+            {
+                $query = "SELECT * FROM mail_article WHERE id = '".$id."'";
+            }
+            else{
+                $query = "SELECT * FROM mail_article ORDER BY id ASC";
+            }
+            $result = $this->db->query($query, true);
+            return $result;
+        }
 	
 	
 	

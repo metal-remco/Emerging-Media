@@ -177,6 +177,25 @@
 	
 	<script type="text/javascript" src="lib/javascripts/script.js"></script>
 	<script type="text/javascript" src="lib/javascripts/mailinglist-subscribers.js"></script>
+          <!-- Javascript files editor en filesubmit button voor articles-add, inputArticle, articles-edit -->
+        <?php 
+            if($getview == "articles-add" || $getview = "inputArticle" || $getview == "articles-edit"):
+                 ?><script type="text/javascript" src="lib/ckeditor/ckeditor.js"></script><?php
+                if($getview == "articles-add"):
+                    $fileSubmitPicture = "lib/images/buttons/afbeelding_toe_backend.png";
+                elseif ($getview = "inputArticle"):
+                        $fileSubmitPicture = "lib/images/buttons/voeg_afbeelding_toe.png";
+                endif;
+         ?>
+                <script type="text/javascript" src="lib/javascripts/fileInputStyle.js"></script>
+                <script type="text/javascript">
+                    $("#picture").filestyle({ 
+                        image: "<?php echo $fileSubmitPicture;?>",
+                        imageheight : 28,
+                        imagewidth : 140,
+                        width : 250
+                    });
+                </script>
 
         <?php
             endif;
