@@ -90,7 +90,7 @@
 
     <div id="container">
         
-        <a href="http://www.emmaus-rotterdam.nl/" target="_blank" title="Bezoek de website van Emmaus Rotterdam"><img id="logo" src="lib/images/logo.png" width="164" height="45" alt="Emmail" /></a>
+        <a href="http://www.emmaus-rotterdam.nl/" target="_blank" title="Bezoek de website van Emmaus Rotterdam"><img id="logo" src="lib/images/logo-darker.png" width="164" height="45" alt="Emmail" /></a>
     
         <?php include($view); ?>
                     
