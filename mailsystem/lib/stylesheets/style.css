@@ -181,9 +181,17 @@
             	#mailinglists .mailinglist .mailinglist-right .mailinglist-title { width: 423px; height: 32px; line-height: 32px; padding: 0px 0px 0px 8px; font-size: 16px; font-weight: normal; background: #4A575D; color: #DDE0E1; float: left; }
 
             	#subscribers { width: 100%; margin: 0px 0px 20px 0px; line-height: 16px; font-size: 12px; text-align: left; border-collapse: collapse; border-left: 1px solid #999; border-right: 1px solid #999; }
-            	#subscribers th { padding: 4px; background: #5A696E; color: #fff; }
+            	#subscribers th { padding: 4px 4px 4px 24px; background: #5A696E; color: #fff; cursor: pointer; }
             	#subscribers td { padding: 4px; background: #fff; border-bottom: 1px solid #999; }
             	#subscribers tr:hover td { background: #eaeaea; }
+                #subscribers th.desc { background: #5A696E url(../../lib/plugins/table-sorter/images/desc.gif) 8px center no-repeat; }
+                #subscribers th.asc  { background: #5A696E url(../../lib/plugins/table-sorter/images/asc.gif) 8px center no-repeat; }
+
+                #mailinglist-subscribers { margin: 0px 0px 20px 0px; padding: 10px 5px 10px 10px; border: 1px dotted #999; }
+                #mailinglist-subscribers .subscriber { height: 32px; margin: 0px 5px 5px 0px; padding: 5px; border: 1px dotted #000; float: left; cursor: pointer; }
+                #mailinglist-subscribers .subscriber.inmailinglist { background: #EF8045; color: #fff; border: 1px solid #fff;}
+                #mailinglist-subscribers .subscriber .name { height: 16px; line-height: 16px; margin: 0px; }
+                #mailinglist-subscribers .subscriber .mail { height: 16px; line-height: 16px; margin: 0px; font-size: 10px; }
 
             	.icon.subscriber-edit { background: url(../../lib/images/icons/pen-16.png) no-repeat; }
             	.icon.subscriber-edit:hover { background: url(../../lib/images/icons/pen-16-orange.png) no-repeat; }

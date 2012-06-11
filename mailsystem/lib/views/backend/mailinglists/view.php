@@ -16,35 +16,29 @@
             </div><!-- sidebar -->
             
             <div id="content">
-                            
-                <h1>Maillijst bekijken</h1>
+            
+            	<?php $mailinglist_id 	= $_GET['id']; ?>
+				<?php $mailinglist_name = $mailsystem->getMailinglistNameByID( $mailinglist_id ); ?>
+
+                <h1>Maillijst bekijken: <?php echo $mailinglist_name; ?></h1>
                                         
-                <table id="subscribers">
+                <table id="subscribers" class="sortable">
             
                     <thead>
                         <tr>
-
                             <th scope="col">Email</th>
                             <th scope="col">Naam</th>
                             <th scope="col">Naam van kind</th>
                             <th scope="col">Klas van kind</th>
-
-                            <!--
-                            <th scope="col">ID</th>
-                            <th scope="col">Medewerker Functie</th>
-                            <th scope="col">Medewerker Klas</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Reden</th>
-                            -->
-
                         </tr>
                     </thead>
             
                     <tbody>
             
-                        <?php $subscribers = $mailsystem->getSubscribers();
-                        foreach($subscribers as $subscriber): ?>
-        
+                        <?php $subscribers = $mailsystem->getSubscribersByMailinglist( $mailinglist_id ); ?>
+                        
+                        <?php foreach($subscribers as $subscriber): ?>
+                        
                             <tr>
                                 <td><?php echo $subscriber->name; ?></td>
                                 <td><?php echo $subscriber->email; ?></td>
@@ -56,14 +50,6 @@
                                 	<a class="icon subscriber-edit" title="Email adres bewerken" href="index.php?view=mailinglists-edit-email&id=<?php echo $subscriber->id; ?>" onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name;?> wilt wijzigen?')">
 
                                 </td>
-                                
-                                <!--
-                                <td><?php echo $subscriber->id; ?></td>
-                                <td><?php echo $subscriber->employee_function; ?></td>
-                                <td><?php echo $subscriber->employee_class; ?></td>
-                                <td><?php echo $subscriber->type; ?></td>
-                                <td><?php echo $subscriber->reason; ?></td>
-                                -->
         
                             </tr>
                         

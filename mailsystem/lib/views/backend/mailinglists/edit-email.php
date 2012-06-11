@@ -21,7 +21,7 @@
                 
 		        <form action="index.php?view=mailinglists-edit-email-success&id=<?php echo $_GET['id']?>" method="post" />
 		        
-		            <input placeholder="Nieuw emailadres" type="newEmail" class="required email" id="newEmail" name="newEmail" value="" /><br />
+		            <input type="text" placeholder="Nieuw emailadres" class="required email" id="newEmail" name="newEmail" value="" /><br />
 
 		            <input id ="submit" type="submit" name="changeEmail" value="Wijzigen" />
 		            <div class="clear"></div>

@@ -16,10 +16,50 @@
             </div><!-- sidebar -->
             
             <div id="content">
-                            
+            
+            	<?php $mailinglist_id 			= $_GET['id']; ?>
+				<?php $mailinglist_name 		= $mailsystem->getMailinglistNameByID( $mailinglist_id ); ?>
+				
+                <?php $subscribers 				= $mailsystem->getSubscribers( ); ?>
+                <?php $subscribersInMailinglist = $mailsystem->getSubscribersByMailinglist( $mailinglist_id ); ?>
+
                 <h1>Maillijst bewerken</h1>
                 
-                <p>Het is nog niet mogelijk om een maillijst te bewerken.</p>
+                <form method="post" action="index.php?view=mailinglists-edit-success">
+		        
+		            <input type="text" value="<?php echo $mailinglist_name; ?>" name="name" id="name" class="required" ><br>
+
+		            <input type="hidden" value="" name="mailinglist-subscribers-input" id="mailinglist-subscribers-input" class="required" ><br>
+		            <input type="hidden" value="<?php echo $mailinglist_id; ?>" name="id" id="id" ><br>
+		            
+		            <div id="mailinglist-subscribers">
+		            
+	                    <?php foreach($subscribers as $subscriber): ?>
+	                    
+		                    <?php foreach($subscribersInMailinglist as $subscriberInMailinglist): ?>
+							
+								<?php if($subscriberInMailinglist == $subscriber): $inmailinglist = true; endif; ?>
+							
+							<?php endforeach; ?>
+	                    
+	                        <div class="subscriber<?php if($inmailinglist):?> inmailinglist<?php endif; ?>" id="subscriber-<?php echo $subscriber->id; ?>">
+	                        
+								<p class="name"><?php echo $subscriber->name; ?></p>
+								<p class="mail"><?php echo $subscriber->email; ?></p>
+																
+	                        </div><!-- subscriber -->
+	
+	                    <?php $inmailinglist = false; endforeach; ?>
+
+						<div class="clear"></div>
+
+		            </div><!-- mailinglist-subscribers -->
+
+		            <input type="submit" value="Bijwerken" name="editMailinglist" id="submit">
+		            
+		            <div class="clear"></div>
+		            
+		        </form>
                                 
             </div><!-- content -->
             

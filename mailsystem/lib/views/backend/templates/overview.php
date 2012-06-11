@@ -11,21 +11,15 @@
         
         	<div id="sidebar">
             
-	    		<a class="button shadow-text" href="index.php?view=templates-view" title="View">View</a>
-
-	    		<a class="button shadow-text" href="index.php?view=templates-add" title="Add">Add</a>
-
-	    		<a class="button shadow-text" href="index.php?view=templates-edit" title="Edit">Edit</a>
-
-	    		<a class="button shadow-text" href="index.php?view=templates-delete" title="Delete">Delete</a>
-
+	    		<a class="button shadow-text" href="index.php?view=dashboard" title="Terug">Terug</a>
+	    		
             </div><!-- sidebar -->
             
             <div id="content">
                             
                 <h1>Templates</h1>
                 
-                <p>Templates moet nog worden ontwikkeld.</p>
+                <p>Er is ondersteuning voor het volgende template:</p>
                                     
             </div><!-- content -->
             

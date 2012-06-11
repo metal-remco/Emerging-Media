@@ -23,12 +23,14 @@
 		case 'mailinglists'; 									$view='lib/views/backend/mailinglists/overview.php'; 	 				$backend = true; break;
 		case 'mailinglists-view'; 								$view='lib/views/backend/mailinglists/view.php'; 		 				$backend = true; break;
 		case 'mailinglists-add'; 								$view='lib/views/backend/mailinglists/add.php'; 		 				$backend = true; break;
+		case 'mailinglists-add-success'; 						$view='lib/views/backend/mailinglists/add-success.php'; 		 		$backend = true; break;
 		case 'mailinglists-edit'; 								$view='lib/views/backend/mailinglists/edit.php'; 		 				$backend = true; break;
+		case 'mailinglists-edit-success'; 						$view='lib/views/backend/mailinglists/edit-success.php'; 		 		$backend = true; break;
 		case 'mailinglists-edit-email'; 						$view='lib/views/backend/mailinglists/edit-email.php'; 					$backend = true; break;
 		case 'mailinglists-edit-email-success'; 				$view='lib/views/backend/mailinglists/edit-email-success.php'; 			$backend = true; break;
 		case 'mailinglists-delete'; 							$view='lib/views/backend/mailinglists/delete.php'; 						$backend = true; break;
                 
-		// Backend - Artikelen
+   		// Backend - Artikelen
 		case 'articles'; 										$view='lib/views/backend/articles/overview.php'; 		 				$backend = true; break;
 		case 'articles-view'; 									$view='lib/views/backend/articles/view.php'; 			 				$backend = true; break;
 		case 'articles-add'; 									$view='lib/views/backend/articles/add.php'; 			 				$backend = true; break;
@@ -91,7 +93,7 @@
 
     <div id="container">
         
-        <a href="http://www.emmaus-rotterdam.nl/" target="_blank" title="Bezoek de website van Emmaus Rotterdam"><img id="logo" src="lib/images/logo.png" width="164" height="45" alt="Emmail" /></a>
+        <a href="http://www.emmaus-rotterdam.nl/" target="_blank" title="Bezoek de website van Emmaus Rotterdam"><img id="logo" src="lib/images/logo-darker.png" width="164" height="45" alt="Emmail" /></a>
     
         <?php include($view); ?>
                     
@@ -167,31 +169,14 @@
         </ul><!-- temporary-navigation -->
         
     </div><!-- temporary-footer -->
-
+    
 	<!-- Javascipts -->
 	<script type="text/javascript" src="lib/javascripts/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="lib/javascripts/jquery.validate-1.9.0.min.js"></script>
+	<script type="text/javascript" src="lib/javascripts/jquery.validate-1.9.0.min.js"></script>	
+	<script type="text/javascript" src="lib/plugins/table-sorter/packed.js"></script>
+	
 	<script type="text/javascript" src="lib/javascripts/script.js"></script>
-        
-        <!-- Javascript files editor en filesubmit button voor articles-add, inputArticle, articles-edit -->
-        <?php 
-            if($getview == "articles-add" || $getview = "inputArticle" || $getview == "articles-edit"):
-                 ?><script type="text/javascript" src="lib/ckeditor/ckeditor.js"></script><?php
-                if($getview == "articles-add"):
-                    $fileSubmitPicture = "lib/images/buttons/afbeelding_toe_backend.png";
-                elseif ($getview = "inputArticle"):
-                        $fileSubmitPicture = "lib/images/buttons/voeg_afbeelding_toe.png";
-                endif;
-         ?>
-                <script type="text/javascript" src="lib/javascripts/fileInputStyle.js"></script>
-                <script type="text/javascript">
-                    $("#picture").filestyle({ 
-                        image: "<?php echo $fileSubmitPicture;?>",
-                        imageheight : 28,
-                        imagewidth : 140,
-                        width : 250
-                    });
-                </script>
+	<script type="text/javascript" src="lib/javascripts/mailinglist-subscribers.js"></script>
 
         <?php
             endif;
