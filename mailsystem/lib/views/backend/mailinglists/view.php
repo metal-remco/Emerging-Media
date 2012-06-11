@@ -19,7 +19,7 @@
                             
                 <h1>Maillijst bekijken</h1>
                                         
-                <table id="subscribers">
+                <table id="subscribers" class="sortable">
             
                     <thead>
                         <tr>
