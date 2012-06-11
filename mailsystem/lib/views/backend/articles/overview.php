@@ -21,7 +21,7 @@
                 
                 <div id="articles">
                 
-					<?php $articles = $mailsystem->getArticles();
+					<?php $articles = $mailsystem->getArticles(0);
                     foreach($articles as $article): ?>
     
                         <div class="article">
@@ -39,10 +39,10 @@
                             
                             	<span class="orange">Auteur:</span> Henk van Dongen | <span class="orange">Geschreven:</span> 15-05-2012
                             	                            
-                                <a class="icon article-comment" title="Reageren" href="index.php?view=articles-view" /></a>
-                                <a class="icon article-edit" title="Bewerken" href="index.php?view=articles-edit" /></a>
-                                <a class="icon article-delete" title="Verwijderen" href="index.php?view=articles-delete" /></a>
-                                <a class="icon article-view" title="Bekijken" href="index.php?view=articles-view" /></a>
+                                <a class="icon article-comment" title="Reageren" href="index.php?view=articles-view&id=<?php echo $article->id;?>" /></a>
+                                <a class="icon article-edit" title="Bewerken" href="index.php?view=articles-edit&id=<?php echo $article->id;?>" /></a>
+                                <a class="icon article-delete" title="Verwijderen" href="index.php?view=articles-delete&id=<?php echo $article->id;?>" /></a>
+                                <a class="icon article-view" title="Bekijken" href="index.php?view=articles-view&id=<?php echo $article->id;?>" /></a>
 
                             </p><!-- article-footer -->
                         

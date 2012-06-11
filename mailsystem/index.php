@@ -34,6 +34,7 @@
 		case 'articles-add'; 									$view='lib/views/backend/articles/add.php'; 			 				$backend = true; break;
 		case 'articles-edit'; 									$view='lib/views/backend/articles/edit.php'; 			 				$backend = true; break;
 		case 'articles-delete'; 								$view='lib/views/backend/articles/delete.php'; 			 				$backend = true; break;
+                                    case 'edit-succes';                                                                                                                                      $view='lib/views/backend/articles/edit-succes.php';                                                                                                     $backen = true; break;
 				
 		// Backend - Templates
 		case 'templates'; 										$view='lib/views/backend/templates/overview.php'; 		 				$backend = true; break;
@@ -171,6 +172,29 @@
 	<script type="text/javascript" src="lib/javascripts/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="lib/javascripts/jquery.validate-1.9.0.min.js"></script>
 	<script type="text/javascript" src="lib/javascripts/script.js"></script>
+        
+        <!-- Javascript files editor en filesubmit button voor articles-add, inputArticle, articles-edit -->
+        <?php 
+            if($getview == "articles-add" || $getview = "inputArticle" || $getview == "articles-edit"):
+                 ?><script type="text/javascript" src="lib/ckeditor/ckeditor.js"></script><?php
+                if($getview == "articles-add"):
+                    $fileSubmitPicture = "lib/images/buttons/afbeelding_toe_backend.png";
+                elseif ($getview = "inputArticle"):
+                        $fileSubmitPicture = "lib/images/buttons/voeg_afbeelding_toe.png";
+                endif;
+         ?>
+                <script type="text/javascript" src="lib/javascripts/fileInputStyle.js"></script>
+                <script type="text/javascript">
+                    $("#picture").filestyle({ 
+                        image: "<?php echo $fileSubmitPicture;?>",
+                        imageheight : 28,
+                        imagewidth : 140,
+                        width : 250
+                    });
+                </script>
 
+        <?php
+            endif;
+        ?>
 </body>
 </html>

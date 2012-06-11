@@ -14,7 +14,8 @@
             <a class="button shadow-text" href="index.php?view=articles" title="Terug">Terug</a>
 
         </div><!-- sidebar -->
-        <script type="text/javascript" src="lib/ckeditor/ckeditor.js"></script>
+       
+      
         <div id="content">
 
             <h1>Artikel toevoegen</h1>
