@@ -117,7 +117,9 @@
                 #submit { width: 84px; height: 24px; margin: 0px 0px 0px 0px; float: right; }
 
                 .icon { width: 16px; height: 16px; margin: 0px 0px 0px 4px; display: block; float: right; }
-                .button { width: 252px; height: 52px; line-height: 52px; margin: 0px 0px 16px 0px; background: url(../../lib/images/buttons/sidebar-button.png) no-repeat; color: #fff; text-align: center; text-decoration: none; float: left; }
+                .button, #submit-newsletter { width: 252px; height: 52px; line-height: 52px; margin: 0px 0px 16px 0px; background: url(../../lib/images/buttons/sidebar-button.png) no-repeat; color: #fff; text-align: center; text-decoration: none; float: left; }
+
+                #submit-newsletter { border: none; float: left; margin: 0px 0px 0px 0px; font-size: 20px; cursor: pointer; }
 
                 /* Dashboard */
                 #dashboard-articles { }
@@ -153,6 +155,7 @@
             	    
                     #sidebar #articles .article { cursor: move; position: relative; z-index: 9; background: #eaeaea; }
                     #sidebar #articles .article .article-title { width: 234px; }
+
  
                 #next-step-button { height: 12px; line-height: 12px; font-size: 12px; padding: 0px 16px 0px 0px; color: #6D6E70; background: url(../../lib/images/icons/arrow-right.png) top right no-repeat; position: absolute; right: 0px; bottom: -20px; text-decoration: none; }
                 #prev-step-button { height: 12px; line-height: 12px; font-size: 12px; padding: 0px 0px 0px 16px; color: #6D6E70; background: url(../../lib/images/icons/arrow-left.png) top left no-repeat; position: absolute; left: 0px; bottom: -20px; text-decoration: none;}

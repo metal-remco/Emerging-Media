@@ -1,5 +1,6 @@
 <?php
 $articles = $mailsystem->getArticles(0);
+$newsletters = $mailsystem->getNewsletters();
 ?>    	
     <div id="dashboard" class="shadow">
     
@@ -57,6 +58,27 @@ $articles = $mailsystem->getArticles(0);
                                 
                 <div id="newsletters">
                 
+	                <?php foreach ($newsletters as $newsletter) { ?>
+	
+	                	<div class="newsletter">
+	                	
+	                		<div class="newsletter-left">
+	                		
+	                			<p>Aantal keer bekeken</p>
+	                			<p class="count">0</p>
+	                				                		
+	                		</div><!-- newsletter-left -->
+	                		
+	                		<div class="newsletter-right">
+	                		
+	                			<h2 class="newsletter-title"><?php echo $newsletter->title;?></h2>
+	                							                		
+	                		</div><!-- newsletter-right -->
+	                		
+	                	</div><!-- newsletter -->
+	
+                    <?php } ?>
+                
                 	<div class="newsletter">
                 	
                 		<div class="newsletter-left">
@@ -68,7 +90,7 @@ $articles = $mailsystem->getArticles(0);
                 		
                 		<div class="newsletter-right">
                 		
-                			<h2 class="newsletter-title">Test nieuwsbrief 1</h2>
+                			<h2 class="newsletter-title">Voorbeeld nieuwsbrief 1</h2>
                 			
                 			<ul>
                 			
@@ -94,7 +116,7 @@ $articles = $mailsystem->getArticles(0);
                 		
                 		<div class="newsletter-right">
                 		
-                			<h2 class="newsletter-title">Test nieuwsbrief 2</h2>
+                			<h2 class="newsletter-title">Voorbeeld nieuwsbrief 2</h2>
                 			
                 			<ul>
                 			

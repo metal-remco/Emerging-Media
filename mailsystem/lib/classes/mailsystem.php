@@ -16,10 +16,10 @@ class mailsystem
 		// $this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
         
 		// Randy Localhost
-		//$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
+		$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
          
 		// Remco Localhost
-		 $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
+		//$this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
 
 		session_start();
 
@@ -238,14 +238,19 @@ class mailsystem
 
 
 	// Methodes: Newsletter
-	public function addNewsletter($name) {
+	public function addNewsletter($title, $template, $templatestring) {
 		
-		$query = 'INSERT INTO mail_newsletter VALUES ("", "", "'.$name.'", "", "");';
+		$query = 'INSERT INTO mail_newsletters VALUES ("", "", "'.$title.'", "'.$template.'", "'.$templatestring.'");';
 		$this->db->query($query);		
 		
 	}
 
-
+	public function getNewsletters() {
+		
+		$query	= 'SELECT * FROM mail_newsletters ORDER BY id ASC;';
+		return $this->db->query($query, true);
+		
+	}
 	
 
 
