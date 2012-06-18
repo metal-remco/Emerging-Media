@@ -28,13 +28,12 @@
                 }
             ?>
                 <p>Schrijver: <?php echo $article->author;?></p>
-                <p>Datum: <?php echo $article->date;?></p>
                 <?php endforeach;?>
 
-                <form id="form_reaction" action="index.php?view=articles-view-succes" method="post" />
-                    <textarea id="reaction" class="required" name="reaction" placeholder="Reageer hier op het artikel" cols="60" rows="6"></textarea>
+                <form method="POST" action="#">
+                    <textarea name="reaction" placeholder="Reageer hier op het artikel" cols="60" rows="6"></textarea>
                     <input type="hidden" id="author" name="author" value="<?php echo $article->author;?>"/>
-                <input class="button shadow-text" id="submit" Value="Reageren" type="submit"/>
+                <input class="button" Value="Reageren" type="submit"
                 </form>
                 
             </div><!-- content -->
