@@ -1,4 +1,9 @@
-		
+<?php
+$id = $_GET['id'];
+$child_name = $_POST['nameChild'];
+$child_class = $_POST['classChild'];
+$newEmail = $_POST['newEmail'];
+?>
     <div id="mailinglists-edit" class="shadow">
     
     	<div id="breadcrumbs">
@@ -17,12 +22,11 @@
             
             <div id="content">
                             
-                <h1>Email adres succesvol bijgewerkt</h1>
+                <p>Email adres is succesvol bijgewerkt</p>
 
 				<?php
 				
-					$newEmail = $_POST['newEmail'];
-					$mailsystem->changeSubscriberEmail($newEmail, $_GET['id'])
+					$mailsystem->changeSubscriber($child_name, $child_class, $newEmail, $id);
 				
 				?>
 

@@ -26,8 +26,8 @@
             
                     <thead>
                         <tr>
-                            <th scope="col">Email</th>
                             <th scope="col">Naam</th>
+                            <th scope="col">Email</th>
                             <th scope="col">Naam van kind</th>
                             <th scope="col">Klas van kind</th>
                         </tr>
@@ -47,7 +47,7 @@
                                 
                                 	<?php echo $subscriber->child_class; ?>
                                 	<a class="icon subscriber-delete" title="Abbonement opzeggen" href="index.php?view=unsubscribe&id=<?php echo $subscriber->id; ?>" onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name; ?> wilt verwijderen?');"></a>
-                                	<a class="icon subscriber-edit" title="Email adres bewerken" href="index.php?view=mailinglists-edit-email&id=<?php echo $subscriber->id; ?>" onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name;?> wilt wijzigen?')">
+                                	<a class="icon subscriber-edit" title="Email adres bewerken" href="index.php?view=mailinglists-edit-email&id=<?php echo $subscriber->id; ?>&email=<?php echo $subscriber->email;?>&child_name=<?php echo $subscriber->child_name;?>&child_class=<?php echo $subscriber->child_class;?>&mailinglist_id=<?php echo $_GET['id'];?>" onclick="return confirm('Weet je zeker dat je <?php echo $subscriber->name;?> wilt wijzigen?')">
 
                                 </td>
         

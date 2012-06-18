@@ -49,6 +49,7 @@ $(document).ready(function(){
 	$("#form_login").validate();
 	$("#form_article").validate();
 	$("#form_reaction").validate();
+                  $("#form_edit").validate();
                 
 	
 	
