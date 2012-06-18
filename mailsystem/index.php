@@ -171,7 +171,7 @@
 	
 	<script type="text/javascript" src="lib/javascripts/script.js"></script>
 	<script type="text/javascript" src="lib/javascripts/mailinglist-subscribers.js"></script>
-	<script type="text/javascript" src="lib/javascripts/newsletter.js"></script>
+	<script type="text/javascript" src="lib/javascripts/add-newsletter.js"></script>
           <!-- Javascript files editor en filesubmit button voor articles-add, inputArticle, articles-edit -->
         <?php 
             if($getview == "articles-add" || $getview == "inputArticle" || $getview == "articles-edit"):

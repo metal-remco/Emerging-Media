@@ -81,7 +81,7 @@
 				if( $(this).hasClass('selected') ) {
 					
 					var id = $(this).attr('id').split('-')[1];
-					//$('#step-3 #article-'+id).removeClass('hidden');
+					$('#step-4 #article-'+id).removeClass('hidden');
 					console.log(id);
 					
 				}			

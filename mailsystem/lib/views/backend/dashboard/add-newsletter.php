@@ -113,9 +113,30 @@
 						<div class="step" id="step-4">
 						
 							<h1>Artikelen plaatsen</h1>
-							<div class="clear"></div>
 							
-	
+							<div id="articles">
+							
+								<?php $articles = $mailsystem->getArticles(0);?>
+								
+								<?php foreach ($articles as $article): ?>
+								
+								    <div class="article hidden" id="article-<?php echo $article->id; ?>">
+								
+								        <h2 class="article-title"><?php echo $article->title; ?></h2>
+																
+								        <p class="article-footer">
+								
+								            <span class="orange">Auteur:</span> <?php echo $article->author;?> <span class="orange">Geschreven:</span> <?php echo $article->date;?>
+								
+								        </p><!-- article-footer -->
+								
+								    </div><!-- article -->
+								
+								<?php endforeach; ?>
+								
+							</div><!-- articles -->
+							<div class="clear"></div>
+
 						</div><!-- step-4 -->
 						
 						
