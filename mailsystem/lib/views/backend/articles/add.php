@@ -35,6 +35,8 @@
             </script>
 
             <input id="picture" type="file" name="picture" value="" ></input>
+            <input id="author" type="hidden" name="author" value="Redacteur"/>
+            <input id="date" type="hidden" value="<?php echo date("d-m-Y");?>" name="date"/>
             <input class="button shadow-text" id="submit" type="submit" value="Versturen" name="submit"/>
 
             </form>

@@ -39,11 +39,20 @@
                 
             </script>
             <p>Huidige afbeelding:</p>
-            <img class="article-picture" src="<?php echo $article->picture;?>" alt="Afbeelding"/>
+            <?php
+                if (empty($article->picture)) {
+                    ?>
+                    <p>Er is geen afbeelding bij dit artikel.</p>
+                    <?php
+                }else{
+                    ?><img class="article-picture" src="<?php echo $article->picture;?>" alt="Afbeelding"/><?php
+                }
+            ?>
+            
             <input id="picture" type="file" name="picture" value="" />
             <input type="hidden" name="oldPicture" value="<?php echo $article->picture;?>"/>
-            <input class="button shadow-text" id="submit" type="submit" value="Versturen" name="submit"/>
             <input id="id" type="hidden" name="id" value="<?php echo $article->id;?>"/>
+            <input class="button shadow-text" id="submit" type="submit" value="Versturen" name="submit"/>
 
             </form>
             <?php endforeach;?>

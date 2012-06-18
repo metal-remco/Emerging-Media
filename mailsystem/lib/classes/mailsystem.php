@@ -121,8 +121,9 @@ class mailsystem
 	}
         
 	// Methodes: Articles
-    public function sendArticle($title, $article, $picture){
-        $query = 'INSERT INTO mail_article (title, article, picture) VALUES ("'. $title . '","' .addslashes($article). '", "'.$picture.'")';
+    public function sendArticle($title, $article, $picture, $author, $date){
+        $query = 'INSERT INTO mail_article (title, article, picture, author, date) VALUES ("'. $title . '","' .addslashes($article). '", "'.$picture.'", "'.$author.'", "'.$date.'")';
+        echo $query;
         $this->db->query($query);
     }
     

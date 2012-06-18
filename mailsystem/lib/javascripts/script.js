@@ -47,6 +47,8 @@ $(document).ready(function(){
 		
 	$("#form_subscribe").validate();
 	$("#form_login").validate();
+                  $("#form_article").validate();
+                
 	
 	
 	$("#addchild").live("click", function(){ 

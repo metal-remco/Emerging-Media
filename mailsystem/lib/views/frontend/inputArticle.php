@@ -21,8 +21,9 @@
             </script>
             
             <input id="picture" type="file" name="picture" value="" ></input>
+            <input id="email" class="email required" type="text" name="author" placeholder="Vul hier uw emailadres in."/>
+            <input id="date" type="hidden" value="<?php echo date("d-m-Y");?>" name="date"/>
             <input id="submit" class="shadow" type="submit" value="Versturen" name="submit"/>
-        
         </form>
         
     </div>

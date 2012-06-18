@@ -1,4 +1,7 @@
-
+<?php   
+    $id = $_GET['id'];
+    $articles = $mailsystem->getArticles($id);
+?>
     <div id="articles-view" class="shadow">
     
     	<div id="breadcrumbs">
@@ -16,15 +19,23 @@
             </div><!-- sidebar -->
             
             <div id="content">
-                            
-                <h1>Artikel bekijken</h1>
+                 <?php foreach ($articles as $article):?>            
+                <h1><?php echo $article->title;?></h1>
                 
-                <p>Het is nog niet mogelijk om een artikel te bekijken.</p>
-                
-                <h2>Reageer</h2>
-                
-                <p>Het is nog niet mogelijk om op een artikel te reageren.</p>
+                <p><?php echo $article->article;?></p>            <?php
+                if (!empty($article->picture)) {
+                    ?><img class="article-picture" src="<?php echo $article->picture;?>"/><?php
+                }
+            ?>
+                <p>Schrijver: <?php echo $article->author;?></p>
+                <?php endforeach;?>
 
+                <form method="POST" action="#">
+                    <textarea name="reaction" placeholder="Reageer hier op het artikel" cols="60" rows="6"></textarea>
+                    <input type="hidden" id="author" name="author" value="<?php echo $article->author;?>"/>
+                <input class="button" Value="Reageren" type="submit"
+                </form>
+                
             </div><!-- content -->
             
             <div class="clear"></div>
