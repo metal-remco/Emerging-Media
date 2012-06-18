@@ -20,7 +20,7 @@ class mailsystem
          
 		// Remco Localhost
 		 $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
-
+                                
 		session_start();
 
 	}
@@ -59,7 +59,7 @@ class mailsystem
     {
         $query = 'UPDATE mail_subscribers SET email="'.$email.'" WHERE id="'.$id.'"';
         //echo $query;
-        $this->db->query($query);
+       $this->db->query($query);
     }
     
     public function sendConformationMail($email)
@@ -69,6 +69,14 @@ class mailsystem
         $message = "U bent succesvol ingeschreven voor de nieuwsbrief van de Emmausschool. Deze zult u dus zeer binnenkort ontvangen";
         //$from = "info@emmausschool";
        mail($to, $subject, $message);
+    }
+    
+    public function sendArticleReaction($email, $message)
+    {
+        $to = $email;
+        $subject = "Reactie op uw ingezonden artikel van de Emmausschool.";
+        $message = $message;
+        mail($to, $subject, $message);
     }
 	
 	// Methodes: Login
@@ -139,7 +147,7 @@ class mailsystem
                 $query = "SELECT * FROM mail_article WHERE id = '".$id."'";
             }
             else{
-                $query = "SELECT * FROM mail_article ORDER BY id ASC";
+                $query = "SELECT * FROM mail_article ORDER BY date DESC";
             }
             $result = $this->db->query($query, true);
             return $result;

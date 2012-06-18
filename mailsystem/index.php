@@ -33,6 +33,7 @@
    		// Backend - Artikelen
 		case 'articles'; 										$view='lib/views/backend/articles/overview.php'; 		 				$backend = true; break;
 		case 'articles-view'; 									$view='lib/views/backend/articles/view.php'; 			 				$backend = true; break;
+                                    case 'articles-view-succes';                                                                                                                                            $view='lib/views/backend/articles/view-reaction-succes.php';                                                                                     $backend = true; break;
 		case 'articles-add'; 									$view='lib/views/backend/articles/add.php'; 			 				$backend = true; break;
 		case 'articles-edit'; 									$view='lib/views/backend/articles/edit.php'; 			 				$backend = true; break;
 		case 'articles-delete'; 								$view='lib/views/backend/articles/delete.php'; 			 				$backend = true; break;
