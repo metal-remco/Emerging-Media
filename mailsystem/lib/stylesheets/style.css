@@ -2,7 +2,7 @@
 /* Global */
     
     * { margin: 0px; padding: 0px; outline: none; }
-    h1, h2, h3, h4, h5, h6, p, li, label, input, textarea, dt, dd, th, td, .type_button, #addchild, #removechild, .button, .dashboard-button { font-family: "Calibri", "Helvetica", sans-serif; }
+    h1, h2, h3, h4, h5, h6, p, li, label, input, textarea, dt, dd, th, td, .type_button, #addchild, #removechild, .button, .dashboard-button, .steps-button { font-family: "Calibri", "Helvetica", sans-serif; }
     p, li { font-size: 13px; }
 
     .clear { clear: both; }
@@ -102,7 +102,7 @@
             #sidebar { width: 252px; margin: 0px 30px 0px 0px; float: left; }
             #dashboard #sidebar { width: 230px; padding: 10px; border: 1px solid #999; background: #fff; }
 
-            #content { width: 576px; padding: 20px 20px 0px 20px; border: 1px solid #999; background: #fff; float: left; }
+            #content { width: 576px; padding: 20px 20px 0px 20px; border: 1px solid #999; background: #fff; float: left; position: relative; }
 
                 a { color: #EB7F44; }
 
@@ -131,19 +131,37 @@
             	#newsletters .newsletter .newsletter-right { float: left; }
             	#newsletters .newsletter .newsletter-right .newsletter-title { width: 423px; height: 32px; line-height: 32px; padding: 0px 0px 0px 8px; font-size: 16px; font-weight: normal; background: #4A575D; color: #DDE0E1; float: left; }
 
-                #steps { width: 230px; margin: 0px 0px 20px 0px; padding: 10px; border: 1px solid #999; background: #fff;  }
-                #steps .step { height: 32px; line-height: 24px;margin: 0px 0px 4px 0px; padding: 0px 0px 0px 0px; text-align: center; background: url(../../lib/images/arrow-down.png) center bottom no-repeat; }
-                #steps .step.done p { background: url(../../lib/images/check.png) right center no-repeat; color: #999; }
-                #steps .step.last { background: none; padding: 0px; }
-                #steps .step.current p { text-decoration: underline; color: #EF8045; }
+                #nav-steps { width: 230px; margin: 0px 0px 20px 0px; padding: 10px; border: 1px solid #999; background: #fff;  }
+                #nav-steps .nav-step { height: 32px; line-height: 24px;margin: 0px 0px 4px 0px; padding: 0px 0px 0px 0px; text-align: center; background: url(../../lib/images/arrow-down.png) center bottom no-repeat; }
+                #nav-steps .nav-step.done p { background: url(../../lib/images/check.png) right center no-repeat; color: #999; }
+                #nav-steps .nav-step.last { background: none; padding: 0px; }
+                #nav-steps .nav-step.current p { text-decoration: underline; color: #EF8045; }
+
+                #steps-container { width: 574px; padding: 0px 0px 20px 0px; overflow: hidden; }
+                #steps { width: 4172px; position: relative; } /* 7 * 596 = 4172 */
+                #steps .step { width: 574px; margin: 0px 22px 0px 0px; float: left; }
+               
+            	    #steps-mailinglists { margin: 0px 0px 20px 0px; }
+            	    #steps-mailinglists .step-mailinglist { height: 64px; padding: 0px 16px 0px 16px; border: 1px solid #999; margin: 0px 0px 16px 0px; }
+            	    #steps-mailinglists .step-mailinglist input { width: auto; height: 64px; margin: 0px 32px 0px 0px; float: left; }
+            	    #steps-mailinglists .step-mailinglist p { line-height: 64px; float: left; margin: 0px; }
+            	    #steps-mailinglists .step-mailinglist p.right { float: right; }
+
+            	    #step-3 .article.selected .article-title { background: #EF8045 url(../../lib/images/check-white.png) 550px center no-repeat; color: #fff; }
+            	    #step-3 .article .article-title .selectme { float: right; margin: 0px 32px 0px 0px; text-decoration: underline; cursor: pointer; }
+            	    #step-3 .article.selected .article-title .selectme { text-decoration: none; }
 
 
+ 
+                #next-step-button { height: 12px; line-height: 12px; font-size: 12px; padding: 0px 16px 0px 0px; color: #6D6E70; background: url(../../lib/images/icons/arrow-right.png) top right no-repeat; position: absolute; right: 0px; bottom: -20px; text-decoration: none; }
+                #prev-step-button { height: 12px; line-height: 12px; font-size: 12px; padding: 0px 0px 0px 16px; color: #6D6E70; background: url(../../lib/images/icons/arrow-left.png) top left no-repeat; position: absolute; left: 0px; bottom: -20px; text-decoration: none;}
+                #prev-step-button:hover, #next-step-button:hover { text-decoration: underline; cursor: pointer; }
 
 
             	/* Articles */
             	#articles { margin: 0px 0px 20px 0px; }
             	#articles .article { margin: 0px 0px 10px 0px; border: 1px solid #999; }
-            	#articles .article .article-title { width: 566px; height: 32px; line-height: 32px; padding: 0px 0px 0px 8px; font-size: 16px; font-weight: normal; background: #4A575D; color: #DDE0E1; float: left; }
+            	#articles .article .article-title { width: 558px; height: 32px; line-height: 32px; padding: 0px 8px 0px 8px; font-size: 16px; font-weight: normal; background: #4A575D; color: #DDE0E1; float: left; }
             	#articles .article .article-content { line-height: 20px; padding: 0px 10px 0px 10px;}
                 #articles .article .article-content p { font-family: Calibri; font-weight: normal; color: #707173; font-size: 12px; width: 560px; margin: 8px;}
                 #articles .article .article-content li {font-family: Calibri; font-weight: normal; color: #707173; font-size: 12px; width: 560px; margin:8 8 8 40;}
@@ -170,7 +188,8 @@
             	.icon.article-comment:hover { background: url(../../lib/images/icons/cloud-16-orange.png) no-repeat; }
 
             	/* Templates */
-                /* - */
+            	#template { width: 131px; }
+            	#template p { text-align: center; }
 
             	/* Mailinglists */
             	#mailinglists { margin: 0px 0px 20px 0px; }
@@ -209,3 +228,5 @@
     #temporary-navigation { width: 960px; margin: 0px auto 0px auto; }
     #temporary-navigation li { margin: 0px 2px 0px 0px; font-size: 12px; display: inline; color: #999; }
     #temporary-navigation li a { color: #333; color: #999; }
+    
+    

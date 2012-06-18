@@ -16,11 +16,11 @@ class mailsystem
 		// $this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
         
 		// Randy Localhost
-		//$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
+		$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
          
 		// Remco Localhost
-		 $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
-                                
+		// $this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
+
 		session_start();
 
 	}
@@ -59,7 +59,7 @@ class mailsystem
     {
         $query = 'UPDATE mail_subscribers SET email="'.$email.'" WHERE id="'.$id.'"';
         //echo $query;
-       $this->db->query($query);
+        $this->db->query($query);
     }
     
     public function sendConformationMail($email)
@@ -72,7 +72,7 @@ class mailsystem
     }
     
     public function sendArticleReaction($email, $message)
-    {
+   {
         $to = $email;
         $subject = "Reactie op uw ingezonden artikel van de Emmausschool.";
         $message = $message;
@@ -142,12 +142,13 @@ class mailsystem
         }
         
         public function getArticles ($id){
+        
             if($id != 0)
             {
                 $query = "SELECT * FROM mail_article WHERE id = '".$id."'";
             }
             else{
-                $query = "SELECT * FROM mail_article ORDER BY date DESC";
+                $query = "SELECT * FROM mail_article ORDER BY date ASC";
             }
             $result = $this->db->query($query, true);
             return $result;
@@ -233,6 +234,19 @@ class mailsystem
 		return $array[0]->name;
 
 	}
+	
+
+
+
+	// Methodes: Newsletter
+	public function addNewsletter($name) {
+		
+		$query = 'INSERT INTO mail_newsletter VALUES ("", "", "'.$name.'", "", "");';
+		$this->db->query($query);		
+		
+	}
+
+
 	
 
 

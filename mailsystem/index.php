@@ -15,7 +15,6 @@
 		case 'subscribe':										$view='lib/views/frontend/subscribe.php';				 				break;
 		case 'subscribe-success':								$view='lib/views/frontend/subscribe-success.php';		 				break;
 		case 'unsubscribe':										$view='lib/views/frontend/unsubscribe.php';				 				break;
-
 		case 'inputArticle';        							$view='lib/views/frontend/inputArticle.php';           	 				break;
 		case 'inputArticle-succes'; 							$view='lib/views/frontend/inputArticle-succes.php';    	 				break;
 		
@@ -33,11 +32,11 @@
    		// Backend - Artikelen
 		case 'articles'; 										$view='lib/views/backend/articles/overview.php'; 		 				$backend = true; break;
 		case 'articles-view'; 									$view='lib/views/backend/articles/view.php'; 			 				$backend = true; break;
-                                    case 'articles-view-succes';                                                                                                                                            $view='lib/views/backend/articles/view-reaction-succes.php';                                                                                     $backend = true; break;
+		case 'articles-view-succes';							$view='lib/views/backend/articles/view-reaction-succes.php'; 			$backend = true; break;
 		case 'articles-add'; 									$view='lib/views/backend/articles/add.php'; 			 				$backend = true; break;
 		case 'articles-edit'; 									$view='lib/views/backend/articles/edit.php'; 			 				$backend = true; break;
+        case 'articles-edit-success';         					$view='lib/views/backend/articles/edit-succes.php';                     $backend = true; break;
 		case 'articles-delete'; 								$view='lib/views/backend/articles/delete.php'; 			 				$backend = true; break;
-                                    case 'article-edit-success';                                                                                                                                      $view='lib/views/backend/articles/edit-succes.php';                                                                                                     $backen = true; break;
 				
 		// Backend - Templates
 		case 'templates'; 										$view='lib/views/backend/templates/overview.php'; 		 				$backend = true; break;
@@ -47,13 +46,7 @@
 		case 'templates-delete'; 								$view='lib/views/backend/templates/delete.php'; 		 				$backend = true; break;
 
 		// Backend - Dashboard
-		case 'step1': 											$view='lib/views/backend/dashboard/step1.php';			 				$backend = true; break; // Nieuwsbrief toevoegen
-		case 'step2': 											$view='lib/views/backend/dashboard/step2.php';			 				$backend = true; break; // Template kiezen
-		case 'step3': 											$view='lib/views/backend/dashboard/step3.php';			 				$backend = true; break; // Artikelen selecteren
-		case 'step4': 											$view='lib/views/backend/dashboard/step4.php';			 				$backend = true; break; // Artikelen plaatsen (Drag & Drop)
-		case 'step5': 											$view='lib/views/backend/dashboard/step5.php';			 				$backend = true; break; // Maillijst selecteren
-		case 'step6': 											$view='lib/views/backend/dashboard/step6.php';			 				$backend = true; break; // Preview
-
+		case 'add-newsletter': 									$view='lib/views/backend/dashboard/add-newsletter.php';			 		$backend = true; break;
 		case 'dashboard': 										$view='lib/views/backend/dashboard/dashboard.php';		 				$backend = true; break;
 		default: 												$view='lib/views/backend/dashboard/dashboard.php'; 		 				$backend = true; 
 			
@@ -123,7 +116,7 @@
                 <li<?php if($getv == 'templates'): ?> class="current"<?php endif; ?>><a href="index.php?view=templates">Templates</a></li>  
                 <li<?php if($getv == 'articles'): ?> class="current"<?php endif; ?>><a href="index.php?view=articles">Artikelen</a></li>  
 
-                <li<?php if($getview == 'step1'): ?> class="current"<?php endif; ?>><a href="index.php?view=step1">Nieuwsbrief maken</a></li>  
+                <li<?php if($getview == 'step1'): ?> class="current"<?php endif; ?>><a href="index.php?view=add-newsletter">Nieuwsbrief maken</a></li>  
 
             </ul><!-- navigation -->
             
@@ -178,7 +171,7 @@
 	
 	<script type="text/javascript" src="lib/javascripts/script.js"></script>
 	<script type="text/javascript" src="lib/javascripts/mailinglist-subscribers.js"></script>
-        
+	<script type="text/javascript" src="lib/javascripts/newsletter.js"></script>
           <!-- Javascript files editor en filesubmit button voor articles-add, inputArticle, articles-edit -->
         <?php 
             if($getview == "articles-add" || $getview == "inputArticle" || $getview == "articles-edit"):

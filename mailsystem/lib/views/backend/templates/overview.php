@@ -19,7 +19,14 @@
                             
                 <h1>Templates</h1>
                 
-                <p>Er is ondersteuning voor het volgende template:</p>
+                <p>Op dit moment is alleen het standaad template beschikbaar.</p>
+                
+                <div id="template">
+                
+	                <img src="lib/images/default-template.png" alt="standaard-template" width="131" height="131" />
+	                <p>Standaard template</p>
+                
+                </div><!-- template -->
                                     
             </div><!-- content -->
             
