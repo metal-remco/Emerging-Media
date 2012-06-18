@@ -31,7 +31,7 @@
 
                         <div class="article-content">
 
-    <?php echo $article->article; ?>
+						    <?php echo $article->article; ?>
 
                         </div>
                         <img class="article-picture" src="<?php echo $article->picture; ?>"></img>

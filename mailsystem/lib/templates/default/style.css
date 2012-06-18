@@ -1,0 +1,29 @@
+
+	/* Template */
+
+    #template-default { margin: 0px 0px 20px 0px; border: 1px solid #999; }
+    #template-default #template-logo { height: 100px; margin: 20px 20px 10px 20px; padding: 10px; border: 1px dashed #999; }
+    #template-default #template-logo p { line-height: 100px; text-align: center; color: #999; text-transform: uppercase; }
+    #template-default #template-date { width: 140px; height: 10px; margin: 20px 20px 10px 20px; padding: 10px; border: 1px dashed #999; }
+    #template-default #template-date p { line-height: 10px; text-align: center; color: #999; text-transform: uppercase; }
+    #template-default #template-stage { height: 400px; margin: 20px 20px 20px 20px; padding: 10px; border: 1px dashed #999; }
+    #template-default #template-stage p { line-height: 100px; text-align: center; color: #999; }
+    
+	/* Preview */
+
+    #preview-default { background: url(images/background.jpg) top center no-repeat; margin: 0px 0px 20px 0px; border: 1px solid #999; }
+    #preview-default #preview-logo { background: url(images/dot.png) repeat; }
+    #preview-default #preview-title { height: 40px; line-height: 40px; margin: 0px 0px 0px 0px; padding: 0px 0px 10px 10px; background: url(images/dot.png) repeat; font-size: 30px; color: #fff;  }
+    #preview-default #preview-stage { background: #fff; }
+    #preview-default #preview-stage .article { width: 286px; float: left; }
+    #preview-default #preview-stage .article.red-bg { background: #F6532A; }
+    #preview-default #preview-stage .article.blue-bg { background: #003E85; }
+    #preview-default #preview-stage .article-title { padding: 10px 10px 0px 10px; font-size: 16px; text-align: center; }
+    #preview-default #preview-stage .article-content { padding: 10px 10px 0px 10px; }
+    #preview-default #preview-stage .article-content p {  }
+    #preview-default #preview-stage .article-picture { }
+
+
+
+
+

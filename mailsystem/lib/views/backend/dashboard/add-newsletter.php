@@ -1,4 +1,7 @@
-    	
+
+	<?php $articles = $mailsystem->getArticles(0);?>
+	<?php $mailinglists = $mailsystem->getMailinglists(); ?>     
+
     <div id="step1" class="shadow">
     
     	<div id="breadcrumbs">
@@ -22,6 +25,28 @@
         			<div id="nav-step-7" class="nav-step last"><p>Nieuwsbrief versturen</p></div>
 
         		</div><!-- nav-steps -->
+
+				<div id="articles" class="hidden draggable">
+				
+					<?php foreach ($articles as $article): ?>
+					
+					    <div class="article hidden" id="article-<?php echo $article->id; ?>">
+					
+					        <h2 class="article-title"><?php echo $article->title; ?></h2>
+													
+					        <p class="article-footer">
+					
+					            <span class="orange">Auteur:</span> <?php echo $article->author;?> <span class="orange">Geschreven:</span> <?php echo $article->date;?>
+					
+					        </p><!-- article-footer -->
+					
+					    </div><!-- article -->
+					
+					<?php endforeach; ?>
+					
+				</div><!-- articles -->
+				
+				<div class="clear"></div>
 
             </div><!-- sidebar -->
             
@@ -62,7 +87,8 @@
 			                
 				                <img src="lib/images/default-template.png" alt="standaard-template" width="131" height="131" />
 				                <p>Standaard template</p>
-			                
+					            <input type="hidden" name="template" value="default" />
+
 			                </div><!-- template -->
 				            <div class="clear"></div>
 	
@@ -80,8 +106,6 @@
 							
 							<div id="articles">
 							
-								<?php $articles = $mailsystem->getArticles(0);?>
-								
 								<?php foreach ($articles as $article): ?>
 								
 								    <div class="article" id="article-<?php echo $article->id; ?>">
@@ -114,27 +138,11 @@
 						
 							<h1>Artikelen plaatsen</h1>
 							
-							<div id="articles">
+							<?php include('lib/templates/default/template.php'); ?>
 							
-								<?php $articles = $mailsystem->getArticles(0);?>
-								
-								<?php foreach ($articles as $article): ?>
-								
-								    <div class="article hidden" id="article-<?php echo $article->id; ?>">
-								
-								        <h2 class="article-title"><?php echo $article->title; ?></h2>
-																
-								        <p class="article-footer">
-								
-								            <span class="orange">Auteur:</span> <?php echo $article->author;?> <span class="orange">Geschreven:</span> <?php echo $article->date;?>
-								
-								        </p><!-- article-footer -->
-								
-								    </div><!-- article -->
-								
-								<?php endforeach; ?>
-								
-							</div><!-- articles -->
+			                <!-- //article:4,117px,382px.article:15,-70px,449px. -->
+				            <input type="hidden" name="templatestring" id="templatestring" value="" />
+				            
 							<div class="clear"></div>
 
 						</div><!-- step-4 -->
@@ -148,17 +156,15 @@
 	
 							<h1>Maillijst(en) selecteren</h1>
 							
-			        		<?php $mailinglists = $mailsystem->getMailinglists(); ?>     
-			
 			                <div id="steps-mailinglists">
-			                						 
+			                
 								<?php foreach($mailinglists as $mailinglist): ?>
 								
 				            		<?php $subscribers = $mailsystem->getSubscribersByMailinglist($mailinglist->ID); ?>     
 								
 				                	<div class="step-mailinglist">
 				                	                	
-	                					<input type="checkbox" name="mailinglijst-<?php echo $mailinglist->ID; ?>" id="checkbox-<?php echo $mailinglist->ID; ?>" />
+			        					<input type="checkbox" name="mailinglijst-<?php echo $mailinglist->ID; ?>" id="checkbox-<?php echo $mailinglist->ID; ?>" />
 			                			<p><?php echo $mailinglist->name; ?></p>
 			                				                		
 			                			<p class="right"><a href="index.php?view=mailinglists-view&id=<?php echo $mailinglist->ID; ?>">Bekijk maillijst</a></p>
@@ -168,9 +174,9 @@
 								<?php endforeach; ?>
 								
 								<div class="clear"></div>
-
+			
 			                </div><!-- steps-mailinglists -->
-							
+			                							
 							<div class="clear"></div>
 	
 						</div><!-- step-5 -->
@@ -184,6 +190,9 @@
 						<div class="step" id="step-6">
 						
 							<h1>Preview nieuwsbrief</h1>
+							
+							<?php include('lib/templates/default/preview.php'); ?>
+
 							<div class="clear"></div>
 	
 						</div><!-- step-6 -->

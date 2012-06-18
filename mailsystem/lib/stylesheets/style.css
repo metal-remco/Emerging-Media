@@ -150,8 +150,9 @@
             	    #step-3 .article.selected .article-title { background: #EF8045 url(../../lib/images/check-white.png) 550px center no-repeat; color: #fff; }
             	    #step-3 .article .article-title .selectme { float: right; margin: 0px 32px 0px 0px; text-decoration: underline; cursor: pointer; }
             	    #step-3 .article.selected .article-title .selectme { text-decoration: none; }
-
-
+            	    
+                    #sidebar #articles .article { cursor: move; position: relative; z-index: 9; background: #eaeaea; }
+                    #sidebar #articles .article .article-title { width: 234px; }
  
                 #next-step-button { height: 12px; line-height: 12px; font-size: 12px; padding: 0px 16px 0px 0px; color: #6D6E70; background: url(../../lib/images/icons/arrow-right.png) top right no-repeat; position: absolute; right: 0px; bottom: -20px; text-decoration: none; }
                 #prev-step-button { height: 12px; line-height: 12px; font-size: 12px; padding: 0px 0px 0px 16px; color: #6D6E70; background: url(../../lib/images/icons/arrow-left.png) top left no-repeat; position: absolute; left: 0px; bottom: -20px; text-decoration: none;}
@@ -222,7 +223,7 @@
     #footer p { text-align: center; color: #999; }
     #footer p a { color: #999; }
 
-    #temporary-footer { width: 100%; height: 48px; padding: 8px 0px 8px 0px; background: #000; border-top: 1px solid #fff; position: fixed; bottom: 0px; left: 0px; line-height: 24px; }
+    #temporary-footer { width: 100%; height: 48px; padding: 8px 0px 8px 0px; background: #000; border-top: 1px solid #fff; position: fixed; bottom: 0px; left: 0px; line-height: 24px; z-index: 99; }
     #temporary-footer p { width: 960px; margin: 0px auto 0px auto; font-size: 12px; color: #999; }
     #temporary-footer p .livegaan { float: right; }
     #temporary-navigation { width: 960px; margin: 0px auto 0px auto; }

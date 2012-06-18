@@ -3,7 +3,7 @@
 		
 		this.currentstep 	= 1;
 		this.speed			= 1000;
-		
+				
 		this.init = function() {
 			
 			var height = $('#steps #step-1').height();
@@ -56,15 +56,68 @@
 
 				}				
 				
-			});		 
+			}); 
+			
+			// Height
+			var height = $('#steps #step-'+newstep).height();
+			$("#steps-container").css('height', height+'px');
+			
+			// Preview Articles
+			if(newstep == 2) {
+			
+				var title = $('#title').attr('value'); console.log(title);
+				$('#preview-title').html(title);
+							
+			}
+
+			// Sidebar Articles
+			if(newstep == 4) {
+			
+				$('#articles.draggable').removeClass('hidden');
+			
+			} else {
+			
+				$('#articles.draggable').addClass('hidden');
+			
+			}
+			
+			// Article Positions
+			if(newstep == 5) {
+			
+				var templatestring = '';
+			
+				$('#articles.draggable .article').each(function() {
+				
+					
+					if( $(this).hasClass('hidden') ){
+					
+						//$('#preview-article-'+id).addClass('hidden');
+						
+					} else {
+						
+						var id 			= $(this).attr('id').split('-')[1]; 
+						var top 		= $(this).css('top');
+						var left 		= $(this).css('left');
+						
+						templatestring += 'article:'+id+','+top+','+left+'.';	
+						//article:4,117px,382px.article:15,-70px,449px.		
+
+						$('#preview-article-'+id).removeClass('hidden');
+						
+					}
+					
+				});	
+
+				$('#templatestring').attr('value', templatestring);
+				
+
+
+			}
 
 			// Animation
 			var position = (-596 * (newstep-1) );
 			$('#steps').animate({ left: position }, this.speed, function() {  
 				
-				// Height
-				var height = $('#steps #step-'+newstep).height();
-				$("#steps-container").css('height', height+'px');
 
 				
 			});
@@ -76,19 +129,16 @@
 		
 		this.checkarticles = function(id) {
 		
-			$('#step-3 .article').each(function() {
+			$('#articles .article').each(function() {
 			
 				if( $(this).hasClass('selected') ) {
 					
 					var id = $(this).attr('id').split('-')[1];
-					$('#step-4 #article-'+id).removeClass('hidden');
-					console.log(id);
+					$('#articles #article-'+id).removeClass('hidden');
 					
 				}			
 				
 			});	
-				 
-			console.log('----');
 
 		}
 		
@@ -128,6 +178,9 @@ $(document).ready(function(){
 		steps.checkarticles();
 		
 	});
+	
+	$( ".draggable .article" ).draggable({ });
+
 	
 
 });
