@@ -112,13 +112,12 @@
 		         
 		         ?>
             
-                <li<?php if($getview == 'dashboard'): ?> class="current"<?php endif; ?>><a href="index.php?view=dashboard">Dashboard</a></li>  
 
                 <li<?php if($getv == 'mailinglists'): ?> class="current"<?php endif; ?>><a href="index.php?view=mailinglists">Maillijsten</a></li>  
                 <li<?php if($getv == 'templates'): ?> class="current"<?php endif; ?>><a href="index.php?view=templates">Templates</a></li>  
                 <li<?php if($getv == 'articles'): ?> class="current"<?php endif; ?>><a href="index.php?view=articles">Artikelen</a></li>  
-
-                <li<?php if($getview == 'step1'): ?> class="current"<?php endif; ?>><a href="index.php?view=add-newsletter">Nieuwsbrief maken</a></li>  
+                <li<?php if($getview == 'add-newsletter'): ?> class="current"<?php endif; ?>><a href="index.php?view=add-newsletter">Nieuwsbrief maken</a></li>  
+                <li<?php if($getview == 'dashboard'): ?> class="current"<?php endif; ?>><a href="index.php?view=dashboard">Dashboard</a></li>  
 
             </ul><!-- navigation -->
             

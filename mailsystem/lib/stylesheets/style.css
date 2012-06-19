@@ -169,7 +169,7 @@
             	#articles .article { margin: 0px 0px 10px 0px; border: 1px solid #999; }
             	#articles .article .article-title { width: 558px; height: 32px; line-height: 32px; padding: 0px 8px 0px 8px; font-size: 16px; font-weight: normal; background: #4A575D; color: #DDE0E1; float: left; }
             	#articles .article .article-content { line-height: 20px; padding: 0px 10px 0px 10px;}
-                #articles .article .article-content p { font-family: Calibri; font-weight: normal; color: #707173; font-size: 12px; width: 560px; margin: 8px;}
+                #articles .article .article-content p { font-family: Calibri; font-weight: normal; color: #707173; font-size: 12px; width: 540px; margin: 8px;}
                 #articles .article .article-content li {font-family: Calibri; font-weight: normal; color: #707173; font-size: 12px; width: 560px; margin:8 8 8 40;}
                 #articles .article .article-content blockquote p { font-style: italic; padding-left:20px; }
                 #articles .article .article-content blockquote p:before {content: '"'; }
