@@ -35,7 +35,7 @@
 		case 'articles-view-succes';							$view='lib/views/backend/articles/view-reaction-succes.php'; 			$backend = true; break;
 		case 'articles-add'; 									$view='lib/views/backend/articles/add.php'; 			 				$backend = true; break;
 		case 'articles-edit'; 									$view='lib/views/backend/articles/edit.php'; 			 				$backend = true; break;
-        case 'articles-edit-success';         					$view='lib/views/backend/articles/edit-succes.php';                     $backend = true; break;
+        case 'articles-edit-success';         					$view='lib/views/backend/articles/edit-success.php';                     $backend = true; break;
 		case 'articles-delete'; 								$view='lib/views/backend/articles/delete.php'; 			 				$backend = true; break;
 				
 		// Backend - Templates
