@@ -49,6 +49,7 @@
 		case 'add-newsletter': 									$view='lib/views/backend/dashboard/add-newsletter.php';			 		$backend = true; break;
 		case 'add-newsletter-success': 							$view='lib/views/backend/dashboard/add-newsletter-success.php';			$backend = true; break;
 		case 'dashboard': 										$view='lib/views/backend/dashboard/dashboard.php';		 				$backend = true; break;
+                                    case 'newsletter-delete':                                                                                                                               $view='lib/views/backend/dashboard/newsletter-delete.php';                                                                                                      $backend = true; break;
 		default: 												$view='lib/views/backend/dashboard/dashboard.php'; 		 				$backend = true; 
 			
 	}

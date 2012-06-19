@@ -250,6 +250,12 @@ class mailsystem
 		return $this->db->query($query, true);
 		
 	}
+        
+                  public function newsletterDelete($id)
+                  {
+                      $query = 'DELETE FROM mail_newsletters WHERE id = '.$id.';';
+                      $this->db->query($query);
+                  }
 	
 
 

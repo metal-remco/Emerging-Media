@@ -72,6 +72,9 @@ $newsletters = $mailsystem->getNewsletters();
 	                		<div class="newsletter-right">
 	                		
 	                			<h2 class="newsletter-title"><?php echo $newsletter->title;?></h2>
+                                                <ul>
+                                                    <li><a href="index.php?view=newsletter-delete&id=<?php echo $newsletter->id;?>">Verwijder</a></li>
+                                                </ul>
 	                							                		
 	                		</div><!-- newsletter-right -->
 	                		
