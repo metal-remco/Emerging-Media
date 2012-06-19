@@ -23,7 +23,7 @@
             <h1>Artikel bewerken</h1>
             <?php foreach ($articles as $article):?>
             <form enctype="multipart/form-data" id="form_article" action="index.php?view=articles-edit-success" method="post"/>
-            <input id="articleTitle" class="required" value="" name="articleTitle" placeholder="<?php if($article->title) echo $article->title;else echo "Titel van artikel" ?>" type="text"></input>
+            <input id="articleTitle" class="required" value="<?php if($article->title) echo $article->title;?>" name="articleTitle" placeholder="Titel van artikel" type="text"></input>
             <textarea id="editor1" name="editor1">
                 <?php echo $article->article;?>
             </textarea>
