@@ -123,8 +123,8 @@
 
                 /* Dashboard */
                 #dashboard-articles a { text-decoration:none;}
-                #dashboard-articles :hover {color:white; background-color:#EF8045;}
-                
+                #dashboard-articles :hover { background-color:#EF8045;}
+                #dashboard-articles :hover a { color: white; }
                 #dashboard-articles .dashboard-article { padding: 4px; border-bottom: 1px solid #999; }
 
             	#newsletters { margin: 0px 0px 20px 0px; }

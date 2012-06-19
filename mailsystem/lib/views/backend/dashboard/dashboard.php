@@ -73,7 +73,7 @@ $newsletters = $mailsystem->getNewsletters();
 	                		
 	                			<h2 class="newsletter-title"><?php echo $newsletter->title;?></h2>
                                                 <ul>
-                                                    <li><a href="index.php?view=newsletter-delete&id=<?php echo $newsletter->id;?>" onclick="return confirm('Weet je zeker dat je deze nieuwsbrief wilt verwijderen?');" >Verwijder</a></li>
+                                                    <li><p><a href="index.php?view=newsletter-delete&id=<?php echo $newsletter->id;?>" onclick="return confirm('Weet je zeker dat je deze nieuwsbrief wilt verwijderen?');" >Verwijder</a></p></li>
                                                 </ul>
 	                							                		
 	                		</div><!-- newsletter-right -->
