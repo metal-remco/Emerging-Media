@@ -179,7 +179,7 @@
         <?php 
             if($getview == "articles-add" || $getview == "inputArticle" || $getview == "articles-edit"):
                  ?><script type="text/javascript" src="lib/ckeditor/ckeditor.js"></script><?php
-                if($getview == "articles-add"):
+                if($getview == "articles-add" || $getview == "articles-edit"):
                     $fileSubmitPicture = "lib/images/buttons/afbeelding_toe_backend.png";
                 elseif ($getview == "inputArticle"):
                         $fileSubmitPicture = "lib/images/buttons/voeg_afbeelding_toe.png";
