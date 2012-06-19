@@ -16,14 +16,15 @@
     #preview-default #preview-title { height: 40px; line-height: 40px; margin: 0px 0px 0px 0px; padding: 0px 0px 10px 10px; background: url(images/dot.png) repeat; font-size: 30px; color: #fff;  }
     #preview-default #preview-stage { background: #fff; }
     #preview-default #preview-stage .article { width: 286px; float: left; }
-    #preview-default #preview-stage .article.red-bg { background: #F6532A; }
-    #preview-default #preview-stage .article.blue-bg { background: #003E85; }
+
     #preview-default #preview-stage .article-title { padding: 10px 10px 0px 10px; font-size: 16px; text-align: center; }
     #preview-default #preview-stage .article-content { padding: 10px 10px 0px 10px; }
     #preview-default #preview-stage .article-content p {  }
     #preview-default #preview-stage .article-picture { }
 
 
-
+    #preview-default #preview-stage .article.red-bg { background: #F6532A; color: #fff; }
+    #preview-default #preview-stage .article.blue-bg { background: #003E85; color: #fff; }
+    #preview-default #preview-stage .article.gray-bg { background: #6E7D84; color: #fff; width: 572px; }
 
 
