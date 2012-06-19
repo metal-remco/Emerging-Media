@@ -73,7 +73,7 @@ $newsletters = $mailsystem->getNewsletters();
 	                		
 	                			<h2 class="newsletter-title"><?php echo $newsletter->title;?></h2>
                                                 <ul>
-                                                    <li><a href="index.php?view=newsletter-delete&id=<?php echo $newsletter->id;?>">Verwijder</a></li>
+                                                    <li><a href="index.php?view=newsletter-delete&id=<?php echo $newsletter->id;?>" onclick="return confirm('Weet je zeker dat je deze nieuwsbrief wilt verwijderen?');" >Verwijder</a></li>
                                                 </ul>
 	                							                		
 	                		</div><!-- newsletter-right -->
@@ -81,41 +81,15 @@ $newsletters = $mailsystem->getNewsletters();
 	                	</div><!-- newsletter -->
 	
                     <?php } ?>
-                
-                	<div class="newsletter">
-                	
-                		<div class="newsletter-left">
-                		
-                			<p>Aantal keer bekeken</p>
-                			<p class="count">126</p>
-                				                		
-                		</div><!-- newsletter-left -->
-                		
-                		<div class="newsletter-right">
-                		
-                			<h2 class="newsletter-title">Voorbeeld nieuwsbrief 1</h2>
-                			
-                			<ul>
-                			
-                				<li>Bekijk</li>
-                				<li>Dupliceer</li>
-                				<li>Delen</li>
-                				<li>Verstuurd naar: Maillijst</li>
-
-                			</ul>
-	                		
-                		</div><!-- newsletter-right -->
-                		
-                	</div><!-- newsletter -->
-                
-                	<div class="newsletter">
+                                
+                	<!--<div class="newsletter">
                 	
                 		<div class="newsletter-left">
                 		
                 			<p>Aantal keer bekeken</p>
                 			<p class="count">332</p>
                 				                		
-                		</div><!-- newsletter-left -->
+                		</div>
                 		
                 		<div class="newsletter-right">
                 		
@@ -130,7 +104,7 @@ $newsletters = $mailsystem->getNewsletters();
                 				
                 			</ul>
 	                		
-                		</div><!-- newsletter-right -->
+                		</div>
                 		
                 	</div><!-- newsletter -->
                 
