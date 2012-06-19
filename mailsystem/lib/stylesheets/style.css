@@ -122,7 +122,9 @@
                 #submit-newsletter { border: none; float: left; margin: 0px 0px 0px 0px; font-size: 20px; cursor: pointer; }
 
                 /* Dashboard */
-                #dashboard-articles { }
+                #dashboard-articles a { text-decoration:none;}
+                #dashboard-articles :hover {color:white; background-color:#EF8045;}
+                
                 #dashboard-articles .dashboard-article { padding: 4px; border-bottom: 1px solid #999; }
 
             	#newsletters { margin: 0px 0px 20px 0px; }

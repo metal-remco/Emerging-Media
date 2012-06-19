@@ -13,7 +13,6 @@ $directory = $uploaddir . basename($_FILES['picture']['name']);
 $author = $_POST['author'];
 
 $date = $_POST['date'];
-echo $date;
 touch($directory);
 move_uploaded_file($_FILES['picture']['tmp_name'], $directory);
 

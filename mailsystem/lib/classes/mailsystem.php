@@ -63,19 +63,19 @@ class mailsystem
     
     public function sendConformationMail($email)
     {
-        $to = $email;
+      /*  $to = $email;
         $subject = "Bevestiging van inschrijven voor de nieuwsbrief van de Emmausschool";
         $message = "U bent succesvol ingeschreven voor de nieuwsbrief van de Emmausschool. Deze zult u dus zeer binnenkort ontvangen";
         //$from = "info@emmausschool";
-       mail($to, $subject, $message);
+       mail($to, $subject, $message);*/
     }
     
     public function sendArticleReaction($email, $message)
    {
-        $to = $email;
+      /*  $to = $email;
         $subject = "Reactie op uw ingezonden artikel van de Emmausschool.";
         $message = $message;
-        mail($to, $subject, $message);
+        mail($to, $subject, $message);*/
     }
 	
 	// Methodes: Login
@@ -130,7 +130,6 @@ class mailsystem
 	// Methodes: Articles
     public function sendArticle($title, $article, $picture, $author, $date){
         $query = 'INSERT INTO mail_article (title, article, picture, author, date) VALUES ("'. $title . '","' .addslashes($article). '", "'.$picture.'", "'.$author.'", "'.$date.'")';
-        echo $query;
         $this->db->query($query);
     }
     
@@ -147,7 +146,7 @@ class mailsystem
                 $query = "SELECT * FROM mail_article WHERE id = '".$id."'";
             }
             else{
-                $query = "SELECT * FROM mail_article ORDER BY date ASC";
+                $query = "SELECT * FROM mail_article ORDER BY date DESC";
             }
             $result = $this->db->query($query, true);
             return $result;
