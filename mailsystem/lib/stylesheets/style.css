@@ -30,8 +30,9 @@
             #logo { margin: 11px 0px 0px 0px; }
             #navigation { width: 700px; height: 32px; float: right; list-style: none; }
             #navigation li { }
-            #navigation li a { height: 32px; line-height: 32px; float: right; padding: 0px 8px 0px 8px; color: #333; background: #fff; text-decoration:none;}
-            #navigation li.current a { background: #EF8045; }
+            #navigation li a { height: 32px; line-height: 32px; float: right; margin: 0px; padding: 0px 8px 0px 8px; color: #333; background: #fff; text-decoration:none;}
+            #navigation li.current a { background: #EF8045; color: #fff; }
+            #navigation li:hover a { background: #EF8045; color: #fff; }
             #userinfo { height: 16px; line-height: 16px; float: right; }
             #userinfo p { color: #fff; }
             #userinfo p a { color: #fff; }
