@@ -76,9 +76,9 @@
 	<!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" media="screen" href="lib/stylesheets/style.css" />
 
-    <!-- Todo: Favicons 
-    <link href="lib/images/favicon.ico" type="image/x-icon" rel="shortcut icon"  />
-    <link href="lib/images/favicon-ios.png" rel="apple-touch-icon-precomposed" /> -->
+    <!-- Favicons --> 
+    <link href="lib/images/favicons/favicon.ico" type="image/x-icon" rel="shortcut icon"  />
+    <link href="lib/images/favicons/favicon-ios.png" rel="apple-touch-icon-precomposed" />
 
 
 </head>
