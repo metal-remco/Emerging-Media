@@ -134,6 +134,7 @@
             	#newsletters .newsletter .newsletter-left p.count { padding: 70px 0px 0px 0px; text-align: center; line-height: 20px; font-size: 30px; font-weight: bold; }
             	#newsletters .newsletter .newsletter-right { float: left; }
             	#newsletters .newsletter .newsletter-right .newsletter-title { width: 423px; height: 32px; line-height: 32px; padding: 0px 0px 0px 8px; font-size: 16px; font-weight: normal; background: #4A575D; color: #DDE0E1; float: left; }
+            	#newsletters .newsletter .newsletter-right p { margin: 0px 0px 0px 10px; }
 
                 #nav-steps { width: 230px; margin: 0px 0px 20px 0px; padding: 10px; border: 1px solid #999; background: #fff;  }
                 #nav-steps .nav-step { height: 32px; line-height: 24px;margin: 0px 0px 4px 0px; padding: 0px 0px 0px 0px; text-align: center; background: url(../../lib/images/arrow-down.png) center bottom no-repeat; }

@@ -74,9 +74,17 @@ $newsletters = $mailsystem->getNewsletters();
 	                		
 	                			<h2 class="newsletter-title"><?php echo $newsletter->title;?></h2>
                                 <ul>
-                                    <li><p><a href="index.php?view=newsletter-delete&id=<?php echo $newsletter->id;?>" onclick="return confirm('Weet je zeker dat je deze nieuwsbrief wilt verwijderen?');" >Verwijder</a></p></li>
+                                    <li><a href="index.php?view=newsletter-delete&id=<?php echo $newsletter->id;?>" onclick="return confirm('Weet je zeker dat je deze nieuwsbrief wilt verwijderen?');" >Verwijder</a></li>
                                 </ul>
-	                							                		
+                                
+								<p>
+								
+									Template: Standaard<br />
+									Deze artikelen zijn te vinden in de nieuwsbrief: <?php echo $newsletter->articles; ?><br />
+									Wordt verstuurd naar de volgende lijsten: <?php echo $newsletter->mailinglists; ?>
+		                							                		
+		                		</p>
+		                		
 	                		</div><!-- newsletter-right -->
 	                		
 	                	</div><!-- newsletter -->
