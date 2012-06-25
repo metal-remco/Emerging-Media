@@ -110,7 +110,7 @@
                 h2 { margin: 0px 0px 8px 0px; }
                 h3 { margin: 0px 0px 0px 0px; color: #6E6F71; font-size: 16px; }
                 p { margin: 0px 0px 16px 0px; }
-                ul, ol { margin: 0px 0px 0px 20px; }
+                ul, ol { margin: 0px 0px 16px 20px; }
 
                 form { margin: 0px 0px 20px 0px; }
                 input { width: 560px; height: 16px; margin: 0px 0px 8px 0px; padding: 4px; }
@@ -141,24 +141,30 @@
                 #nav-steps .nav-step.last { background: none; padding: 0px; }
                 #nav-steps .nav-step.current p { text-decoration: underline; color: #EF8045; }
 
-                #steps-container { width: 574px; padding: 0px 0px 20px 0px; overflow: hidden; }
+                #steps-container { width: 574px; padding: 0px 0px 20px 0px; /* overflow: hidden; */ }
                 #steps { width: 4172px; position: relative; } /* 7 * 596 = 4172 */
                 #steps .step { width: 574px; margin: 0px 22px 0px 0px; float: left; }
-               
-            	    #steps-mailinglists { margin: 0px 0px 20px 0px; }
-            	    #steps-mailinglists .step-mailinglist { height: 64px; padding: 0px 16px 0px 16px; border: 1px solid #999; margin: 0px 0px 16px 0px; }
-            	    #steps-mailinglists .step-mailinglist input { width: auto; height: 64px; margin: 0px 32px 0px 0px; float: left; }
-            	    #steps-mailinglists .step-mailinglist p { line-height: 64px; float: left; margin: 0px; }
-            	    #steps-mailinglists .step-mailinglist p.right { float: right; }
-
-            	    #step-3 .article.selected .article-title { background: #EF8045 url(../../lib/images/check-white.png) 550px center no-repeat; color: #fff; }
+              
+            	    #step-3 #articles .article .article-title { width: 556px; }
+            	    #step-3 .article.selected .article-title { width: 556px; background: #EF8045 url(../../lib/images/check-white.png) 550px center no-repeat; color: #fff; }
             	    #step-3 .article .article-title .selectme { float: right; margin: 0px 32px 0px 0px; text-decoration: underline; cursor: pointer; }
             	    #step-3 .article.selected .article-title .selectme { text-decoration: none; }
             	    
                     #sidebar #articles .article { cursor: move; position: relative; z-index: 9; background: #eaeaea; }
                     #sidebar #articles .article .article-title { width: 234px; }
 
- 
+             	    #steps-mailinglists { margin: 0px 0px 20px 0px; }
+            	    #steps-mailinglists .step-mailinglist { height: 64px; padding: 0px 16px 0px 16px; border: 1px solid #999; margin: 0px 0px 16px 0px; background: #fff; }
+            	    #steps-mailinglists .step-mailinglist p { line-height: 64px; margin: 0px; }
+            	    #steps-mailinglists .step-mailinglist p.right { float: right; display: none; }
+
+            	    #steps-mailinglists .step-mailinglist.selected { background: #EF8045 url(../../lib/images/check-white.png) 550px center no-repeat; color: #fff; }
+            	    #steps-mailinglists .step-mailinglist .step-mailinglist-title .selectme { float: right; margin: 0px 32px 0px 0px; text-decoration: underline; cursor: pointer; }
+            	    #steps-mailinglists .step-mailinglist.selected .step-mailinglist-title .selectme { text-decoration: none; }
+
+
+
+
                 #next-step-button { height: 12px; line-height: 12px; font-size: 12px; padding: 0px 16px 0px 0px; color: #6D6E70; background: url(../../lib/images/icons/arrow-right.png) top right no-repeat; position: absolute; right: 0px; bottom: -20px; text-decoration: none; }
                 #prev-step-button { height: 12px; line-height: 12px; font-size: 12px; padding: 0px 0px 0px 16px; color: #6D6E70; background: url(../../lib/images/icons/arrow-left.png) top left no-repeat; position: absolute; left: 0px; bottom: -20px; text-decoration: none;}
                 #prev-step-button:hover, #next-step-button:hover { text-decoration: underline; cursor: pointer; }

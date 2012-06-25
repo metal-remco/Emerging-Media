@@ -9,6 +9,9 @@
 			var height = $('#steps #step-1').height();
 			$("#steps-container").css('height', height+'px');
 			
+			var firsttitle 		= $('#steps #step-2').find('h1').html();
+			$("#next-step-button").html(firsttitle);
+
 		}; this.init();
 		
 		this.next = function (newstep) {
@@ -85,6 +88,7 @@
 			if(newstep == 5) {
 			
 				var templatestring = '';
+				var articlestring = '';
 			
 				$('#articles.draggable .article').each(function() {
 				
@@ -102,12 +106,20 @@
 						//article:4,117px,382px.article:15,-70px,449px.		
 						
 						$('#preview-article-'+id).removeClass('hidden');
+						articlestring += id+','
 						
 					}
 					
 				});	
-
+				
+				$('#mailingliststring').attr('value', 'Todo');
 				$('#templatestring').attr('value', templatestring);
+				$('#articlestring').attr('value', articlestring);
+				
+				$('#finalcheck-mailinglists').html( $('#mailingliststring').attr('value') );
+				$('#finalcheck-templates').html( $('#articlestring').attr('value') );
+				$('#finalcheck-articles').html( $('#articlestring').attr('value') );
+				
 
 				var counter = 1;
 				
@@ -168,6 +180,22 @@
 					
 					var id = $(this).attr('id').split('-')[1];
 					$('#articles #article-'+id).removeClass('hidden');
+					$('#finalcheck-article-'+id).removeClass('hidden');
+					
+				}			
+				
+			});	
+
+		}
+
+		this.checkmailinglists = function(id) {
+		
+			$('#steps-mailinglists .step-mailinglist').each(function() {
+			
+				if( $(this).hasClass('selected') ) {
+					
+					var id = $(this).attr('id').split('-')[2];
+					$('#finalcheck-mailinglist-'+id).removeClass('hidden');
 					
 				}			
 				
@@ -211,6 +239,25 @@ $(document).ready(function(){
 		steps.checkarticles();
 		
 	});
+	
+	$("#steps-mailinglists .step-mailinglist").live("click", function(){ 
+			
+		if( $(this).hasClass('selected') ) {
+		
+			$(this).removeClass('selected');
+			$(this).find('.selectme').html('Maillijst selecteren');
+		
+		} else {
+			
+			$(this).addClass('selected');
+			$(this).find('.selectme').html('Maillijst geselecteerd');
+
+		}
+		
+		steps.checkmailinglists();
+		
+	});
+	
 	
 	$( ".draggable .article" ).draggable({ });
 

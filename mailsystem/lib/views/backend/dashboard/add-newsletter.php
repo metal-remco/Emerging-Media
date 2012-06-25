@@ -87,7 +87,6 @@
 			                
 				                <img src="lib/images/default-template.png" alt="standaard-template" width="131" height="131" />
 				                <p>Standaard template</p>
-					            <input type="hidden" name="template" value="default" />
 
 			                </div><!-- template -->
 				            <div class="clear"></div>
@@ -140,9 +139,6 @@
 							
 							<?php include('lib/templates/default/template.php'); ?>
 							
-			                <!-- //article:4,117px,382px.article:15,-70px,449px. -->
-				            <input type="hidden" name="templatestring" id="templatestring" value="" />
-				            
 							<div class="clear"></div>
 
 						</div><!-- step-4 -->
@@ -161,15 +157,14 @@
 								<?php foreach($mailinglists as $mailinglist): ?>
 								
 				            		<?php $subscribers = $mailsystem->getSubscribersByMailinglist($mailinglist->ID); ?>     
+
+								    <div class="step-mailinglist" id="step-mailinglist-<?php echo $mailinglist->ID; ?>">
 								
-				                	<div class="step-mailinglist">
-				                	                	
-			        					<input type="checkbox" name="mailinglijst-<?php echo $mailinglist->ID; ?>" id="checkbox-<?php echo $mailinglist->ID; ?>" />
-			                			<p><?php echo $mailinglist->name; ?></p>
+								        <p class="step-mailinglist-title"><?php echo $mailinglist->name; ?> <span class="selectme">Maillijst Selecteren</span></p>
 			                				                		
 			                			<p class="right"><a href="index.php?view=mailinglists-view&id=<?php echo $mailinglist->ID; ?>">Bekijk maillijst</a></p>
-					                		
-				                	</div><!-- step-mailinglist -->
+								
+								    </div><!-- step-mailinglist -->
 								
 								<?php endforeach; ?>
 								
@@ -207,6 +202,41 @@
 						
 							<h1>Nieuwsbrief versturen</h1>
 							
+							<p>Template:</p>
+							<ul>
+							
+								<li>Standaard</li>
+								
+							</ul>
+							
+							<p>Deze artikelen zijn te vinden in de nieuwsbrief:</p>
+
+							<ul>
+							
+								<?php foreach ($articles as $article): ?>
+								
+								    <li class="finalcheck-article hidden" id="finalcheck-article-<?php echo $article->id; ?>"><?php echo $article->title; ?></li>
+								
+								<?php endforeach; ?>
+								
+							</ul>
+							
+							<p>Wordt verstuurd naar de volgende lijsten:</p>
+							<ul>
+							
+								<?php foreach ($mailinglists as $mailinglist): ?>
+								
+								    <li class="finalcheck-mailinglist hidden" id="finalcheck-mailinglist-<?php echo $mailinglist->ID; ?>"><?php echo $mailinglist->name; ?></li>
+								
+								<?php endforeach; ?>
+								
+							</ul>
+							
+				            <input type="hidden" name="template" value="default" />
+				            <input type="hidden" name="articles" value="" id="articlestring" />
+				            <input type="hidden" name="templatestring" id="templatestring" value="" /><!-- //article:4,117px,382px.article:15,-70px,449px. -->
+				            <input type="hidden" name="mailinglists" value="" id="mailingliststring" />
+
 				            <input id="submit-newsletter" type="submit" name="submit-newsletter" value="Nieuwsbrief versturen" />
 				            
 							<div class="clear"></div>

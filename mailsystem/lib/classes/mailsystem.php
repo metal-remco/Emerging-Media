@@ -16,10 +16,10 @@ class mailsystem
 		//$this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
         
 		// Randy Localhost
-		//$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
+		$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');
          
 		// Remco Localhost
-		$this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
+		//$this->db = new db('localhost', 'root', '841nk2s', 'prj_2011_2012_emedia_med2d_t5');
 
 		session_start();
 
@@ -179,6 +179,12 @@ class mailsystem
             $query = "DELETE  FROM mail_article WHERE id='".$id."'";
             $this->db->query($query);
         }
+
+        public function getArticleTitle($id)
+        {
+            $query = "SELECT title FROM mail_article WHERE id='".$id."'";
+            return $this->db->query($query);
+        }
 	
 	
 	// Methodes: Maillists
@@ -259,9 +265,9 @@ class mailsystem
 
 
 	// Methodes: Newsletter
-	public function addNewsletter($title, $template, $templatestring) {
+	public function addNewsletter($title, $template, $articles, $templatestring, $mailinglists_string) {
 		
-		$query = 'INSERT INTO mail_newsletters VALUES ("", "'.date("d-m-Y").'", "'.$title.'", "'.$template.'", "'.$templatestring.'");';
+		$query = 'INSERT INTO mail_newsletters VALUES ("", "'.date("d-m-Y").'", "'.$title.'", "'.$template.'", "'.$articles.'", "'.$templatestring.'", "'.$mailinglists_string.'");';
 		$this->db->query($query);		
 		
 	}
