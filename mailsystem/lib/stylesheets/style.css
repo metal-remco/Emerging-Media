@@ -145,8 +145,10 @@
                 #steps-container { width: 574px; padding: 0px 0px 20px 0px; /* overflow: hidden; */ }
                 #steps { width: 4172px; position: relative; } /* 7 * 596 = 4172 */
                 #steps .step { width: 574px; margin: 0px 22px 0px 0px; float: left; }
-              
+
+
             	    #step-3 #articles .article .article-title { width: 556px; }
+                    #step-3 #articles .article .article-content { max-height: 70px; overflow: hidden; margin: 0px 0px 8px 0px; }
             	    #step-3 .article.selected .article-title { width: 556px; background: #EF8045 url(../../lib/images/check-white.png) 550px center no-repeat; color: #fff; }
             	    #step-3 .article .article-title .selectme { float: right; margin: 0px 32px 0px 0px; text-decoration: underline; cursor: pointer; }
             	    #step-3 .article.selected .article-title .selectme { text-decoration: none; }

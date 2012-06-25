@@ -111,6 +111,12 @@
 								
 								        <h2 class="article-title"><?php echo $article->title; ?> <span class="selectme">Artikel Selecteren</span></h2>
 																
+				                        <div class="article-content">
+				
+										    <?php echo $article->article; ?>
+				
+				                        </div>
+																
 								        <p class="article-footer">
 								
 								            <span class="orange">Auteur:</span> <?php echo $article->author;?> <span class="orange">Geschreven:</span> <?php echo $article->date;?>
