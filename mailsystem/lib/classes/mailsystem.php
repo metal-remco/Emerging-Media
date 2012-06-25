@@ -13,7 +13,7 @@ class mailsystem
 	public function __construct() {
 
 		// Schoolserver
-		// $this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
+		//$this->db = new db('localhost', '52089', 'gudaeb', 'prj_2011_2012_emedia_med2d_t5');
         
 		// Randy Localhost
 		//$this->db = new db('localhost', 'root', '', 'prj_2011_2012_emedia_med2d_t5');

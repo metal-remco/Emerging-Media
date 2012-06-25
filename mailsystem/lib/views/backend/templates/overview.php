@@ -19,7 +19,7 @@
                             
                 <h1>Templates</h1>
                 
-                <p>Op dit moment is alleen het standaad template beschikbaar.</p>
+                <p>Op dit moment is alleen het standaard template beschikbaar.</p>
                 
                 <div id="template">
                 
