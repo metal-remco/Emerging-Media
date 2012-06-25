@@ -45,7 +45,7 @@
                     <p>Er is geen afbeelding bij dit artikel.</p>
                     <?php
                 }else{
-                    ?><img class="article-picture" src="<?php echo $article->picture;?>" alt="Afbeelding"/><?php
+                    ?><img class="article-picture" src="<?php echo $article->picture;?>" /><?php
                 }
             ?>
             

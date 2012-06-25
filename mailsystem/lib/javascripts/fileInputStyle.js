@@ -37,9 +37,9 @@
                 "background-position": "right",
                 "display": "inline",
                 "position": "absolute",
-                "margin-top":"1px",
                 "cursor":"pointer",
                 "overflow": "hidden"
+                
             });
                             
             var filename = $('<input class="file">')
@@ -59,6 +59,7 @@
                 "display": "inline",
                 "cursor": "pointer",
                 "opacity": "0.0"
+                
             });
 
             if ($.browser.mozilla) {

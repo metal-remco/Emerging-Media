@@ -20,7 +20,7 @@
 
             <h1>Artikel toevoegen</h1>
             <form enctype="multipart/form-data" id="form_article" action="index.php?view=inputArticle-succes" method="post"/>
-            <input class="shadow box" id="articleTitle" class="required" value="" name="articleTitle" placeholder="Titel van artikel" type="text"></input>
+            <input class=" box" id="articleTitle" maxlength="50" class="required" value="" name="articleTitle" placeholder="Titel van artikel" type="text"></input>
             <textarea id="editor1" name="editor1">&lt;i&gt;Vul hier de text in.&lt;/i&gt;</textarea>
 
 
