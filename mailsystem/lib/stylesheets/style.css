@@ -92,9 +92,9 @@
         #dashboard-header .button-newsletter:hover { background: url(../../lib/images/buttons/newsletter-hover.png) no-repeat; }
         #dashboard-header .button-articles { background: url(../../lib/images/buttons/articles.png) no-repeat; }
         #dashboard-header .button-articles:hover { background: url(../../lib/images/buttons/articles-hover.png) no-repeat; }
-        #dashboard-header .button-templates { background: url(../../lib/images/buttons/templates.png) no-repeat; }
+        #dashboard-header .button-templates { background: url(../../lib/images/buttons/templates.png) no-repeat; margin: 0px; }
         #dashboard-header .button-templates:hover { background: url(../../lib/images/buttons/templates-hover.png) no-repeat; }
-        #dashboard-header .button-mailinglists { background: url(../../lib/images/buttons/mailinglists.png) no-repeat; margin: 0px; }
+        #dashboard-header .button-mailinglists { background: url(../../lib/images/buttons/mailinglists.png) no-repeat; }
         #dashboard-header .button-mailinglists:hover { background: url(../../lib/images/buttons/mailinglists-hover.png) no-repeat; }
 
         #stage { padding: 30px; }

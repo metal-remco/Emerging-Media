@@ -206,7 +206,7 @@
 						<div class="step" id="step-7">
 						
 							<h1>Nieuwsbrief versturen</h1>
-	
+							
 				            <input id="submit-newsletter" type="submit" name="submit-newsletter" value="Nieuwsbrief versturen" />
 				            
 							<div class="clear"></div>

@@ -14,11 +14,12 @@ $newsletters = $mailsystem->getNewsletters();
         
         	<div id="dashboard-header">
         	
-        		<a class="dashboard-button button-newsletter" href="index.php?view=add-newsletter" title="Nieuwsbrief maken">Nieuwsbrief maken</a>
         		<a class="dashboard-button button-articles" href="index.php?view=articles" title="Artikelen">Artikelen</a>
-        		<a class="dashboard-button button-templates" href="index.php?view=templates" title="Templates">Templates</a>
         		<a class="dashboard-button button-mailinglists" href="index.php?view=mailinglists" title="Maillijsten">Maillijsten</a>
-        	
+
+        		<a class="dashboard-button button-newsletter" href="index.php?view=add-newsletter" title="Nieuwsbrief maken">Nieuwsbrief maken</a>
+        		<a class="dashboard-button button-templates" href="index.php?view=templates" title="Templates">Templates</a>
+
         	</div><!-- dashboard-header -->
         	
         	<div id="sidebar">

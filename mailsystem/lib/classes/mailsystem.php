@@ -63,19 +63,41 @@ class mailsystem
     
     public function sendConformationMail($email)
     {
-      /*  $to = $email;
+    
+      /*
+      
+        $to = $email;
         $subject = "Bevestiging van inschrijven voor de nieuwsbrief van de Emmausschool";
         $message = "U bent succesvol ingeschreven voor de nieuwsbrief van de Emmausschool. Deze zult u dus zeer binnenkort ontvangen";
-        //$from = "info@emmausschool";
-       mail($to, $subject, $message);*/
+        mail($to, $subject, $message);
+       
+       */
+       
     }
     
     public function sendArticleReaction($email, $message)
    {
-      /*  $to = $email;
+   	
+   		/*
+   
+      	$to = $email;
         $subject = "Reactie op uw ingezonden artikel van de Emmausschool.";
         $message = $message;
-        mail($to, $subject, $message);*/
+        
+        mail($to, $subject, $message);
+        
+        */
+    
+    }
+    
+    public function sendNewsletter() {
+	    
+      	$to = $email;
+        $subject = "Reactie op uw ingezonden artikel van de Emmausschool.";
+        $message = $message;
+        
+        mail($to, $subject, $message);
+	    
     }
 	
 	// Methodes: Login
@@ -239,7 +261,7 @@ class mailsystem
 	// Methodes: Newsletter
 	public function addNewsletter($title, $template, $templatestring) {
 		
-		$query = 'INSERT INTO mail_newsletters VALUES ("", "", "'.$title.'", "'.$template.'", "'.$templatestring.'");';
+		$query = 'INSERT INTO mail_newsletters VALUES ("", "'.date("d-m-Y").'", "'.$title.'", "'.$template.'", "'.$templatestring.'");';
 		$this->db->query($query);		
 		
 	}
