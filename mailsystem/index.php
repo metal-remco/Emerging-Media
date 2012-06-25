@@ -166,9 +166,9 @@
     </div><!-- temporary-footer -->
     
 	<!-- Javascipts -->
-	<script type="text/javascript" src="lib/javascripts/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="lib/javascripts/jquery-ui-1.8.18.custom.min.js"></script>
-	<script type="text/javascript" src="lib/javascripts/jquery.validate-1.9.0.min.js"></script>	
+	<script type="text/javascript" src="lib/plugins/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="lib/plugins/jquery-ui-1.8.18.custom.min.js"></script>
+	<script type="text/javascript" src="lib/plugins/jquery.validate-1.9.0.min.js"></script>	
 
 	<script type="text/javascript" src="lib/plugins/table-sorter/packed.js"></script>
 	
